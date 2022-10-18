@@ -36,3 +36,19 @@ a {
 a {
   color: inherit;
 }
+
+.content {
+  animation: 1s ease Content forwards
+}
+
+@keyframes Content {
+  0% {
+    opacity: 0;
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}

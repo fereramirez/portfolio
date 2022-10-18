@@ -1,1 +1,22 @@
-.home-container {}
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 3rem;
+   padding-top: 15%;
+   text-align: left;
+}
+
+.greeting {
+   font-size: 2rem;
+   margin: 1rem 0;
+}
+
+.name {
+   color: green
+}
+
+.title {
+   font-size: 3.5rem;
+   /*  margin: 1rem 0; */
+}

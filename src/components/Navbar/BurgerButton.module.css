@@ -1,0 +1,66 @@
+.hamburger {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  height: 50px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.hamburgerBottomBread,
+.hamburgerPatty,
+.hamburgerTopBread {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  left: 12.5px;
+}
+
+/* HAMBURGUESA */
+.hamburgerTopBread {
+  margin-top: -8px;
+}
+
+.hamburgerPatty {
+  margin-top: -0.6666666667px;
+}
+
+.hamburgerBottomBread {
+  margin-top: 6px;
+}
+
+/* HAMBURGUESA FINA */
+/* .hamburgerTopBread {
+  margin-top: -5px;
+}
+.hamburgerPatty {
+  margin-top: -1px;
+}
+.hamburgerBottomBread {
+  margin-top: 3px;
+} */
+
+/* TRANSFORMACION A X */
+.hamburgerTopBreadOpen {
+  transform: translate(0, 8px) rotate(45deg);
+}
+
+.hamburgerPattyOpen {
+  transform: scale(0, 0);
+}
+
+.hamburgerBottomBreadOpen {
+  transform: translate(0, -6px) rotate(-45deg);
+}
+
+@media (min-width: 720px) {
+  .hamburger {
+    display: none;
+  }
+}

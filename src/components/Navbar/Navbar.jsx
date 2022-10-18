@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import BurgerButton from "./BurgerButton";
 
 import css from "./Navbar.module.css";
 
@@ -10,6 +11,7 @@ const Navbar = () => {
   const [buttonHover, setButtonHover] = useState(
     location.pathname.substring(1).toLocaleLowerCase()
   );
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleHover = (i) => {
     setButtonHover(i);
@@ -33,18 +35,52 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <div className={css.container}>
-      <div className={css.homeButton}></div>
+    <>
+      <div className={css.container}>
+        <div className={css.homeButton}>Fernando</div>
 
-      <div className={css.buttonsContainer}>
-        <div className={css.buttonsBox}>
+        <div className={css.buttonsContainer}>
+          <div className={css.buttonsBox}>
+            {React.Children.toArray(
+              SECTIONS.map((section, i) => (
+                <NavLink to={section.toLowerCase()}>
+                  <div
+                    className={css.button}
+                    onPointerEnter={() => handleHover(i)}
+                    onPointerLeave={handleHoverLeave}
+                  >
+                    {section}
+                  </div>
+                </NavLink>
+              ))
+            )}
+          </div>
+
+          <div
+            className={css.bottomSelector}
+            style={{ transform: `translateX(${buttonHover * 100}%)` }}
+          ></div>
+
+          <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
+        </div>
+      </div>
+
+      <div
+        className={`${css.mobileMenu} ${showMenu ? css.showMobileMenu : ""}`}
+      >
+        <div className={css.mobileButtonsContainer}>
           {React.Children.toArray(
             SECTIONS.map((section, i) => (
-              <NavLink to={section.toLowerCase()}>
+              <NavLink
+                to={section.toLowerCase()}
+                onClick={() => setShowMenu(false)}
+              >
                 <div
-                  className={css.button}
-                  onPointerEnter={() => handleHover(i)}
-                  onPointerLeave={handleHoverLeave}
+                  className={`${
+                    section.toLowerCase() === location.pathname.substring(1)
+                      ? css.mobileCurrentSection
+                      : css.mobileButton
+                  }`}
                 >
                   {section}
                 </div>
@@ -52,13 +88,8 @@ const Navbar = () => {
             ))
           )}
         </div>
-
-        <div
-          className={css.bottomSelector}
-          style={{ transform: `translateX(${buttonHover * 100}%)` }}
-        ></div>
       </div>
-    </div>
+    </>
   );
 };
 

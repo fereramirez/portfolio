@@ -7,13 +7,18 @@
    align-items: center;
    justify-content: space-between;
    flex-direction: row;
+   user-select: none;
 }
 
 .homeButton {
-   width: 3rem;
+   width: 6rem;
    height: 2rem;
-   background-color: red;
    margin-left: 1rem;
+   font-weight: 600;
+   font-size: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .buttonsContainer {
@@ -34,6 +39,8 @@
    align-items: center;
    justify-content: center;
    cursor: pointer;
+   font-weight: 600;
+   font-size: .9rem;
 }
 
 .bottomSelector {
@@ -42,4 +49,87 @@
    width: 5rem;
    background-color: green;
    transition: transform .3s cubic-bezier(0, 1.11, 0.38, 1.14);
+}
+
+@media (max-width: 719px) {
+   .bottomSelector {
+      display: none;
+   }
+
+   .button {
+      display: none;
+   }
+
+   .container {
+      height: 3.5rem;
+   }
+}
+
+@media (min-width: 720px) {
+   /* .container {
+      justify-content: flex-end;
+   } */
+
+   /* .homeButton {
+      display: none;
+   } */
+
+   .mobileMenu {
+      display: none;
+   }
+}
+
+.mobileMenu {
+   position: fixed;
+   width: 100vw;
+   height: 100%;
+   background-color: green;
+   right: -100%;
+   transition: right .3s ease;
+   z-index: 30;
+   user-select: none;
+}
+
+.showMobileMenu {
+   right: 0;
+}
+
+.mobileButtonsContainer {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.mobileButtonsContainer a:hover {
+   width: 9rem;
+   transition: color .2s ease;
+}
+
+.mobileButtonsContainer a:hover {
+   color: red;
+}
+
+.mobileButton {
+   width: 7rem;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 1.4rem;
+   margin: 1.5rem 1rem;
+}
+
+.mobileButton:hover {
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 1.4rem;
+   margin: 1.5rem 1rem;
+}
+
+.mobileCurrentSection {
+   width: 7rem;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 1.4rem;
+   margin: 1.5rem 1rem;
+   color: black;
 }
