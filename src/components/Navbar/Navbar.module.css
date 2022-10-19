@@ -25,7 +25,7 @@
    display: flex;
    flex-direction: column;
    margin-top: 6px;
-   margin-right: 1rem;
+   margin-right: 2.5rem;
 }
 
 .buttonsBox {
@@ -48,7 +48,7 @@
    height: 2px;
    width: 5rem;
    background-color: green;
-   transition: transform .3s cubic-bezier(0, 1.11, 0.38, 1.14);
+   transition: transform .2s ease;
 }
 
 @media (max-width: 719px) {
@@ -84,7 +84,7 @@
    width: 100vw;
    height: 100%;
    background-color: green;
-   right: -100%;
+   right: -110%;
    transition: right .3s ease;
    z-index: 30;
    user-select: none;
@@ -107,7 +107,7 @@
 }
 
 .mobileButtonsContainer a:hover {
-   color: red;
+   color: #000000;
 }
 
 .mobileButton {

@@ -5,6 +5,7 @@
    padding: 3rem;
    padding-top: 15%;
    text-align: left;
+   user-select: none;
 }
 
 .greeting {
@@ -18,5 +19,19 @@
 
 .title {
    font-size: 3.5rem;
-   /*  margin: 1rem 0; */
+}
+
+.titleUnderline {
+   background-color: green;
+   height: 2px;
+   width: 0;
+   transition: width .3s ease;
+}
+
+.title:hover+.titleUnderline {
+   width: 100%;
+}
+
+.name:hover+.titleUnderline {
+   width: 100%;
 }

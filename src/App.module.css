@@ -3,7 +3,8 @@
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #181a1b;
+  /* background-color: #181a1b; */
+  background-color: #000000;
   color: #d5d1cc;
   position: relative;
 }
