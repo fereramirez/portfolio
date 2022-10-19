@@ -1,0 +1,43 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 3rem;
+   padding-top: 5%;
+   text-align: left;
+   user-select: none;
+}
+
+.title {
+   font-size: 3.5rem;
+   margin: 1rem 0;
+}
+
+.linksContainer {
+   display: flex;
+}
+
+.linksContainer a {
+   margin: 1rem;
+}
+
+.svgLinkedin svg,
+.svgGithub svg g {
+   fill: white;
+}
+
+.svgLinkedin:hover svg,
+.svgGithub:hover svg g {
+   fill: green;
+   transition: fill .2s ease;
+}
+
+.svgLinkedin svg,
+.svgGithub svg {
+   height: 50px;
+}
+
+.email {
+   color: green;
+   user-select: all;
+}

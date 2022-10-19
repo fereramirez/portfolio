@@ -23,8 +23,8 @@ const About = () => {
     <div className={`${css.container} ${common.content}`}>
       <div className={css.title}>Learning to create excellence.</div>
       <div className={css.description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet
-        numquam deserunt facere tempora eaque quo ad. Sapiente, a.
+        I'm a versatile person specialized in JavaScript technologies, and a
+        passionate in learning new ones.
       </div>
       <div className={css.description}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet
