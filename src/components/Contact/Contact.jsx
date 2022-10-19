@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
 import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
@@ -6,10 +8,12 @@ import css from "./Contact.module.css";
 import common from "../../App.module.css";
 
 const Contact = () => {
+  const { texts } = useContext(LanguageContext);
+
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>Let's talk.</div>
-      <div>Get in touch via the links below</div>
+      <div className={css.title}>{texts.contactTitle}</div>
+      <div className={css.description}>{texts.contactLinks}</div>
 
       <div className={css.linksContainer}>
         <a
@@ -40,8 +44,9 @@ const Contact = () => {
         </a>
       </div>
 
-      <p>
-        or by emailing <span className={css.email}>fer.eze.ram@gmail.com</span>.
+      <p className={css.description}>
+        {texts.contactEmail}{" "}
+        <span className={css.email}>fer.eze.ram@gmail.com</span>.
       </p>
     </div>
   );

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
+import LanguageContext from "../../context/LanguageContext";
 
 import css from "./Navbar.module.css";
 
@@ -12,6 +13,7 @@ const Navbar = () => {
     location.pathname.substring(1).toLocaleLowerCase()
   );
   const [showMenu, setShowMenu] = useState(false);
+  const { language, texts, handleLanguage } = useContext(LanguageContext);
 
   const handleHover = (i) => {
     setButtonHover(i);
@@ -37,7 +39,7 @@ const Navbar = () => {
   return (
     <>
       <div className={css.container}>
-        <div className={css.homeButton}>Fernando</div>
+        <div className={css.mobileHomeButton}>Fernando</div>
 
         <div className={css.buttonsContainer}>
           <div className={css.buttonsBox}>
@@ -63,6 +65,16 @@ const Navbar = () => {
 
           <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
+
+        <div
+          className={css.language}
+          onClick={() => handleLanguage(language === "en" ? "es" : "en")}
+        >
+          <span className={css.languageCurrent}>{language.toUpperCase()}</span>
+          <span className={css.languageHover}>
+            {language === "en" ? "ES" : "EN"}
+          </span>
+        </div>
       </div>
 
       <div
@@ -87,6 +99,7 @@ const Navbar = () => {
               </NavLink>
             ))
           )}
+          <div className={css.languageMobile}>EN</div>
         </div>
       </div>
     </>

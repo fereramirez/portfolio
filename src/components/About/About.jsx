@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as HTML } from "../../assets/svg/html.svg";
 import { ReactComponent as CSS } from "../../assets/svg/css.svg";
 import { ReactComponent as JS } from "../../assets/svg/js.svg";
@@ -19,26 +21,17 @@ import css from "./About.module.css";
 import common from "../../App.module.css";
 
 const About = () => {
+  const { texts } = useContext(LanguageContext);
+
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>Learning to create excellence.</div>
-      <div className={css.description}>
-        I'm a versatile person specialized in JavaScript technologies, and a
-        passionate in learning new ones.
-      </div>
-      <div className={css.description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet
-        numquam deserunt facere tempora eaque quo ad. Sapiente, a. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Esse rem amet numquam
-        deserunt facere tempora eaque quo ad. Sapiente, a.
-      </div>
-      <div className={css.description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet
-        numquam deserunt facere tempora eaque quo ad. Sapiente, a.
-      </div>
+      <div className={css.title}>{texts.aboutTitle}</div>
+      <div className={css.description}>{texts.aboutFirstParagraph}</div>
+      <div className={css.description}>{texts.aboutSecondParagraph}</div>
+      <div className={css.description}>{texts.aboutThirdParagraph}</div>
+      <div className={css.description}>{texts.aboutTechnologies}</div>
 
       <div className={css.technologiesSection}>
-        <p>Technologies I currently work with</p>
         <div className={css.technologiesContainer}>
           <div className={css.technologyContainer}>
             <HTML />
