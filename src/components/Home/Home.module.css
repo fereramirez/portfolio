@@ -35,3 +35,52 @@
 .name:hover+.titleUnderline {
    width: 100%;
 }
+
+@media(max-width:779px) {
+   .titleUnderline {
+      display: none;
+   }
+
+   .name {
+      transition: color .2s ease;
+   }
+
+   .title {
+      transition: color .2s ease;
+   }
+
+   .title:hover {
+      color: green;
+   }
+
+   .name:hover {
+      color: green;
+   }
+}
+
+.content1 {
+   animation: 1s ease Content forwards;
+   opacity: 0;
+}
+
+.content2 {
+   animation: 1s ease 1s Content forwards;
+   opacity: 0;
+}
+
+.content3 {
+   animation: 1s ease 2s Content forwards;
+   opacity: 0;
+}
+
+@keyframes Content {
+   0% {
+      opacity: 0;
+      transform: translate(0, 15px);
+   }
+
+   100% {
+      transform: translate(0);
+      opacity: 1;
+   }
+}

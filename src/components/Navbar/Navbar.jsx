@@ -51,7 +51,7 @@ const Navbar = () => {
                     onPointerEnter={() => handleHover(i)}
                     onPointerLeave={handleHoverLeave}
                   >
-                    {section}
+                    {texts.navbarButtons[i]}
                   </div>
                 </NavLink>
               ))
@@ -94,12 +94,26 @@ const Navbar = () => {
                       : css.mobileButton
                   }`}
                 >
-                  {section}
+                  {texts.navbarButtons[i]}
                 </div>
               </NavLink>
             ))
           )}
-          <div className={css.languageMobile}>EN</div>
+
+          <div className={css.languageMobileContainer}>
+            <div
+              className={css.languageMobile}
+              onClick={() => handleLanguage(language === "en" ? "es" : "en")}
+            >
+              <span className={css.languageMobileCurrent}>
+                {language.toUpperCase()}
+              </span>
+
+              <span className={css.languageMobileHover}>
+                {language === "en" ? "ES" : "EN"}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </>

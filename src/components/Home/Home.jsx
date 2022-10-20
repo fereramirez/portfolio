@@ -9,8 +9,8 @@ const Home = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
-    <div className={`${css.container} ${common.content}`}>
-      <div className={css.greeting}>
+    <div className={`${css.container}`}>
+      <div className={`${css.greeting} ${css.content1}`}>
         {texts.homeGreeting}
         <span className={css.name}>
           <NavLink to={"/about"}>Fernando</NavLink>
@@ -18,14 +18,14 @@ const Home = () => {
         .
       </div>
 
-      <div>
+      <div className={css.content2}>
         <p className={css.title}>
           <NavLink to={"/projects"}>{texts.homeTitle}</NavLink>
         </p>
         <div className={css.titleUnderline}></div>
       </div>
 
-      <div>
+      <div className={css.content3}>
         <p className={css.title}>
           <NavLink to={"/contact"}>{texts.homeDescription}</NavLink>
         </p>

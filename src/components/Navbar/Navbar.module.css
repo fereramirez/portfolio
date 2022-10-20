@@ -62,19 +62,52 @@
    color: green;
 }
 
-.languageMobile {
+.languageMobileContainer {
    width: 15rem;
-   cursor: pointer;
+   height: 5rem;
    font-weight: 600;
    font-size: 1.2rem;
    padding: 2.5rem 1rem;
    margin: 1rem 1rem;
    transition: color .2s ease;
    border-top: 2px solid #000000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.languageMobile:hover {
+.languageMobile {
+   margin-top: 1rem;
+   cursor: pointer;
+   height: 1.5rem;
+   width: 4rem;
+   position: relative;
+   overflow: hidden;
+}
+
+.languageMobileCurrent {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   transition: top .1s ease;
+}
+
+.languageMobileHover {
+   position: absolute;
+   left: 0;
+   right: 0;
+   transition: top .1s ease;
+   top: -22px;
    color: #000000;
+}
+
+.languageMobile:hover .languageMobileCurrent {
+   top: 22px;
+}
+
+.languageMobile:hover .languageMobileHover {
+   top: 0;
 }
 
 .buttonsContainer {
@@ -89,7 +122,7 @@
 }
 
 .button {
-   width: 5rem;
+   width: 6rem;
    height: 2rem;
    display: flex;
    align-items: center;
@@ -102,7 +135,7 @@
 .bottomSelector {
    margin-top: 3px;
    height: 2px;
-   width: 5rem;
+   width: 6rem;
    background-color: green;
    transition: transform .2s ease;
 }

@@ -1,0 +1,138 @@
+.project {
+   height: fit-content;
+   width: 80vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.5rem;
+
+   border-bottom: 1px solid green;
+}
+
+.projectData {
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+   padding-right: 1.5rem;
+}
+
+.projectName {
+   font-size: 1.5rem;
+   color: green;
+   margin-bottom: 1rem;
+}
+
+.projectImage {
+   width: 320px;
+   height: 155px;
+}
+
+.projectImage img {
+   width: 320px;
+   height: 155px;
+}
+
+.projectImageMobile {
+   width: 320px;
+   height: 155px;
+   margin-top: 1.5rem;
+   align-self: center;
+}
+
+.projectImageMobile img {
+   width: 320px;
+   height: 155px;
+}
+
+@media(max-width:799px) {
+   .projectImage {
+      display: none;
+   }
+
+   .project {
+      justify-content: center;
+   }
+
+   .projectData {
+      padding: 0;
+   }
+}
+
+@media(min-width:800px) {
+   .projectImageMobile {
+      display: none;
+   }
+}
+
+.links {
+   margin-top: 1rem;
+}
+
+.link svg {
+   fill: white;
+   transition: fill .2s ease;
+}
+
+.link:hover svg {
+   fill: green
+}
+
+.link svg g {
+   fill: white;
+   transition: fill .2s ease;
+}
+
+.link:hover svg g {
+   fill: green
+}
+
+.technologiesContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.technologiesContainer svg {
+   height: 30px;
+}
+
+.technologyContainer {
+   display: flex;
+   flex-direction: column-reverse;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   margin: 1rem;
+   /* max-height: fit-content;
+   max-width: fit-content; */
+}
+
+.tooltip {
+   position: absolute;
+   top: -22px;
+   opacity: 0;
+   /* background-color: rgb(85, 1, 85); */
+   background-color: green;
+   padding: .2rem .5rem;
+   transform: translate(35%, -5px);
+   transition: opacity .2s ease;
+   border-radius: 2px;
+   /* font-weight: 600; */
+   min-width: max-content;
+}
+
+.technologyContainer:hover>.tooltip {
+   opacity: 1
+}
+
+.link:hover .tooltip {
+   opacity: 1
+}
+
+.cssModulesSvgContainer+.tooltip {
+   transform: translate(35%, 10px);
+}
+
+.cssModulesSvgContainer svg {
+   height: 60px;
+}

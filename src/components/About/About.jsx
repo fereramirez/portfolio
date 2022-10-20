@@ -87,12 +87,12 @@ const About = () => {
             <div className={css.tooltip}>Express.js</div>
           </div>
           <div className={css.technologyContainer}>
-            <PostgresSql />
-            <div className={css.tooltip}>PostgreSQL</div>
-          </div>
-          <div className={css.technologyContainer}>
             <Mongo />
             <div className={css.tooltip}>MongoDB</div>
+          </div>
+          <div className={css.technologyContainer}>
+            <PostgresSql />
+            <div className={css.tooltip}>PostgreSQL</div>
           </div>
           <div className={css.technologyContainer}>
             <Sequelize />
