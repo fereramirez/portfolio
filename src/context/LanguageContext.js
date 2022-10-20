@@ -13,11 +13,11 @@ const translations = {
 
     aboutTitle: "Learning to create.",
     aboutFirstParagraph:
-      "I'm a versatile person specialized in JavaScript technologies, and a passionate in learning new ones.",
+      "I'm Fernando Ramirez, self-taught Web Developer, who found his passion for programming just for curiosity.",
     aboutSecondParagraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem ametnumquam deserunt facere tempora eaque quo ad. Sapiente, a. Lorem ipsum  dolor sit amet consectetur adipisicing elit. Esse rem amet numquam deserunt facere tempora eaque quo ad. Sapiente, a.",
+      "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
     aboutThirdParagraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet numquam deserunt facere tempora eaque quo ad. Sapiente, a.",
+      "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
     aboutTechnologies: "Technologies I currently work with",
 
     projectsTitle: "Passion for build.",
@@ -40,11 +40,11 @@ const translations = {
 
     aboutTitle: "Aprendiendo a crear.",
     aboutFirstParagraph:
-      "Soy una persona versátil, especializada en tecnologías JavaScript y apasionada por aprender nuevas herramientas.",
+      "Soy Fernando Ramirez, Desarrollador Web autodidacta, que descubrió su pasión por la programación por curiosidad.",
     aboutSecondParagraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem ametnumquam deserunt facere tempora eaque quo ad. Sapiente, a. Lorem ipsum  dolor sit amet consectetur adipisicing elit. Esse rem amet numquam deserunt facere tempora eaque quo ad. Sapiente, a.",
+      "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por adquirir nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
     aboutThirdParagraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem amet numquam deserunt facere tempora eaque quo ad. Sapiente, a.",
+      "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Frontend en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
     aboutTechnologies: "Tecnologías con las que trabajo actualmente",
 
     projectsTitle: "Pasión por construir.",

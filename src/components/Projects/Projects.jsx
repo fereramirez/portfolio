@@ -23,7 +23,7 @@ const Projects = () => {
           }}
           technologies={["react", "redux", "chakra", "express", "mongo"]}
           imageUrl={
-            "https://res.cloudinary.com/fenkratos/image/upload/v1665449606/provider_fepqlc.png"
+            "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298641/Portfolio/video-provider2_axhz0j.gif"
           }
         />
         <ProjectsCard
@@ -41,10 +41,10 @@ const Projects = () => {
             "sequelize",
           ]}
           imageUrl={
-            "https://res.cloudinary.com/fenkratos/image/upload/v1665449695/dogos_s0swzh.png"
+            "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_25/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
           }
         />
-        <ProjectsCard
+        {/*  <ProjectsCard
           name={"Fernando Ramirez"}
           text={"projectsPortfolioDescription"}
           links={{
@@ -53,7 +53,7 @@ const Projects = () => {
           }}
           technologies={["react", "css-modules"]}
           imageUrl={""}
-        />
+        /> */}
       </div>
     </div>
   );

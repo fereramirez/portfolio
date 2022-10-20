@@ -33,7 +33,7 @@ const About = () => {
 
       <div className={css.technologiesSection}>
         <div className={css.technologiesContainer}>
-          <div className={css.technologyContainer}>
+          {/* <div className={css.technologyContainer}>
             <HTML />
             <div className={css.tooltip}>HTML</div>
           </div>
@@ -44,7 +44,7 @@ const About = () => {
           <div className={css.technologyContainer}>
             <JS />
             <div className={css.tooltip}>JavaScript</div>
-          </div>
+          </div> */}
 
           <div className={css.technologyContainer}>
             <ReactSvg />
@@ -64,19 +64,19 @@ const About = () => {
             </span>
             <div className={css.tooltip}>CSS Modules</div>
           </div>
-          <div className={css.technologyContainer}>
+          {/* <div className={css.technologyContainer}>
             <Sass />
             <div className={css.tooltip}>Sass</div>
-          </div>
+          </div> */}
 
-          <div className={css.technologyContainer}>
+          {/* <div className={css.technologyContainer}>
             <Git />
             <div className={css.tooltip}>Git</div>
           </div>
           <div className={css.technologyContainer}>
             <Github />
             <div className={css.tooltip}>GitHub</div>
-          </div>
+          </div> */}
 
           <div className={css.technologyContainer}>
             <Nodejs />
@@ -99,10 +99,10 @@ const About = () => {
             <div className={css.tooltip}>Sequelize</div>
           </div>
 
-          <div className={css.technologyContainer}>
+          {/* <div className={css.technologyContainer}>
             <Next />
             <div className={css.tooltip}>Next.js</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

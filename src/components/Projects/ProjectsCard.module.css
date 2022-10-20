@@ -6,7 +6,7 @@
    justify-content: space-between;
    padding: 1.5rem;
 
-   border-bottom: 1px solid green;
+   border-bottom: 2px solid green;
 }
 
 .projectData {
@@ -23,13 +23,16 @@
 }
 
 .projectImage {
-   width: 320px;
-   height: 155px;
+   height: fit-content;
+   width: fit-content;
+   background-color: green;
 }
 
 .projectImage img {
-   width: 320px;
-   height: 155px;
+   width: auto;
+   max-height: 200px;
+   margin: .5rem;
+   margin-bottom: .3rem;
 }
 
 .projectImageMobile {
