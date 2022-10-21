@@ -16,10 +16,6 @@ const Title = ({ text, setLinkSelected, linkSelected }) => {
     }, 2500);
   };
 
-  console.log("linkSelected", linkSelected);
-  console.log("text", text);
-  console.log(linkSelected === text);
-
   return (
     <div
       onClick={handleSelectedLink}

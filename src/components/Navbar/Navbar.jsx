@@ -4,13 +4,15 @@ import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
 
 import css from "./Navbar.module.css";
+import common from "../../App.module.css";
 
-const SECTIONS = ["Home", "About", "Projects", "Contact"];
+/* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
+const SECTIONS = ["About", "Projects", "Contact"];
 
 const Navbar = () => {
   const location = useLocation();
   const [buttonHover, setButtonHover] = useState(
-    location.pathname.substring(1).toLocaleLowerCase()
+    location.pathname.substring(1).toLowerCase()
   );
   const [showMenu, setShowMenu] = useState(false);
   const { language, texts, handleLanguage } = useContext(LanguageContext);
@@ -21,31 +23,32 @@ const Navbar = () => {
   const handleHoverLeave = () => {
     const i = SECTIONS.findIndex(
       (section) =>
-        section.toLowerCase() ===
-        location.pathname.substring(1).toLocaleLowerCase()
+        section.toLowerCase() === location.pathname.substring(1).toLowerCase()
     );
 
     setButtonHover(i === -1 ? 0 : i);
   };
 
   useEffect(() => {
-    console.log(
-      "deberia entrar",
-      location.pathname.substring(1).toLocaleLowerCase()
+    setButtonHover(
+      SECTIONS.findIndex(
+        (section) =>
+          section.toLowerCase() === location.pathname.substring(1).toLowerCase()
+      )
     );
-    setButtonHover(location.pathname.substring(1).toLocaleLowerCase());
   }, [location.pathname]);
 
   return (
     <>
-      <div className={css.container}>
+      <div className={`${css.container} ${common.content}`}>
         <div className={css.mobileHomeButton}>Fernando</div>
 
         <div className={css.buttonsContainer}>
           <div className={css.buttonsBox}>
             {React.Children.toArray(
               SECTIONS.map((section, i) => (
-                <NavLink to={i === 0 ? "/" : section.toLowerCase()}>
+                /*  <NavLink to={i === 0 ? "/" : section.toLowerCase()}> */
+                <NavLink to={section.toLowerCase()}>
                   <div
                     className={css.button}
                     onPointerEnter={() => handleHover(i)}
@@ -84,7 +87,7 @@ const Navbar = () => {
           {React.Children.toArray(
             SECTIONS.map((section, i) => (
               <NavLink
-                to={i === 0 ? "/" : section.toLowerCase()}
+                to={section.toLowerCase()}
                 onClick={() => setShowMenu(false)}
               >
                 <div
