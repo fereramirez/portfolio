@@ -1,13 +1,14 @@
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
+import common from "../../App.module.css";
 
 import css from "./Home.module.css";
-import common from "../../App.module.css";
 import Title from "./Title";
 
 const Home = () => {
   const { texts } = useContext(LanguageContext);
+  const [linkSelected, setLinkSelected] = useState("");
 
   return (
     <div className={`${css.container}`}>
@@ -25,9 +26,21 @@ const Home = () => {
         <div className={css.titleUnderline}></div>
       </div> */}
 
-      <Title text={"Proyectos"} to={"/projects"} />
-      <Title text={"Sobre mi"} to={"/about"} />
-      <Title text={"Contacto"} to={"/contact"} />
+      <Title
+        text={"projects"}
+        setLinkSelected={setLinkSelected}
+        linkSelected={linkSelected}
+      />
+      <Title
+        text={"about"}
+        setLinkSelected={setLinkSelected}
+        linkSelected={linkSelected}
+      />
+      <Title
+        text={"contact"}
+        setLinkSelected={setLinkSelected}
+        linkSelected={linkSelected}
+      />
 
       {/* <div className={css.content3}>
         <p className={css.title}>

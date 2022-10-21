@@ -1,36 +1,52 @@
-import { useLocation, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { useLocation, NavLink, useNavigate } from "react-router-dom";
+import LanguageContext from "../../context/LanguageContext";
 import "./Title.css";
 
-const Title = ({ text, to }) => {
+const Title = ({ text, setLinkSelected, linkSelected }) => {
+  const { texts } = useContext(LanguageContext);
+  const navigate = useNavigate();
   const location = useLocation();
 
+  const handleSelectedLink = () => {
+    setLinkSelected(text);
+
+    setTimeout(() => {
+      navigate(`/${text}`);
+    }, 2500);
+  };
+
+  console.log("linkSelected", linkSelected);
+  console.log("text", text);
+  console.log(linkSelected === text);
+
   return (
-    <NavLink
-      to={to}
-      className={`title-container-link${
-        location.pathname === "/" + text
-          ? " title-container-link-selected"
-          : location.pathname !== "/"
-          ? " title-container-link-not-selected"
-          : " title-container-link-home"
+    <div
+      onClick={handleSelectedLink}
+      className={`title-container-link ${
+        linkSelected === text
+          ? "title-container-link-selected"
+          : linkSelected !== ""
+          ? "title-container-link-not-selected"
+          : "title-container-link-selectable"
       }`}
     >
       <div className="title-container">
-        <h1 className="title">{text}</h1>
+        <h1 className="title">{texts.homeLinks[text]}</h1>
       </div>
 
       <div
         className={`title-background-hover ${
-          location.pathname !== "/" + text && location.pathname !== "/"
+          linkSelected !== "" && linkSelected !== text
             ? "title-background-cover-link"
             : "title-background-hover-active"
         }`}
       ></div>
 
       <div className="title-hover-container">
-        <h1 className="title-hover">{text}</h1>
+        <h1 className="title-hover">{texts.homeLinks[text]}</h1>
       </div>
-    </NavLink>
+    </div>
   );
 };
 

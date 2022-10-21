@@ -4,30 +4,23 @@
    width: 100%;
    position: relative;
    top: 0;
-   cursor: pointer;
    transition: all .5s ease;
-   /* height: 15vh; */
+}
+
+.title-container-link-selectable {
+   cursor: pointer;
 }
 
 .title-container-link h1 {
-   font-family: 'Oswald', sans-serif;
    font-weight: 500;
    letter-spacing: -.4rem;
    height: 100%;
    font-size: 8rem;
 }
 
-.title-container-link-inner-selected {
-   position: absolute;
-   top: 0;
-   transition: top .5s ease;
-}
-
 .title-container-link-not-selected {
    visibility: hidden;
 }
-
-.title-container-link-selected-home {}
 
 .title-container {
    z-index: 30;
@@ -40,6 +33,7 @@
    color: #d5d1cc;
    height: 100%;
    width: 100vw;
+   padding-left: 4rem;
 }
 
 .title-background-hover {
@@ -58,7 +52,6 @@
 }
 
 .title-background-cover-link {
-   background-color: #000000;
    right: 0;
    width: 100%;
    z-index: 50;
@@ -79,12 +72,35 @@
 .title-hover {
    color: #d5d1cc;
    width: 100vw;
+   padding-left: 4rem;
 }
 
-.title-container-link-home:hover .title-background-hover {
+.title-container-link-selectable:hover .title-background-hover {
    width: 100%;
 }
 
-.title-container-link-home:hover .title-hover-container {
+.title-container-link-selectable:hover .title-hover-container {
    width: 100%;
+}
+
+.title-container-link-not-selected .title-background-cover-link {
+   background-color: #000000;
+}
+
+.title-container-link-selected {
+   animation: pop 2s forwards
+}
+
+@keyframes pop {
+   0% {
+      opacity: 1;
+   }
+
+   99% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
 }

@@ -5,6 +5,12 @@ const LanguageContext = createContext();
 const initialLanguage = "en";
 const translations = {
   en: {
+    homeLinks: {
+      projects: "Projects",
+      about: "About",
+      contact: "Contact",
+    },
+
     navbarButtons: ["Home", "About", "Projects", "Contact"],
 
     homeGreeting: "Hi, I'm ",
@@ -32,6 +38,12 @@ const translations = {
     contactEmail: "or by emailing ",
   },
   es: {
+    homeLinks: {
+      projects: "Proyectos",
+      about: "Sobre mi",
+      contact: "Contacto",
+    },
+
     navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"],
 
     homeGreeting: "Hola, soy ",

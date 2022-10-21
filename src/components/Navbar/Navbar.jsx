@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className={css.buttonsBox}>
             {React.Children.toArray(
               SECTIONS.map((section, i) => (
-                <NavLink to={section.toLowerCase()}>
+                <NavLink to={i === 0 ? "/" : section.toLowerCase()}>
                   <div
                     className={css.button}
                     onPointerEnter={() => handleHover(i)}
@@ -84,7 +84,7 @@ const Navbar = () => {
           {React.Children.toArray(
             SECTIONS.map((section, i) => (
               <NavLink
-                to={section.toLowerCase()}
+                to={i === 0 ? "/" : section.toLowerCase()}
                 onClick={() => setShowMenu(false)}
               >
                 <div
