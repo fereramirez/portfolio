@@ -1,0 +1,90 @@
+.title-container-link {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   position: relative;
+   top: 0;
+   cursor: pointer;
+   transition: all .5s ease;
+   /* height: 15vh; */
+}
+
+.title-container-link h1 {
+   font-family: 'Oswald', sans-serif;
+   font-weight: 500;
+   letter-spacing: -.4rem;
+   height: 100%;
+   font-size: 8rem;
+}
+
+.title-container-link-inner-selected {
+   position: absolute;
+   top: 0;
+   transition: top .5s ease;
+}
+
+.title-container-link-not-selected {
+   visibility: hidden;
+}
+
+.title-container-link-selected-home {}
+
+.title-container {
+   z-index: 30;
+   height: 100%;
+   transition: width .5s ease;
+   position: relative;
+}
+
+.title {
+   color: #d5d1cc;
+   height: 100%;
+   width: 100vw;
+}
+
+.title-background-hover {
+   position: absolute;
+   top: 0;
+   width: 0;
+   height: 100%;
+   z-index: 20;
+   transition: width .5s ease;
+}
+
+.title-background-hover-active {
+   background-color: green;
+   left: 0;
+   top: 0;
+}
+
+.title-background-cover-link {
+   background-color: #000000;
+   right: 0;
+   width: 100%;
+   z-index: 50;
+}
+
+.title-hover-container {
+   z-index: 30;
+   position: absolute;
+   left: 0;
+   top: 0;
+   overflow: hidden;
+   width: 0;
+   transition: width .5s ease;
+   display: flex;
+   flex-direction: column;
+}
+
+.title-hover {
+   color: #d5d1cc;
+   width: 100vw;
+}
+
+.title-container-link-home:hover .title-background-hover {
+   width: 100%;
+}
+
+.title-container-link-home:hover .title-hover-container {
+   width: 100%;
+}

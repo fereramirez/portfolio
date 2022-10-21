@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
-import { ReactComponent as HTML } from "../../assets/svg/html.svg";
+/* import { ReactComponent as HTML } from "../../assets/svg/html.svg";
 import { ReactComponent as CSS } from "../../assets/svg/css.svg";
-import { ReactComponent as JS } from "../../assets/svg/js.svg";
+import { ReactComponent as JS } from "../../assets/svg/js.svg"; */
 import { ReactComponent as ReactSvg } from "../../assets/svg/react.svg";
 import { ReactComponent as Redux } from "../../assets/svg/redux.svg";
 import { ReactComponent as Nodejs } from "../../assets/svg/nodejs.svg";
@@ -10,12 +10,12 @@ import { ReactComponent as Express } from "../../assets/svg/express.svg";
 import { ReactComponent as PostgresSql } from "../../assets/svg/postgresql.svg";
 import { ReactComponent as Mongo } from "../../assets/svg/mongo.svg";
 import { ReactComponent as Sequelize } from "../../assets/svg/sequelize.svg";
-import { ReactComponent as Git } from "../../assets/svg/git.svg";
-import { ReactComponent as Github } from "../../assets/svg/github.svg";
+/* import { ReactComponent as Git } from "../../assets/svg/git.svg";
+import { ReactComponent as Github } from "../../assets/svg/github.svg"; */
 import { ReactComponent as Chakra } from "../../assets/svg/chakraui.svg";
-import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
 import { ReactComponent as CssModules } from "../../assets/svg/cssmodules.svg";
-import { ReactComponent as Next } from "../../assets/svg/next.svg";
+/* import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
+import { ReactComponent as Next } from "../../assets/svg/next.svg"; */
 
 import css from "./About.module.css";
 import common from "../../App.module.css";
