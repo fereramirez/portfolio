@@ -1,13 +1,9 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import LanguageContext from "../../context/LanguageContext";
-import common from "../../App.module.css";
+import { useState } from "react";
 
 import css from "./Home.module.css";
 import Title from "./Title";
 
 const Home = () => {
-  const { texts } = useContext(LanguageContext);
   const [linkSelected, setLinkSelected] = useState("");
 
   return (

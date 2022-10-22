@@ -8,8 +8,16 @@ import Intro from "./components/Intro/Intro";
 import { LanguageProvider } from "./context/LanguageContext";
 
 import css from "./App.module.css";
+import { useEffect } from "react";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
+  const { handleTheme } = useTheme();
+
+  useEffect(() => {
+    handleTheme("dark");
+  }, []);
+
   return (
     <div className={css.App}>
       <LanguageProvider>

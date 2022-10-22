@@ -30,7 +30,7 @@
 }
 
 .title {
-   color: #d5d1cc;
+   color: var(--secondary-color);
    height: 100%;
    width: 100vw;
    padding-left: 4rem;
@@ -70,7 +70,7 @@
 }
 
 .title-hover {
-   color: #d5d1cc;
+   color: var(--secondary-color);
    width: 100vw;
    padding-left: 4rem;
 }
@@ -84,7 +84,7 @@
 }
 
 .title-container-link-not-selected .title-background-cover-link {
-   background-color: #000000;
+   background-color: var(--primary-color);
 }
 
 .title-container-link-selected {
@@ -96,7 +96,7 @@
       opacity: 1;
    }
 
-   99% {
+   50% {
       opacity: 1;
    }
 

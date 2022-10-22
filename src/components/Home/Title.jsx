@@ -1,19 +1,18 @@
 import { useContext } from "react";
-import { useLocation, NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
 import "./Title.css";
 
 const Title = ({ text, setLinkSelected, linkSelected }) => {
   const { texts } = useContext(LanguageContext);
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleSelectedLink = () => {
     setLinkSelected(text);
 
     setTimeout(() => {
       navigate(`/${text}`);
-    }, 2500);
+    }, 2000);
   };
 
   return (

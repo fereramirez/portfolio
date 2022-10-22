@@ -72,7 +72,7 @@
 }
 
 .link svg {
-   fill: white;
+   fill: var(--secondary-color);
    transition: fill .2s ease;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .link svg g {
-   fill: white;
+   fill: var(--secondary-color);
    transition: fill .2s ease;
 }
 
