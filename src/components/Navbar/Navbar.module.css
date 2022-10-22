@@ -62,53 +62,6 @@
    color: green;
 }
 
-.languageMobileContainer {
-   width: 15rem;
-   height: 5rem;
-   font-weight: 600;
-   font-size: 1.2rem;
-   padding: 2.5rem 1rem;
-   margin: 1rem 1rem;
-   transition: color .2s ease;
-   border-top: 2px solid var(--primary-color);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.languageMobile {
-   margin-top: 1rem;
-   cursor: pointer;
-   height: 1.5rem;
-   width: 4rem;
-   position: relative;
-   overflow: hidden;
-}
-
-.languageMobileCurrent {
-   position: absolute;
-   left: 0;
-   right: 0;
-   top: 0;
-   transition: top .1s ease;
-}
-
-.languageMobileHover {
-   position: absolute;
-   left: 0;
-   right: 0;
-   transition: top .1s ease;
-   top: -22px;
-   color: var(--primary-color);
-}
-
-.languageMobile:hover .languageMobileCurrent {
-   top: 22px;
-}
-
-.languageMobile:hover .languageMobileHover {
-   top: 0;
-}
 
 .buttonsContainer {
    display: flex;
@@ -192,6 +145,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   color: var(--primary-color);
 }
 
 .mobileButtonsContainer a:hover {
@@ -200,7 +154,7 @@
 }
 
 .mobileButtonsContainer a:hover {
-   color: var(--primary-color);
+   color: var(--secondary-color);
 }
 
 .mobileButton {
@@ -209,6 +163,7 @@
    font-weight: 600;
    font-size: 1.4rem;
    margin: 1.5rem 1rem;
+
 }
 
 .mobileButton:hover {
@@ -224,42 +179,129 @@
    font-weight: 600;
    font-size: 1.4rem;
    margin: 1.5rem 1rem;
-   color: var(--primary-color);
+   color: var(--secondary-color);
 }
 
 .selectors {
    margin-right: 2rem;
 }
 
-.themeButton {
-   cursor: pointer;
+.themeButtons {
    margin-right: .5rem;
    position: relative;
 }
 
+.lightThemeButton,
+.darkThemeButton {
+   cursor: pointer;
+}
+
 .rays {
    position: absolute;
-   left: -3px;
-   top: -8px;
+   left: 0px;
+   top: -2px;
 }
 
-.themeButton svg {
+.themeButtons svg {
    fill: var(--secondary-color);
-   transition: fill .2s ease;
+   transition: fill .3s ease;
 }
 
-.themeHover {
-   display: none;
+.lightThemeButton .rays {
+   scale: 0;
+   transition: scale .2s ease;
 }
 
-.themeButton:hover svg {
+.lightThemeButton:hover .rays {
+   scale: 1;
+}
+
+.darkThemeButton .rays {
+   scale: 1;
+   transition: scale .2s ease;
+}
+
+.darkThemeButton:hover .rays {
+   scale: 0;
+}
+
+.lightThemeButton:hover svg,
+.darkThemeButton:hover svg {
    fill: green;
 }
 
-.themeButton:hover .themeHover {
-   display: inline;
+.mobileSelectors {
+   display: flex;
+   align-items: center;
+   width: 15rem;
+   border-top: 2px solid var(--secondary-color);
+   margin-top: 1rem;
+   padding: 2.5rem 1rem;
+   justify-content: center;
 }
 
-.themeButton:hover .themeSelected {
-   display: none;
+.languageMobileContainer {
+   font-weight: 600;
+   font-size: 1.2rem;
+   margin: 0 1rem;
+   transition: color .2s ease;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.languageMobile {
+   cursor: pointer;
+   height: 1.5rem;
+   width: 4rem;
+   position: relative;
+   overflow: hidden;
+}
+
+.languageMobileCurrent {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   transition: top .1s ease;
+}
+
+.languageMobileHover {
+   position: absolute;
+   left: 0;
+   right: 0;
+   transition: top .1s ease;
+   top: -22px;
+   color: var(--secondary-color);
+}
+
+.languageMobile:hover .languageMobileCurrent {
+   top: 22px;
+}
+
+.languageMobile:hover .languageMobileHover {
+   top: 0;
+}
+
+.mobileSelectors .themeButtons {
+   width: 4rem;
+   margin: 0 1rem;
+}
+
+.mobileSelectors .rays {
+   left: 20px;
+   top: -4px;
+}
+
+.mobileSelectors .lightThemeButton svg,
+.mobileSelectors .darkThemeButton svg {
+   scale: 1.5;
+}
+
+.mobileSelectors .lightThemeButton:hover svg {
+   fill: var(--secondary-color);
+}
+
+.mobileSelectors .darkThemeButton:hover svg {
+   fill: var(--secondary-color);
 }

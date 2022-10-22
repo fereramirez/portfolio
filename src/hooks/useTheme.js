@@ -10,16 +10,19 @@ const themeColors = {
 export const useTheme = () => {
   const [theme, setTheme] = useState(initialTheme);
 
-  const handleTheme = () => {
+  const handleTheme = (newTheme) => {
     const root = document.getElementById("root");
 
-    root.style.setProperty("--primary-color", themeColors[theme].primaryColor);
+    root.style.setProperty(
+      "--primary-color",
+      themeColors[newTheme].primaryColor
+    );
     root.style.setProperty(
       "--secondary-color",
-      themeColors[theme].secondaryColor
+      themeColors[newTheme].secondaryColor
     );
 
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(newTheme);
   };
 
   return { theme, handleTheme };

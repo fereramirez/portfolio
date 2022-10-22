@@ -5,7 +5,7 @@ import LanguageContext from "../../context/LanguageContext";
 import { useTheme } from "../../hooks/useTheme";
 import { ReactComponent as Light } from "../../assets/svg/lightbulb.svg";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
-import { ReactComponent as Rays } from "../../assets/svg/rays.svg";
+import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 
 import css from "./Navbar.module.css";
 import common from "../../App.module.css";
@@ -43,6 +43,8 @@ const Navbar = () => {
     );
   }, [location.pathname]);
 
+  console.log(theme);
+
   return (
     <>
       <div className={`${css.container} ${common.content}`}>
@@ -75,35 +77,33 @@ const Navbar = () => {
         </div>
 
         <div className={css.selectors}>
-          <div className={css.themeButton} onClick={handleTheme}>
+          <div className={css.themeButtons}>
             {theme === "dark" && (
-              <>
+              <span
+                className={css.lightThemeButton}
+                onClick={() => handleTheme("light")}
+              >
                 <span className={css.themeSelected}>
                   <Dark />
-                </span>
-
-                <span className={css.themeHover}>
-                  <Light />
                   <span className={css.rays}>
                     <Rays />
                   </span>
                 </span>
-              </>
+              </span>
             )}
 
             {theme === "light" && (
-              <>
-                <span className={css.themeSelected}>
-                  <Light />
+              <span
+                className={css.darkThemeButton}
+                onClick={() => handleTheme("dark")}
+              >
+                <span>
+                  <Dark />
                   <span className={css.rays}>
                     <Rays />
                   </span>
                 </span>
-
-                <span className={css.themeHover}>
-                  <Dark />
-                </span>
-              </>
+              </span>
             )}
           </div>
 
@@ -144,18 +144,50 @@ const Navbar = () => {
             ))
           )}
 
-          <div className={css.languageMobileContainer}>
-            <div
-              className={css.languageMobile}
-              onClick={() => handleLanguage(language === "en" ? "es" : "en")}
-            >
-              <span className={css.languageMobileCurrent}>
-                {language.toUpperCase()}
-              </span>
+          <div className={css.mobileSelectors}>
+            <div className={css.languageMobileContainer}>
+              <div
+                className={css.languageMobile}
+                onClick={() => handleLanguage(language === "en" ? "es" : "en")}
+              >
+                <span className={css.languageMobileCurrent}>
+                  {language.toUpperCase()}
+                </span>
 
-              <span className={css.languageMobileHover}>
-                {language === "en" ? "ES" : "EN"}
-              </span>
+                <span className={css.languageMobileHover}>
+                  {language === "en" ? "ES" : "EN"}
+                </span>
+              </div>
+            </div>
+
+            <div className={css.themeButtons}>
+              {theme === "dark" && (
+                <span
+                  className={css.lightThemeButton}
+                  onClick={() => handleTheme("light")}
+                >
+                  <span className={css.themeSelected}>
+                    <Dark />
+                    <span className={css.rays}>
+                      <Rays />
+                    </span>
+                  </span>
+                </span>
+              )}
+
+              {theme === "light" && (
+                <span
+                  className={css.darkThemeButton}
+                  onClick={() => handleTheme("dark")}
+                >
+                  <span>
+                    <Dark />
+                    <span className={css.rays}>
+                      <Rays />
+                    </span>
+                  </span>
+                </span>
+              )}
             </div>
           </div>
         </div>
