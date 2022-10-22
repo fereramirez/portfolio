@@ -16,12 +16,13 @@ function App() {
 
   useEffect(() => {
     handleTheme("dark");
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className={css.App}>
       <LanguageProvider>
-        <Intro />
+        {/* <Intro /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

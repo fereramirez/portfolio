@@ -24,7 +24,7 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
     <div className={css.project}>
       <div className={css.projectData}>
         <p className={css.projectName}>{name}</p>
-        <p>{texts[text]}</p>
+        <p className={css.projectDescription}>{texts[text]}</p>
 
         <div className={css.projectImageMobile}>
           <img src={imageUrl} alt={name} />

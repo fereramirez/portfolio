@@ -146,6 +146,7 @@
    flex-direction: column;
    align-items: center;
    color: var(--primary-color);
+   padding-top: 1rem;
 }
 
 .mobileButtonsContainer a:hover {

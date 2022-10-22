@@ -61,3 +61,13 @@
 .cssModulesSvgContainer svg {
    height: 80px;
 }
+
+@media(max-width:599px) {
+   .title {
+      font-size: 3rem;
+   }
+
+   .container {
+      padding: 1.5rem;
+   }
+}

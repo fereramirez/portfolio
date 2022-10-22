@@ -42,8 +42,6 @@ const Navbar = () => {
     );
   }, [location.pathname]);
 
-  console.log(theme);
-
   return (
     <>
       <div className={`${css.container} ${common.content}`}>
