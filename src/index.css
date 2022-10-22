@@ -230,3 +230,8 @@ template {
 ::-webkit-scrollbar-thumb:hover {
   background: #404040;
 }
+
+#root {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}

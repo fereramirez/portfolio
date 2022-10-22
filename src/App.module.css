@@ -4,8 +4,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #181a1b; */
-  background-color: #000000;
-  color: #d5d1cc;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   position: relative;
 }
 
@@ -39,7 +39,8 @@ a {
 }
 
 .content {
-  animation: 1s ease Content forwards
+  animation: 1s ease Content forwards;
+  min-height: 100%;
 }
 
 @keyframes Content {

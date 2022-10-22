@@ -5,7 +5,7 @@
    width: 100vw;
    height: 100vh;
    /* background-color: rgb(1, 48, 1); */
-   background-color: #000000;
+   background-color: var(--primary-color);
    z-index: 100;
    display: flex;
    align-items: center;
@@ -63,7 +63,7 @@
    height: 2rem;
    width: 2px;
    margin-left: 6px;
-   background-color: white;
+   background-color: var(--secondary-color);
    animation: topCursor 1s 1.5s forwards;
 }
 
@@ -77,12 +77,12 @@
 
 @keyframes cursorWriting {
    0% {
-      background-color: white;
+      background-color: var(--secondary-color);
       height: 2rem;
    }
 
    99% {
-      background-color: white;
+      background-color: var(--secondary-color);
       height: 2rem;
    }
 
@@ -119,21 +119,21 @@
 @keyframes bottomCursor {
    0% {
       opacity: 1;
-      background-color: white;
+      background-color: var(--secondary-color);
    }
 
    50% {
-      background-color: white;
+      background-color: var(--secondary-color);
       opacity: 1
    }
 
    51% {
-      background-color: white;
+      background-color: var(--secondary-color);
       opacity: 0
    }
 
    100% {
-      background-color: white;
+      background-color: var(--secondary-color);
       opacity: 0;
    }
 }

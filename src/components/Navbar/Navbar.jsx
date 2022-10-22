@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
+import { useTheme } from "../../hooks/useTheme";
 
 import css from "./Navbar.module.css";
 import common from "../../App.module.css";
@@ -16,6 +17,7 @@ const Navbar = () => {
   );
   const [showMenu, setShowMenu] = useState(false);
   const { language, texts, handleLanguage } = useContext(LanguageContext);
+  const { handleTheme } = useTheme();
 
   const handleHover = (i) => {
     setButtonHover(i);
@@ -68,6 +70,9 @@ const Navbar = () => {
 
           <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
+
+        <span onClick={() => handleTheme("dark")}>dark</span>
+        <span onClick={() => handleTheme("light")}>light</span>
 
         <div
           className={css.language}

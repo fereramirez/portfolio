@@ -1,7 +1,7 @@
 .container {
    position: sticky;
    top: 0;
-   background-color: #000000;
+   background-color: var(--primary-color);
    width: 100vw;
    height: 4rem;
    box-shadow: #45525f5b 0px 1px 4px;
@@ -70,7 +70,7 @@
    padding: 2.5rem 1rem;
    margin: 1rem 1rem;
    transition: color .2s ease;
-   border-top: 2px solid #000000;
+   border-top: 2px solid var(--primary-color);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -99,7 +99,7 @@
    right: 0;
    transition: top .1s ease;
    top: -22px;
-   color: #000000;
+   color: var(--primary-color);
 }
 
 .languageMobile:hover .languageMobileCurrent {
@@ -196,7 +196,7 @@
 }
 
 .mobileButtonsContainer a:hover {
-   color: #000000;
+   color: var(--primary-color);
 }
 
 .mobileButton {
@@ -220,5 +220,5 @@
    font-weight: 600;
    font-size: 1.4rem;
    margin: 1.5rem 1rem;
-   color: black;
+   color: var(--primary-color);
 }
