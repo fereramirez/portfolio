@@ -45,7 +45,8 @@ const translations = {
       contact: "Contacto",
     },
 
-    navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"],
+    navbarButtons: ["Sobre mi", "Proyectos", "Contacto"],
+    /* navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"], */
 
     homeGreeting: "Hola, soy ",
     homeTitle: "Desarrollador Frontend.",
