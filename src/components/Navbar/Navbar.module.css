@@ -227,7 +227,7 @@
 
 .lightThemeButton:hover svg,
 .darkThemeButton:hover svg {
-   fill: green;
+   fill: #00ab00;
 }
 
 .mobileSelectors {

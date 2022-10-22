@@ -3,7 +3,6 @@ import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
 import { useTheme } from "../../hooks/useTheme";
-import { ReactComponent as Light } from "../../assets/svg/lightbulb.svg";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 
