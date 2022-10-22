@@ -13,6 +13,7 @@
    height: 100vh;
    z-index: 50;
    background-color: var(--primary-color);
+   /* background-color: red; */
 }
 
 .greeting {

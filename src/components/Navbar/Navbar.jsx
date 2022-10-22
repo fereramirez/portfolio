@@ -3,6 +3,9 @@ import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
 import { useTheme } from "../../hooks/useTheme";
+import { ReactComponent as Light } from "../../assets/svg/lightbulb.svg";
+import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
+import { ReactComponent as Rays } from "../../assets/svg/rays.svg";
 
 import css from "./Navbar.module.css";
 import common from "../../App.module.css";
@@ -17,7 +20,7 @@ const Navbar = () => {
   );
   const [showMenu, setShowMenu] = useState(false);
   const { language, texts, handleLanguage } = useContext(LanguageContext);
-  const { handleTheme } = useTheme();
+  const { theme, handleTheme } = useTheme();
 
   const handleHover = (i) => {
     setButtonHover(i);
@@ -71,17 +74,50 @@ const Navbar = () => {
           <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
 
-        <span onClick={() => handleTheme("dark")}>dark</span>
-        <span onClick={() => handleTheme("light")}>light</span>
+        <div className={css.selectors}>
+          <div className={css.themeButton} onClick={handleTheme}>
+            {theme === "dark" && (
+              <>
+                <span className={css.themeSelected}>
+                  <Dark />
+                </span>
 
-        <div
-          className={css.language}
-          onClick={() => handleLanguage(language === "en" ? "es" : "en")}
-        >
-          <span className={css.languageCurrent}>{language.toUpperCase()}</span>
-          <span className={css.languageHover}>
-            {language === "en" ? "ES" : "EN"}
-          </span>
+                <span className={css.themeHover}>
+                  <Light />
+                  <span className={css.rays}>
+                    <Rays />
+                  </span>
+                </span>
+              </>
+            )}
+
+            {theme === "light" && (
+              <>
+                <span className={css.themeSelected}>
+                  <Light />
+                  <span className={css.rays}>
+                    <Rays />
+                  </span>
+                </span>
+
+                <span className={css.themeHover}>
+                  <Dark />
+                </span>
+              </>
+            )}
+          </div>
+
+          <div
+            className={css.language}
+            onClick={() => handleLanguage(language === "en" ? "es" : "en")}
+          >
+            <span className={css.languageCurrent}>
+              {language.toUpperCase()}
+            </span>
+            <span className={css.languageHover}>
+              {language === "en" ? "ES" : "EN"}
+            </span>
+          </div>
         </div>
       </div>
 

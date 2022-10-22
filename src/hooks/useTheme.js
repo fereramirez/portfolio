@@ -8,24 +8,19 @@ const themeColors = {
 };
 
 export const useTheme = () => {
-  /* const [theme, setTheme] = useState(initialTheme); */
+  const [theme, setTheme] = useState(initialTheme);
 
-  const handleTheme = (theme) => {
-    if (theme === "dark" || theme === "light") {
-      const root = document.getElementById("root");
+  const handleTheme = () => {
+    const root = document.getElementById("root");
 
-      root.style.setProperty(
-        "--primary-color",
-        themeColors[theme].primaryColor
-      );
-      root.style.setProperty(
-        "--secondary-color",
-        themeColors[theme].secondaryColor
-      );
+    root.style.setProperty("--primary-color", themeColors[theme].primaryColor);
+    root.style.setProperty(
+      "--secondary-color",
+      themeColors[theme].secondaryColor
+    );
 
-      /* setTheme(theme); */
-    }
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  return { handleTheme };
+  return { theme, handleTheme };
 };
