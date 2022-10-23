@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Intro from "./components/Intro/Intro";
+import NotFound from "./components/NotFound/NotFound";
 import { LanguageProvider } from "./context/LanguageContext";
 
 import css from "./App.module.css";
@@ -16,12 +17,13 @@ function App() {
 
   useEffect(() => {
     handleTheme("dark");
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className={css.App}>
       <LanguageProvider>
-        <Intro />
+        {/* <Intro /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<h1>NOT FOUND</h1>} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </LanguageProvider>
     </div>

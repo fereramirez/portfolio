@@ -146,6 +146,7 @@
    flex-direction: column;
    align-items: center;
    color: var(--primary-color);
+   padding-top: 1rem;
 }
 
 .mobileButtonsContainer a:hover {
@@ -227,7 +228,7 @@
 
 .lightThemeButton:hover svg,
 .darkThemeButton:hover svg {
-   fill: green;
+   fill: #00ab00;
 }
 
 .mobileSelectors {

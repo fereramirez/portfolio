@@ -1,10 +1,13 @@
 .title-container-link {
    display: flex;
-   justify-content: center;
-   width: 100%;
+   justify-content: flex-start;
+   /* width: 100%; */
+   width: 650px;
    position: relative;
    top: 0;
    transition: all .5s ease;
+   margin-top: .1rem;
+   /* margin-bottom: .05rem; */
 }
 
 .title-container-link-selectable {
@@ -15,10 +18,30 @@
    font-weight: 500;
    letter-spacing: -.4rem;
    height: 100%;
-   font-size: 8rem;
+   font-size: 10.1rem;
+   display: inline;
+}
+
+@media(max-width:699px) {
+   .title-container-link h1 {
+      font-size: 6rem;
+   }
+}
+
+@media(max-height:799px) {
+   .title-container-link h1 {
+      font-size: 6rem;
+   }
+}
+
+@media(max-width:449px) {
+   .title-container-link h1 {
+      font-size: 4rem;
+   }
 }
 
 .title-container-link-not-selected {
+   width: 100%;
    visibility: hidden;
 }
 
@@ -76,11 +99,11 @@
 }
 
 .title-container-link-selectable:hover .title-background-hover {
-   width: 100%;
+   width: 100vw;
 }
 
 .title-container-link-selectable:hover .title-hover-container {
-   width: 100%;
+   width: 100vw;
 }
 
 .title-container-link-not-selected .title-background-cover-link {

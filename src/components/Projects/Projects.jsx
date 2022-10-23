@@ -41,7 +41,7 @@ const Projects = () => {
             "sequelize",
           ]}
           imageUrl={
-            "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_25/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
+            "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
           }
         />
         {/*  <ProjectsCard

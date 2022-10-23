@@ -45,3 +45,17 @@
    color: green;
    user-select: all;
 }
+
+@media(max-width:599px) {
+   .title {
+      font-size: 3rem;
+   }
+
+   .description {
+      font-size: 1.5rem;
+   }
+
+   .container {
+      padding: 1.5rem;
+   }
+}

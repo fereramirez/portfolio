@@ -18,7 +18,7 @@ const translations = {
     homeTitle: "Frontend Developer.",
     homeDescription: "Self-taught person.",
 
-    aboutTitle: "Learning to create.",
+    aboutTitle: "Learning to build.",
     aboutFirstParagraph:
       "I'm Fernando Ramirez, self-taught Web Developer, who found his passion for programming just for curiosity.",
     aboutSecondParagraph:
@@ -27,7 +27,7 @@ const translations = {
       "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
     aboutTechnologies: "Technologies I currently work with",
 
-    projectsTitle: "Passion for build.",
+    projectsTitle: "Passion for create.",
     projectsProviderDescription:
       "eCommerce where each user can buy, publish, sell and write reviews. Group project applying MERN method.",
     projectsDogosDescription:
@@ -45,13 +45,14 @@ const translations = {
       contact: "Contacto",
     },
 
-    navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"],
+    navbarButtons: ["Sobre mi", "Proyectos", "Contacto"],
+    /* navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"], */
 
     homeGreeting: "Hola, soy ",
     homeTitle: "Desarrollador Frontend.",
     homeDescription: "Autodidacta.",
 
-    aboutTitle: "Aprendiendo a crear.",
+    aboutTitle: "Aprendiendo a construir.",
     aboutFirstParagraph:
       "Soy Fernando Ramirez, Desarrollador Web autodidacta, que descubrió su pasión por la programación por curiosidad.",
     aboutSecondParagraph:
@@ -60,7 +61,7 @@ const translations = {
       "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Frontend en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
     aboutTechnologies: "Tecnologías con las que trabajo actualmente",
 
-    projectsTitle: "Pasión por construir.",
+    projectsTitle: "Pasión por crear.",
     projectsProviderDescription:
       "eCommerce donde cada usuario puede comprar, publicar, vender y escribir reseñas. Proyecto grupal aplicando el método MERN.",
     projectsDogosDescription:

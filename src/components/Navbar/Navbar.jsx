@@ -3,7 +3,6 @@ import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
 import { useTheme } from "../../hooks/useTheme";
-import { ReactComponent as Light } from "../../assets/svg/lightbulb.svg";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 
@@ -25,25 +24,24 @@ const Navbar = () => {
   const handleHover = (i) => {
     setButtonHover(i);
   };
+
   const handleHoverLeave = () => {
     const i = SECTIONS.findIndex(
       (section) =>
         section.toLowerCase() === location.pathname.substring(1).toLowerCase()
     );
 
-    setButtonHover(i === -1 ? 0 : i);
+    setButtonHover(i === -1 ? -2 : i);
   };
 
   useEffect(() => {
-    setButtonHover(
-      SECTIONS.findIndex(
-        (section) =>
-          section.toLowerCase() === location.pathname.substring(1).toLowerCase()
-      )
+    const i /* currentSectionIndex */ = SECTIONS.findIndex(
+      (section) =>
+        section.toLowerCase() === location.pathname.substring(1).toLowerCase()
     );
-  }, [location.pathname]);
 
-  console.log(theme);
+    setButtonHover(i === -1 ? -1.5 : i);
+  }, [location.pathname]);
 
   return (
     <>
