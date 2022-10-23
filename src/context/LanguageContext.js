@@ -27,7 +27,7 @@ const translations = {
       "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
     aboutTechnologies: "Technologies I currently work with",
 
-    projectsTitle: "Passion for create.",
+    projectsTitle: "Passion to create.",
     projectsProviderDescription:
       "eCommerce where each user can buy, publish, sell and write reviews. Group project applying MERN method.",
     projectsDogosDescription:
