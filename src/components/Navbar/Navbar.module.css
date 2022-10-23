@@ -23,6 +23,11 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   transition: color .2s ease;
+}
+
+.mobileHomeButton:hover {
+   color: green;
 }
 
 .language {
