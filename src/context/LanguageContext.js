@@ -19,8 +19,9 @@ const translations = {
     homeDescription: "Self-taught person.",
 
     aboutTitle: "Learning to build.",
+    aboutIm: "I'm",
     aboutFirstParagraph:
-      "I'm Fernando Ramirez, self-taught Web Developer, who found his passion for programming just for curiosity.",
+      ", self-taught Web Developer, who found his passion for programming just for curiosity.",
     aboutSecondParagraph:
       "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
     aboutThirdParagraph:
@@ -53,8 +54,10 @@ const translations = {
     homeDescription: "Autodidacta.",
 
     aboutTitle: "Aprendiendo a construir.",
+    aboutIm: "Soy",
+
     aboutFirstParagraph:
-      "Soy Fernando Ramirez, Desarrollador Web autodidacta, que descubrió su pasión por la programación por curiosidad.",
+      ", Desarrollador Web autodidacta, quien descubrió su pasión por la programación por curiosidad.",
     aboutSecondParagraph:
       "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por aprender a utilizar nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
     aboutThirdParagraph:

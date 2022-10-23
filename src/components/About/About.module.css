@@ -13,6 +13,10 @@
    margin: 1rem 0;
 }
 
+.name {
+   color: green;
+}
+
 .description {
    font-size: 1.2rem;
    margin: 1rem 0;
