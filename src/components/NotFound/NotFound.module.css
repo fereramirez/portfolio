@@ -1,6 +1,3 @@
-/* !EFECTO GLITCH PARA TEXTO! */
-/* importante: usar atributo "title" en la etiqueta a glitchear */
-
 .container {
    width: 100vw;
    height: 70vh;
@@ -8,6 +5,7 @@
    align-items: center;
    justify-content: center;
    user-select: none;
+   flex-wrap: wrap;
 }
 
 .text {
