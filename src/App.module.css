@@ -3,11 +3,14 @@
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #181a1b; */
   background-color: var(--primary-color);
   transition: background-color .2s ease;
   color: var(--secondary-color);
   position: relative;
+}
+
+body {
+  background-color: #000000;
 }
 
 * {
