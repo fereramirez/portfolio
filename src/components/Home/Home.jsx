@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Grid from "./Grid";
 
 import css from "./Home.module.css";
 import Title from "./Title";
@@ -21,6 +22,8 @@ const Home = () => {
         </p>
         <div className={css.titleUnderline}></div>
       </div> */}
+
+      <Grid />
 
       <Title
         text={"projects"}
