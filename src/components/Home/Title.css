@@ -41,6 +41,7 @@
 }
 
 .title-container-link-not-selected {
+   width: 100%;
    visibility: hidden;
 }
 
