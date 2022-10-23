@@ -36,8 +36,25 @@ const translations = {
     projectsPortfolioDescription: "My portfolio.",
 
     contactTitle: "Let's talk.",
-    contactLinks: "Get in touch via the links below",
+    contactLinks: "Get in touch via the following links",
     contactEmail: "or by emailing ",
+    contactForm: "the form below",
+
+    form: {
+      name: "Name",
+      nameRequired: "Enter your name",
+      nameLength: "Name must be at most 24 characters in length",
+
+      emailRequired: "Enter your email address",
+      emailLength: "Email must be at most 24 characters in length",
+      emailPattern: "Enter a valid email",
+
+      message: "Message",
+      messageRequired: "Enter your message",
+      messageLength: "Name must be at most 512 characters in length",
+
+      submit: "Send",
+    },
   },
   es: {
     homeLinks: {
@@ -72,8 +89,25 @@ const translations = {
     projectsPortfolioDescription: "Mi portfolio.",
 
     contactTitle: "Hablemos.",
-    contactLinks: "Contáctame mediante los links de abajo",
+    contactLinks: "Contáctame mediante los siguientes links",
     contactEmail: "o envíame un email a ",
+    contactForm: "el formulario de abajo",
+
+    form: {
+      name: "Nombre",
+      nameRequired: "Ingresa tu nombre",
+      nameLength: "El nombre debe tener 24 caracteres como máximo",
+
+      emailRequired: "Ingresa tu email",
+      emailLength: "El email debe tener 24 caracteres como máximo",
+      emailPattern: "Ingresa un email válido",
+
+      message: "Mensaje",
+      messageRequired: "Ingresa un mensaje",
+      messageLength: "El Mensaje debe tener 512 caracteres como máximo",
+
+      submit: "Enviar",
+    },
   },
 };
 

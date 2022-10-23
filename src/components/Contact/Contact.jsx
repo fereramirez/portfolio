@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
+import Form from "./Form";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
 import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
@@ -43,6 +44,10 @@ const Contact = () => {
           <Github />
         </a>
       </div>
+
+      <div className={css.description}>{texts.contactForm}</div>
+
+      <Form />
 
       <p className={css.description}>
         {texts.contactEmail}{" "}
