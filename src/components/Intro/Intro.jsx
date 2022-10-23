@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Grid from "../Home/Grid";
 
 import css from "./Intro.module.css";
 
@@ -33,6 +34,7 @@ const Intro = () => {
 
   return (
     <div className={css.container}>
+      <Grid />
       <div className={css.textContainerOuter}>
         <div className={css.textContainer}>
           <p>{topText}</p>
