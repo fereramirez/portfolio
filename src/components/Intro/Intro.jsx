@@ -9,6 +9,7 @@ const Intro = () => {
   const [bottomCursor, setBottomCursor] = useState(false);
 
   useEffect(() => {
+    document.documentElement.style.overflow = "hidden";
     const name = "Fernando Ramirez,";
     const title = "Frontend Developer.";
 
@@ -30,6 +31,10 @@ const Intro = () => {
     setTimeout(() => {
       setBottomCursor(true);
     }, 2000);
+
+    setTimeout(() => {
+      document.documentElement.style.overflowY = "auto";
+    }, 8000);
   }, []);
 
   return (
