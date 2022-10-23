@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "../Home/Grid";
+import Grid from "../common/Grid/Grid";
 
 import css from "./Intro.module.css";
 
