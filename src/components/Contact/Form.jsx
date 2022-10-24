@@ -168,22 +168,51 @@ const Form = () => {
               maxLength: initialMessageRemaining,
             })}
           />
+
           <div
             className={css.radialProgress}
-            style={{
+            /* style={{
               background: `conic-gradient(${
-                messageRemaining < 0
+                 messageRemaining <= 0
                   ? "red"
                   : messageRemaining < initialMessageRemaining / 4
                   ? "rgb(255, 187, 0)"
                   : "green"
-              } ${messageDegrees}deg, white 0deg)`,
+               } ${messageDegrees}deg, white 0deg)`,
+            }} */
+            style={{
+              background: `${
+                messageRemaining >= 0
+                  ? messageRemaining === 0
+                    ? "conic-gradient(red " +
+                      messageDegrees +
+                      "deg, var(--font-color) 0deg)"
+                    : messageRemaining < initialMessageRemaining / 4
+                    ? "conic-gradient(rgb(255, 187, 0) " +
+                      messageDegrees +
+                      "deg, var(--font-color) 0deg)"
+                    : "conic-gradient(green " +
+                      messageDegrees +
+                      "deg, var(--font-color) 0deg)"
+                  : "var(--background-color)"
+              }`,
             }}
           >
+            <div
+              className={css.radialProgressBefore}
+              style={{
+                backgroundColor: `${
+                  messageRemaining > 0
+                    ? "var(--font-color)"
+                    : "var(--background-color)"
+                }`,
+              }}
+            ></div>
+
             <span
               style={{
                 color: `${
-                  messageRemaining < 0 ? "red" : "var(--background-color)"
+                  messageRemaining <= 0 ? "red" : "var(--background-color)"
                 }`,
               }}
             >
