@@ -14,11 +14,11 @@ export const useTheme = () => {
     const root = document.getElementById("root");
 
     root.style.setProperty(
-      "--primary-color",
+      "--background-color",
       themeColors[newTheme].primaryColor
     );
     root.style.setProperty(
-      "--secondary-color",
+      "--font-color",
       themeColors[newTheme].secondaryColor
     );
 

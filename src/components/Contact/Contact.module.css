@@ -27,7 +27,7 @@
 
 .svgLinkedin svg,
 .svgGithub svg g {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
 }
 
 .svgLinkedin:hover svg,

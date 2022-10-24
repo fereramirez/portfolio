@@ -54,6 +54,11 @@ const translations = {
       messageLength: "Name must be at most 512 characters in length",
 
       submit: "Send",
+      submitError: "There are errors",
+
+      responseError: "There was an error, please try again.",
+      responseSuccess:
+        "Message sent successfully! I will get back to you soon.",
     },
   },
   es: {
@@ -107,6 +112,11 @@ const translations = {
       messageLength: "El Mensaje debe tener 512 caracteres como máximo",
 
       submit: "Enviar",
+      submitError: "Hay errores",
+
+      responseError: "Hubo un error, vuelve a intentar.",
+      responseSuccess:
+        "¡Mensaje enviado con éxito! En breve me pondré en contacto contigo.",
     },
   },
 };

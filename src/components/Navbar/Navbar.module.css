@@ -1,7 +1,7 @@
 .container {
    position: sticky;
    top: 0;
-   background-color: var(--primary-color);
+   background-color: var(--background-color);
    transition: background-color .2s ease;
    width: 100vw;
    height: 4rem;
@@ -150,7 +150,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   color: var(--primary-color);
+   color: var(--background-color);
    padding-top: 1rem;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .mobileButtonsContainer a:hover {
-   color: var(--secondary-color);
+   color: var(--font-color);
 }
 
 .mobileButton {
@@ -185,7 +185,7 @@
    font-weight: 600;
    font-size: 1.4rem;
    margin: 1.5rem 1rem;
-   color: var(--secondary-color);
+   color: var(--font-color);
 }
 
 .selectors {
@@ -209,7 +209,7 @@
 }
 
 .themeButtons svg {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
    transition: fill .3s ease;
 }
 
@@ -240,7 +240,7 @@
    display: flex;
    align-items: center;
    width: 15rem;
-   border-top: 2px solid var(--secondary-color);
+   border-top: 2px solid var(--font-color);
    margin-top: 1rem;
    padding: 2.5rem 1rem;
    justify-content: center;
@@ -278,7 +278,7 @@
    right: 0;
    transition: top .1s ease;
    top: -22px;
-   color: var(--secondary-color);
+   color: var(--font-color);
 }
 
 .languageMobile:hover .languageMobileCurrent {
@@ -305,9 +305,9 @@
 }
 
 .mobileSelectors .lightThemeButton:hover svg {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
 }
 
 .mobileSelectors .darkThemeButton:hover svg {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
 }

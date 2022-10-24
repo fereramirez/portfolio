@@ -29,7 +29,7 @@
 }
 
 .svgContainer svg g {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
    transition: fill .2s ease;
 }
 
