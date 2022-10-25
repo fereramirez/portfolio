@@ -22,7 +22,7 @@ const About = () => {
 
       <Technologies />
 
-      <div>
+      <div className={css.description}>
         <a
           href="https://drive.google.com/file/d/1aCoeYC6wihbg5_vXOBfz8h1PD-8G4-RP/view?usp=sharing"
           target="_blank"
