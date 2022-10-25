@@ -23,7 +23,7 @@ function App() {
   return (
     <div className={css.App}>
       <LanguageProvider>
-        {/* <Intro /> */}
+        <Intro />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
