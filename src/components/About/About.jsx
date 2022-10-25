@@ -29,7 +29,7 @@ const About = () => {
           rel="noreferrer"
           className={css.resume}
         >
-          Resume
+          {texts.aboutResume}
         </a>
       </div>
     </div>
