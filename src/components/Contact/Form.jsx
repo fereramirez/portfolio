@@ -24,7 +24,9 @@ const Form = () => {
     initialMessageRemaining
   );
   const [messageDegrees, setMessageDegrees] = useState(initialMessageDegrees);
+  const [scrollHeight, setScrollHeight] = useState(null);
   const formRef = useRef();
+  const messageRef = useRef();
 
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -38,6 +40,19 @@ const Form = () => {
 
   const watchMessage = watch("message");
 
+  const handleResize = () => {
+    const textarea = document.getElementById("message-text-area");
+
+    /*  if (scrollHeight !== textarea.scrollHeight) {
+      textarea.style.height = textarea.scrollHeight + 5 + "px";
+      textarea.scrollTop = textarea.scrollHeight;
+    }
+
+    setScrollHeight(textarea.scrollHeight); */
+
+    textarea.scrollTop = textarea.scrollHeight;
+  };
+
   useEffect(() => {
     setMessageRemaining(
       watchMessage
@@ -49,6 +64,9 @@ const Form = () => {
       ? (watchMessage.length * 360) / initialMessageRemaining
       : 0;
     setMessageDegrees(degrees > 360 ? 360 : degrees);
+
+    handleResize();
+    // eslint-disable-next-line
   }, [watchMessage]);
 
   const sendEmail = async () => {
@@ -174,6 +192,8 @@ const Form = () => {
               <textarea
                 disabled={waitingResponse || response === "success"}
                 autoComplete="off"
+                ref={messageRef}
+                id="message-text-area"
                 className={`${css.input} ${
                   errors.message ? css.inputError : ""
                 }`}

@@ -108,8 +108,10 @@ input:-webkit-autofill {
 .form textarea {
    resize: vertical;
    max-height: 250px;
-   min-height: 4rem;
-   padding-bottom: 2rem;
+   height: auto;
+   min-height: 6rem;
+   padding-bottom: 2.5rem;
+
 }
 
 .radialProgress {
