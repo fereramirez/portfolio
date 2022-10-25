@@ -22,6 +22,13 @@
    margin: 1rem 0;
 }
 
+.resume {
+   transition: color .2s ease;
+}
+
+.resume:hover {
+   color: green;
+}
 
 @media(max-width:599px) {
    .title {

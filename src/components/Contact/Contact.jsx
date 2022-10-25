@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import Form from "./Form";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
@@ -10,6 +10,15 @@ import common from "../../App.module.css";
 
 const Contact = () => {
   const { texts } = useContext(LanguageContext);
+  const [textCopied, setTextCopied] = useState(false);
+
+  const handleCopy = () => {
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      setTextCopied(true);
+      return navigator.clipboard.writeText("fer.eze.ram@gmail.com");
+    }
+    return Promise.reject("The Clipboard API is not available.");
+  };
 
   return (
     <div className={`${css.container} ${common.content}`}>
@@ -45,10 +54,16 @@ const Contact = () => {
         </a>
       </div>
 
-      <p className={css.description}>
+      <div className={css.description}>
         {texts.contactEmail}{" "}
-        <span className={css.email}>fer.eze.ram@gmail.com</span>,
-      </p>
+        <span className={css.email} onClick={handleCopy}>
+          fer.eze.ram@gmail.com
+          <span className={css.tooltip}>
+            {textCopied ? texts.contactCopied : texts.contactCopy}
+          </span>
+        </span>
+        ,
+      </div>
 
       <Form />
     </div>

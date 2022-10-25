@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Grid from "../common/Grid/Grid";
+import Grid from "../common/Grid";
 
 import css from "./Home.module.css";
 import Title from "./Title";

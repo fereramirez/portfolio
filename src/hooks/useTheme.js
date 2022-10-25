@@ -3,8 +3,8 @@ import { useState } from "react";
 const initialTheme = "dark";
 
 const themeColors = {
-  dark: { primaryColor: "#000000", secondaryColor: "#d5d1cc" },
-  light: { primaryColor: "#d5d1cc", secondaryColor: "#000000" },
+  dark: { backgroundColor: "#000000", fontColor: "#d5d1cc" },
+  light: { backgroundColor: "#d5d1cc", fontColor: "#000000" },
 };
 
 export const useTheme = () => {
@@ -15,12 +15,9 @@ export const useTheme = () => {
 
     root.style.setProperty(
       "--background-color",
-      themeColors[newTheme].primaryColor
+      themeColors[newTheme].backgroundColor
     );
-    root.style.setProperty(
-      "--font-color",
-      themeColors[newTheme].secondaryColor
-    );
+    root.style.setProperty("--font-color", themeColors[newTheme].fontColor);
 
     setTheme(newTheme);
   };
