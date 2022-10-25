@@ -37,8 +37,8 @@ const translations = {
 
     contactTitle: "Let's talk.",
     contactLinks: "Get in touch via the following links",
-    contactEmail: "or by emailing ",
-    contactForm: "the form below",
+    contactEmail: "by emailing ",
+    contactForm: "or via the form below",
 
     form: {
       name: "Name",
@@ -94,9 +94,9 @@ const translations = {
     projectsPortfolioDescription: "Mi portfolio.",
 
     contactTitle: "Hablemos.",
-    contactLinks: "Contáctame mediante los siguientes links",
-    contactEmail: "o envíame un email a ",
-    contactForm: "el formulario de abajo",
+    contactLinks: "Puedes contactarme mediante los siguientes links",
+    contactEmail: "enviandome un email a ",
+    contactForm: "o escribiéndome en el formulario de abajo",
 
     form: {
       name: "Nombre",

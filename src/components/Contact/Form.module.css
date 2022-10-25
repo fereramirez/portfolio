@@ -1,6 +1,35 @@
 .container {
    width: 70%;
    min-width: 250px;
+   transition: max-height .5s ease;
+   overflow: hidden;
+   max-height: 45rem;
+   margin-top: 1rem;
+}
+
+.description {
+   font-size: 1.5rem;
+}
+
+.containerHideForm {
+   max-height: 0;
+}
+
+.showSuccess {
+   max-height: 10rem;
+   transition: max-height 1s ease;
+}
+
+.success {
+   display: flex;
+   align-items: center;
+   color: green;
+}
+
+.success svg {
+   min-width: 2rem;
+   min-height: 2rem;
+   margin-right: 1rem;
 }
 
 .form {
@@ -11,18 +40,25 @@
 .inputContainer {
    margin: .5rem 0;
    height: fit-content;
+   position: relative;
 }
 
 .titleContainer {
-   height: 1.5rem;
+   min-height: 2.5rem;
+   height: fit-content;
+   display: flex;
+   align-items: center;
 }
 
-.title {}
+.title {
+   font-weight: 600;
+}
 
 .input {
    margin-top: .2rem;
    padding: .3rem;
-   border: none;
+   border: 1px solid var(--font-color);
+   border-color: transparent;
    width: 100%;
 }
 
@@ -30,8 +66,39 @@
    outline: none;
 }
 
-.input:disabled {
+button {
+   border: 1px solid transparent;
+}
+
+.input:disabled,
+button[type="submit"]:disabled {
    cursor: not-allowed;
+}
+
+.input:disabled,
+button[type="submit"]:disabled,
+input.input:-internal-autofill-selected {
+   background-color: rgba(239, 239, 239, 0.3) !important;
+   /* background-color: red !important; */
+   /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */
+   /* color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170)) !important; */
+   color: rgba(151, 151, 151, 0.501) !important;
+   border-color: rgba(118, 118, 118, 0.3) !important;
+}
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:focus {
+   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+
+input:-webkit-autofill {
+   box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
+   -webkit-box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
+} */
+
+.inputError {
+   border-color: red;
 }
 
 .form button:disabled {
@@ -41,21 +108,24 @@
 .form textarea {
    resize: vertical;
    max-height: 250px;
-   min-height: 2rem;
+   min-height: 4rem;
+   padding-bottom: 2rem;
 }
 
 .radialProgress {
    height: 35px;
    width: 35px;
-   position: relative;
+   position: absolute;
    border-radius: 50%;
    display: flex;
    align-items: center;
    justify-content: center;
+   bottom: .5rem;
+   right: 1rem;
 }
 
 .radialProgress span {
-   color: var(--background-color);
+   /* color: var(--background-color); */
    z-index: 10;
    font-size: .9rem;
    font-weight: 600;
@@ -90,6 +160,14 @@
 .error svg {
    color: red;
    margin-right: .5rem;
+   min-height: 24px;
+   min-width: 24px;
+}
+
+.submitContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .spinner {
@@ -111,4 +189,10 @@ button[type="submit"] {
 
 .inputContainer:last-child {
    align-self: center;
+}
+
+@media(max-width:599px) {
+   .description {
+      font-size: 1.2rem;
+   }
 }

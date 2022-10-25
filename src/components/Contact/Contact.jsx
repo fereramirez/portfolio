@@ -45,14 +45,12 @@ const Contact = () => {
         </a>
       </div>
 
-      <div className={css.description}>{texts.contactForm}</div>
-
-      <Form />
-
       <p className={css.description}>
         {texts.contactEmail}{" "}
-        <span className={css.email}>fer.eze.ram@gmail.com</span>.
+        <span className={css.email}>fer.eze.ram@gmail.com</span>,
       </p>
+
+      <Form />
     </div>
   );
 };
