@@ -46,7 +46,9 @@ const Navbar = () => {
   return (
     <>
       <div className={`${css.container} ${common.content}`}>
-        <div className={css.mobileHomeButton}>Fernando</div>
+        <span className={css.mobileHomeButton}>
+          <NavLink to={"/"}>Fernando</NavLink>
+        </span>
 
         <div className={css.buttonsContainer}>
           <div className={css.buttonsBox}>

@@ -11,7 +11,11 @@ const About = () => {
   return (
     <div className={`${css.container} ${common.content}`}>
       <div className={css.title}>{texts.aboutTitle}</div>
-      <div className={css.description}>{texts.aboutFirstParagraph}</div>
+      <div className={css.description}>
+        <span> {texts.aboutIm}</span>{" "}
+        <span className={css.name}>Fernando Ramirez</span>
+        <span>{texts.aboutFirstParagraph}</span>
+      </div>
       <div className={css.description}>{texts.aboutSecondParagraph}</div>
       <div className={css.description}>{texts.aboutThirdParagraph}</div>
       <div className={css.description}>{texts.aboutTechnologies}</div>

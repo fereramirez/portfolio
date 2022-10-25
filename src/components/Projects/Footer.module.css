@@ -1,0 +1,38 @@
+.container {
+   background-color: #000000;
+   width: 100vw;
+   position: relative;
+   bottom: 0;
+   left: 0;
+   height: 3.5rem;
+   display: flex;
+   justify-content: center;
+   box-shadow: #45525f5b 0px 1px 4px;
+
+   margin-top: 1rem;
+}
+
+.link {
+   display: flex;
+   align-items: center;
+   transition: color .2s ease;
+}
+
+.link:hover {
+   color: green;
+}
+
+.svgContainer {
+   width: 30px;
+   height: 30px;
+   margin-left: 1rem;
+}
+
+.svgContainer svg g {
+   fill: var(--font-color);
+   transition: fill .2s ease;
+}
+
+.link:hover .svgContainer svg g {
+   fill: green;
+}

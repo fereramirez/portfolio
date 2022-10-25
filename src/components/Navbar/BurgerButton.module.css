@@ -14,7 +14,7 @@
   display: block;
   width: 20px;
   height: 2px;
-  background-color: var(--secondary-color);
+  background-color: var(--font-color);
   top: 50%;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-out;

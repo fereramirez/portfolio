@@ -19,8 +19,9 @@ const translations = {
     homeDescription: "Self-taught person.",
 
     aboutTitle: "Learning to build.",
+    aboutIm: "I'm",
     aboutFirstParagraph:
-      "I'm Fernando Ramirez, self-taught Web Developer, who found his passion for programming just for curiosity.",
+      ", self-taught Web Developer, who found his passion for programming just for curiosity.",
     aboutSecondParagraph:
       "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
     aboutThirdParagraph:
@@ -35,8 +36,30 @@ const translations = {
     projectsPortfolioDescription: "My portfolio.",
 
     contactTitle: "Let's talk.",
-    contactLinks: "Get in touch via the links below",
-    contactEmail: "or by emailing ",
+    contactLinks: "Get in touch via the following links",
+    contactEmail: "by emailing ",
+    contactForm: "or via the form below",
+
+    form: {
+      name: "Name",
+      nameRequired: "Enter your name",
+      nameLength: "Name must be at most 24 characters in length",
+
+      emailRequired: "Enter your email address",
+      emailLength: "Email must be at most 24 characters in length",
+      emailPattern: "Enter a valid email",
+
+      message: "Message",
+      messageRequired: "Enter your message",
+      messageLength: "Name must be at most 512 characters in length",
+
+      submit: "Send",
+      submitError: "There are errors",
+
+      responseError: "There was an error, please try again.",
+      responseSuccess:
+        "Message sent successfully! I will get back to you soon.",
+    },
   },
   es: {
     homeLinks: {
@@ -53,8 +76,10 @@ const translations = {
     homeDescription: "Autodidacta.",
 
     aboutTitle: "Aprendiendo a construir.",
+    aboutIm: "Soy",
+
     aboutFirstParagraph:
-      "Soy Fernando Ramirez, Desarrollador Web autodidacta, que descubrió su pasión por la programación por curiosidad.",
+      ", Desarrollador Web autodidacta, quien descubrió su pasión por la programación por curiosidad.",
     aboutSecondParagraph:
       "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por aprender a utilizar nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
     aboutThirdParagraph:
@@ -69,8 +94,30 @@ const translations = {
     projectsPortfolioDescription: "Mi portfolio.",
 
     contactTitle: "Hablemos.",
-    contactLinks: "Contáctame mediante los links de abajo",
-    contactEmail: "o envíame un email a ",
+    contactLinks: "Puedes contactarme mediante los siguientes links",
+    contactEmail: "enviandome un email a ",
+    contactForm: "o escribiéndome en el formulario de abajo",
+
+    form: {
+      name: "Nombre",
+      nameRequired: "Ingresa tu nombre",
+      nameLength: "El nombre debe tener 24 caracteres como máximo",
+
+      emailRequired: "Ingresa tu email",
+      emailLength: "El email debe tener 24 caracteres como máximo",
+      emailPattern: "Ingresa un email válido",
+
+      message: "Mensaje",
+      messageRequired: "Ingresa un mensaje",
+      messageLength: "El Mensaje debe tener 512 caracteres como máximo",
+
+      submit: "Enviar",
+      submitError: "Hay errores",
+
+      responseError: "Hubo un error, vuelve a intentar.",
+      responseSuccess:
+        "¡Mensaje enviado con éxito! En breve me pondré en contacto contigo.",
+    },
   },
 };
 

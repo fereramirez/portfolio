@@ -14,7 +14,7 @@
 }
 
 .description {
-   font-size: 2rem;
+   font-size: 1.5rem;
 }
 
 .linksContainer {
@@ -27,7 +27,7 @@
 
 .svgLinkedin svg,
 .svgGithub svg g {
-   fill: var(--secondary-color);
+   fill: var(--font-color);
 }
 
 .svgLinkedin:hover svg,
@@ -52,7 +52,7 @@
    }
 
    .description {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
    }
 
    .container {
