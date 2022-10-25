@@ -27,6 +27,7 @@ const translations = {
     aboutThirdParagraph:
       "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
     aboutTechnologies: "Technologies I currently work with",
+    aboutResume: "Here is my Resume.",
 
     projectsTitle: "Passion to create.",
     projectsProviderDescription:
@@ -87,6 +88,7 @@ const translations = {
     aboutThirdParagraph:
       "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Frontend en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
     aboutTechnologies: "Tecnologías con las que trabajo actualmente",
+    aboutResume: "Aquí puedes ver mi CV.",
 
     projectsTitle: "Pasión por crear.",
     projectsProviderDescription:
