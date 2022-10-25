@@ -38,6 +38,8 @@ const translations = {
     contactTitle: "Let's talk.",
     contactLinks: "Get in touch via the following links",
     contactEmail: "by emailing ",
+    contactCopy: "Click to copy",
+    contactCopied: "Copied to clipboard!",
     contactForm: "or via the form below",
 
     form: {
@@ -95,7 +97,10 @@ const translations = {
 
     contactTitle: "Hablemos.",
     contactLinks: "Puedes contactarme mediante los siguientes links",
-    contactEmail: "enviandome un email a ",
+    contactEmail: "enviándome un email a ",
+    contactCopy: "Click para copiar",
+    contactCopied: "¡Copiado al portapapeles!",
+
     contactForm: "o escribiéndome en el formulario de abajo",
 
     form: {
