@@ -134,7 +134,7 @@ const Form = () => {
                 className={`${css.input} ${errors.name ? css.inputError : ""}`}
                 {...register("name", {
                   required: true,
-                  maxLength: 24,
+                  maxLength: 32,
                 })}
               />
             </span>
@@ -166,7 +166,7 @@ const Form = () => {
                 className={`${css.input} ${errors.email ? css.inputError : ""}`}
                 {...register("email", {
                   required: true,
-                  maxLength: 24,
+                  maxLength: 32,
                   pattern: emailRegex,
                 })}
               />

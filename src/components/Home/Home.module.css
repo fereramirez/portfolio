@@ -11,84 +11,45 @@
    width: 100vw;
    height: 100vh;
    z-index: 50;
+   opacity: 1;
    background-color: var(--background-color);
    overflow: hidden;
+   /* background-color: red; */
 }
 
-.greeting {
-   font-size: 2rem;
-   margin: 1rem 0;
+.notHome {
+   transition: opacity .5s ease;
+   animation:
+      fadeOut 1s .5s forwards,
+      toBottom 0s 2s forwards;
 }
 
-.name {
-   color: green
-}
-
-.title {
-   font-size: 4rem;
-}
-
-.titleUnderline {
-   background-color: green;
-   height: 2px;
-   width: 0;
-   transition: width .3s ease;
-}
-
-.title:hover+.titleUnderline {
-   width: 100%;
-}
-
-.name:hover+.titleUnderline {
-   width: 100%;
-}
-
-@media(max-width:779px) {
-   .titleUnderline {
-      display: none;
-   }
-
-   .name {
-      transition: color .2s ease;
-   }
-
-   .title {
-      transition: color .2s ease;
-   }
-
-   .title:hover {
-      color: green;
-   }
-
-   .name:hover {
-      color: green;
-   }
-}
-
-.content1 {
-   animation: 1s ease Content forwards;
-   opacity: 0;
-}
-
-.content2 {
-   animation: 1s ease 1s Content forwards;
-   opacity: 0;
-}
-
-.content3 {
-   animation: 1s ease 2s Content forwards;
-   opacity: 0;
-}
-
-@keyframes Content {
+@keyframes fadeOut {
    0% {
-      opacity: 0;
-      transform: translate(0, 15px);
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 1
    }
 
    100% {
-      transform: translate(0);
-      opacity: 1;
+      opacity: 0;
+   }
+}
+
+@keyframes toBottom {
+   0% {
+      z-index: 50;
+   }
+
+   50% {
+      z-index: 99;
+
+   }
+
+   100% {
+      z-index: -1;
    }
 }
 
@@ -102,14 +63,16 @@
    background-color: var(--background-color);
    z-index: 90;
    overflow: hidden;
+   /* background-color: white; */
 }
 
 .totalCoverActive {
+   /* background-color: purple; */
    width: 100%;
-   animation: pop 2s forwards
+   /* animation: fadeOut 2s forwards; */
 }
 
-@keyframes pop {
+@keyframes fadeOut {
    0% {
       opacity: 1;
    }

@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact";
 import Intro from "./components/Intro/Intro";
 import NotFound from "./components/NotFound/NotFound";
 import { LanguageProvider } from "./context/LanguageContext";
+import { AnimationProvider } from "./context/AnimationContext";
 
 import css from "./App.module.css";
 import { useEffect } from "react";
@@ -22,18 +23,21 @@ function App() {
 
   return (
     <div className={css.App}>
-      <LanguageProvider>
-        <Intro />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes>
-      </LanguageProvider>
+      <AnimationProvider>
+        <LanguageProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Intro />}>
+              <Route path="/" element={<Home />}>
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/*" element={<NotFound />} />
+              </Route>
+            </Route>
+          </Routes>
+        </LanguageProvider>
+      </AnimationProvider>
     </div>
   );
 }

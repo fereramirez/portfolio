@@ -1,25 +1,17 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
+import AnimationContext from "../../context/AnimationContext";
 //import Grid from "../common/Grid";
 
 import css from "./Title.module.css";
 
-const Test = ({ text, setLinkSelected, linkSelected }) => {
+const Title = ({ text }) => {
   const { texts } = useContext(LanguageContext);
-  const navigate = useNavigate();
-
-  const handleSelectedLink = () => {
-    setLinkSelected(text);
-
-    setTimeout(() => {
-      navigate(`/${text}`);
-    }, 2000);
-  };
+  const { linkSelected, handleLinkSelected } = useContext(AnimationContext);
 
   return (
     <div
-      onClick={handleSelectedLink}
+      onClick={() => handleLinkSelected(text)}
       className={`${css.link} ${
         linkSelected === text
           ? css.linkSelected
@@ -37,4 +29,4 @@ const Test = ({ text, setLinkSelected, linkSelected }) => {
   );
 };
 
-export default Test;
+export default Title;

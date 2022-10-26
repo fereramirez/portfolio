@@ -14,10 +14,6 @@ const translations = {
     /*  navbarButtons: ["Home", "About", "Projects", "Contact"], */
     navbarButtons: ["About", "Projects", "Contact"],
 
-    homeGreeting: "Hi, I'm ",
-    homeTitle: "Frontend Developer.",
-    homeDescription: "Self-taught person.",
-
     aboutTitle: "Learning to build.",
     aboutIm: "I'm",
     aboutFirstParagraph:
@@ -46,10 +42,10 @@ const translations = {
     form: {
       name: "Name",
       nameRequired: "Enter your name",
-      nameLength: "Name must be at most 24 characters in length",
+      nameLength: "Name must be at most 32 characters in length",
 
       emailRequired: "Enter your email address",
-      emailLength: "Email must be at most 24 characters in length",
+      emailLength: "Email must be at most 32 characters in length",
       emailPattern: "Enter a valid email",
 
       message: "Message",
@@ -108,10 +104,10 @@ const translations = {
     form: {
       name: "Nombre",
       nameRequired: "Ingresa tu nombre",
-      nameLength: "El nombre debe tener 24 caracteres como máximo",
+      nameLength: "El nombre debe tener 32 caracteres como máximo",
 
       emailRequired: "Ingresa tu email",
-      emailLength: "El email debe tener 24 caracteres como máximo",
+      emailLength: "El email debe tener 32 caracteres como máximo",
       emailPattern: "Ingresa un email válido",
 
       message: "Mensaje",

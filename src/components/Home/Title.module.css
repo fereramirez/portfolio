@@ -85,10 +85,10 @@
 }
 
 .linkSelected {
-   animation: pop 2s forwards
+   animation: fadeOut 2s .5s forwards
 }
 
-@keyframes pop {
+@keyframes fadeOut {
    0% {
       opacity: 1;
    }

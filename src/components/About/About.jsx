@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import Technologies from "./Technologies";
+import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
 import css from "./About.module.css";
 import common from "../../App.module.css";
@@ -29,7 +30,10 @@ const About = () => {
           rel="noreferrer"
           className={css.resume}
         >
-          {texts.aboutResume}
+          <span>{texts.aboutResume}</span>
+          <span>
+            <Cv />
+          </span>
         </a>
       </div>
     </div>
