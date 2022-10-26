@@ -35,7 +35,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const i /* currentSectionIndex */ = SECTIONS.findIndex(
+    setShowMenu(false);
+
+    const i = SECTIONS.findIndex(
       (section) =>
         section.toLowerCase() === location.pathname.substring(1).toLowerCase()
     );
@@ -129,7 +131,7 @@ const Navbar = () => {
             SECTIONS.map((section, i) => (
               <NavLink
                 to={section.toLowerCase()}
-                onClick={() => setShowMenu(false)}
+                /* onClick={() => setShowMenu(false)} */
               >
                 <div
                   className={`${

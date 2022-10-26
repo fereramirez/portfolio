@@ -21,11 +21,9 @@ const Home = () => {
           <>
             <Grid position={"left"} />
 
-            <>
-              <Title text={"projects"} />
-              <Title text={"about"} />
-              <Title text={"contact"} />
-            </>
+            <Title text={"projects"} />
+            <Title text={"about"} />
+            <Title text={"contact"} />
           </>
         )}
 

@@ -14,10 +14,10 @@
    flex-direction: column;
    user-select: none;
    /* animation: pop 2s 7s forwards; */
-   /* animation-name: pop;
+   /* animation-name: pop; */
    animation-duration: 2s;
    animation-delay: 7s;
-   animation-fill-mode: forwards; */
+   animation-fill-mode: forwards;
    /* background-color: green; */
 }
 
@@ -55,7 +55,7 @@
 
    100% {
       opacity: 0;
-      z-index: -2;
+      /* z-index: -2; */
    }
 }
 
