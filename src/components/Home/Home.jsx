@@ -2,7 +2,8 @@ import { useState } from "react";
 import Grid from "../common/Grid";
 
 import css from "./Home.module.css";
-import Title from "./Title";
+/* import Title from "./Title"; */
+import Test from "./Title";
 
 const Home = () => {
   const [linkSelected, setLinkSelected] = useState("");
@@ -23,23 +24,31 @@ const Home = () => {
         <div className={css.titleUnderline}></div>
       </div> */}
 
-      <Grid />
+      <Grid position={"left"} />
 
-      <Title
+      <Test
         text={"projects"}
         setLinkSelected={setLinkSelected}
         linkSelected={linkSelected}
       />
-      <Title
+      <Test
         text={"about"}
         setLinkSelected={setLinkSelected}
         linkSelected={linkSelected}
       />
-      <Title
+      <Test
         text={"contact"}
         setLinkSelected={setLinkSelected}
         linkSelected={linkSelected}
       />
+
+      <div
+        className={`${css.totalCover} ${
+          linkSelected !== "" ? css.totalCoverActive : ""
+        }`}
+      >
+        <Grid color={"purple"} position={"right"} />
+      </div>
 
       {/* <div className={css.content3}>
         <p className={css.title}>

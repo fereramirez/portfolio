@@ -6,7 +6,7 @@
    height: 100vh;
    /* background-color: rgb(1, 48, 1); */
    background-color: var(--background-color);
-   z-index: 100;
+   z-index: 1000;
    display: flex;
    align-items: center;
    justify-content: center;

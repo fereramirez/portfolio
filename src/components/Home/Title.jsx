@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
-import "./Title.css";
+//import Grid from "../common/Grid";
 
-const Title = ({ text, setLinkSelected, linkSelected }) => {
+import css from "./Title.module.css";
+
+const Test = ({ text, setLinkSelected, linkSelected }) => {
   const { texts } = useContext(LanguageContext);
   const navigate = useNavigate();
 
@@ -18,31 +20,21 @@ const Title = ({ text, setLinkSelected, linkSelected }) => {
   return (
     <div
       onClick={handleSelectedLink}
-      className={`title-container-link ${
+      className={`${css.link} ${
         linkSelected === text
-          ? "title-container-link-selected"
+          ? css.linkSelected
           : linkSelected !== ""
-          ? "title-container-link-not-selected"
-          : "title-container-link-selectable"
+          ? css.linkNotSelected
+          : css.linkSelectable
       }`}
     >
-      <div className="title-container">
-        <h1 className="title">{texts.homeLinks[text]}</h1>
+      <div className={css.title}>
+        <h1>{texts.homeLinks[text]}</h1>
       </div>
 
-      <div
-        className={`title-background-hover ${
-          linkSelected !== "" && linkSelected !== text
-            ? "title-background-cover-link"
-            : "title-background-hover-active"
-        }`}
-      ></div>
-
-      <div className="title-hover-container">
-        <h1 className="title-hover">{texts.homeLinks[text]}</h1>
-      </div>
+      <div className={css.backgroundHover}>{/* <Grid active={true} /> */}</div>
     </div>
   );
 };
 
-export default Title;
+export default Test;
