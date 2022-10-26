@@ -85,7 +85,7 @@
 }
 
 .linkSelected {
-   animation: fadeOut 2s forwards
+   animation: fadeOut 2s .5s forwards
 }
 
 @keyframes fadeOut {

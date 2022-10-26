@@ -8,7 +8,7 @@ import Title from "./Title";
 
 const Home = () => {
   const location = useLocation();
-  const { linkSelected } = useContext(AnimationContext);
+  const { runCoverFadeOut } = useContext(AnimationContext);
 
   return (
     <>
@@ -26,16 +26,16 @@ const Home = () => {
               <Title text={"about"} />
               <Title text={"contact"} />
             </>
-
-            <div
-              className={`${css.totalCover} ${
-                linkSelected !== "" ? css.totalCoverActive : ""
-              }`}
-            >
-              <Grid color={"purple"} position={"right"} />
-            </div>
           </>
         )}
+
+        <div
+          className={`${css.totalCover} ${
+            runCoverFadeOut ? css.totalCoverActive : ""
+          }`}
+        >
+          <Grid color={"purple"} position={"right"} />
+        </div>
       </div>
       <Outlet />
     </>

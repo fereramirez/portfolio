@@ -53,41 +53,6 @@
    }
 }
 
-.greeting {
-   font-size: 2rem;
-   margin: 1rem 0;
-}
-
-.name {
-   color: green
-}
-
-.title {
-   font-size: 4rem;
-}
-
-@media(max-width:779px) {
-   .titleUnderline {
-      display: none;
-   }
-
-   .name {
-      transition: color .2s ease;
-   }
-
-   .title {
-      transition: color .2s ease;
-   }
-
-   .title:hover {
-      color: green;
-   }
-
-   .name:hover {
-      color: green;
-   }
-}
-
 .totalCover {
    width: 0;
    height: 100%;
@@ -98,15 +63,16 @@
    background-color: var(--background-color);
    z-index: 90;
    overflow: hidden;
-   /* background-color: purple; */
+   /* background-color: white; */
 }
 
 .totalCoverActive {
+   /* background-color: purple; */
    width: 100%;
-   animation: pop 2s forwards
+   /* animation: fadeOut 2s forwards; */
 }
 
-@keyframes pop {
+@keyframes fadeOut {
    0% {
       opacity: 1;
    }
