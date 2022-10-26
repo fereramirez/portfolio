@@ -1,26 +1,13 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
 import AnimationContext from "../../context/AnimationContext";
 //import Grid from "../common/Grid";
 
 import css from "./Title.module.css";
 
-const Test = ({
-  text /* , setLinkSelected, linkSelected, setRunFadeOut  */,
-}) => {
-  const navigate = useNavigate();
+const Title = ({ text }) => {
   const { texts } = useContext(LanguageContext);
   const { linkSelected, handleLinkSelected } = useContext(AnimationContext);
-
-  /*   const handleSelectedLink = () => {
-    setLinkSelected(text);
-    setRunFadeOut(false);
-
-    setTimeout(() => {
-      navigate(`/${text}`);
-    }, 2000);
-  }; */
 
   return (
     <div
@@ -42,4 +29,4 @@ const Test = ({
   );
 };
 
-export default Test;
+export default Title;

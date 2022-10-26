@@ -14,10 +14,6 @@ const translations = {
     /*  navbarButtons: ["Home", "About", "Projects", "Contact"], */
     navbarButtons: ["About", "Projects", "Contact"],
 
-    homeGreeting: "Hi, I'm ",
-    homeTitle: "Frontend Developer.",
-    homeDescription: "Self-taught person.",
-
     aboutTitle: "Learning to build.",
     aboutIm: "I'm",
     aboutFirstParagraph:

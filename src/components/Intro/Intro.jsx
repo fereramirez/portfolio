@@ -7,7 +7,7 @@ import Grid from "../common/Grid";
 import css from "./Intro.module.css";
 import "./Intro.css";
 
-const Intro = (/* { runFadeOut } */) => {
+const Intro = () => {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [bottomCursor, setBottomCursor] = useState(false);
@@ -48,9 +48,6 @@ const Intro = (/* { runFadeOut } */) => {
       <div
         className={`${css.container}`}
         style={{
-          /* animationName: `${
-            location.pathname !== "/" && runFadeOut ? "fadeOut" : "pop"
-          }`, */
           animationName: `${
             location.pathname !== "/" && runFadeOut
               ? "fadeOut"

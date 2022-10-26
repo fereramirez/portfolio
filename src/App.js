@@ -10,11 +10,10 @@ import { LanguageProvider } from "./context/LanguageContext";
 import { AnimationProvider } from "./context/AnimationContext";
 
 import css from "./App.module.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTheme } from "./hooks/useTheme";
 
 function App() {
-  /*  const [runFadeOut, setRunFadeOut] = useState(true); */
   const { handleTheme } = useTheme();
 
   useEffect(() => {
@@ -28,11 +27,8 @@ function App() {
         <LanguageProvider>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Intro /* runFadeOut={runFadeOut}  */ />}>
-              <Route
-                path="/"
-                element={<Home /* setRunFadeOut={setRunFadeOut}  */ />}
-              >
+            <Route path="/" element={<Intro />}>
+              <Route path="/" element={<Home />}>
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
@@ -40,14 +36,6 @@ function App() {
               </Route>
             </Route>
           </Routes>
-          {/*    <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes> */}
         </LanguageProvider>
       </AnimationProvider>
     </div>

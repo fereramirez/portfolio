@@ -14,10 +14,6 @@ const AnimationProvider = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    /*    if (location.pathname !== "/") {
-      console.log("pop off");
-      setRunPop(false);
-    } */
     location.pathname !== "/" && setRunPop(false);
     // eslint-disable-next-line
   }, []);
@@ -25,7 +21,6 @@ const AnimationProvider = ({ children }) => {
   const handleLinkSelected = (text) => {
     setLinkSelected(text);
     setRunFadeOut(false);
-    // setRunPop(true);
 
     setTimeout(() => {
       navigate(`/${text}`);
