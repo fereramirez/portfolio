@@ -9,7 +9,6 @@
 }
 
 .text {
-   /*  display: flex; */
    animation: glitch 1s linear infinite;
    font-weight: 200;
    color: purple;
