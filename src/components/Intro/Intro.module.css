@@ -14,7 +14,7 @@
    flex-direction: column;
    user-select: none;
    animation: fadeOut 2s 7s forwards;
-   background-color: red;
+   /* background-color: transparent; */
 }
 
 @keyframes fadeOut {
@@ -22,7 +22,7 @@
       opacity: 1;
    }
 
-   50% {
+   99% {
       opacity: 1;
       /* z-index: 100; */
    }
