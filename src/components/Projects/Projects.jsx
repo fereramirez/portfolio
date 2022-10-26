@@ -46,16 +46,6 @@ const Projects = () => {
               "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
             }
           />
-          {/*  <ProjectsCard
-          name={"Fernando Ramirez"}
-          text={"projectsPortfolioDescription"}
-          links={{
-            deploy: "",
-            repo: "https://github.com/fereramirez/portfolio",
-          }}
-          technologies={["react", "css-modules"]}
-          imageUrl={""}
-        /> */}
         </div>
       </div>
       <Footer />
