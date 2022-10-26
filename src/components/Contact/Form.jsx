@@ -24,7 +24,7 @@ const Form = () => {
     initialMessageRemaining
   );
   const [messageDegrees, setMessageDegrees] = useState(initialMessageDegrees);
-  const [scrollHeight, setScrollHeight] = useState(null);
+  // const [scrollHeight, setScrollHeight] = useState(null);
   const formRef = useRef();
   const messageRef = useRef();
 

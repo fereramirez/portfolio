@@ -1,0 +1,109 @@
+.link {
+   display: flex;
+   justify-content: flex-start;
+   width: 750px;
+   position: relative;
+   top: 0;
+   margin-top: .1rem;
+   z-index: 100;
+   opacity: 1;
+}
+
+.link h1 {
+   font-weight: 500;
+   letter-spacing: -.4rem;
+   height: 100%;
+   font-size: 10.1rem;
+   display: inline;
+}
+
+.title {
+   z-index: 100;
+   height: 100%;
+   transition: width .5s ease;
+   position: relative;
+}
+
+.title h1 {
+   color: var(--font-color);
+   height: 100%;
+   width: 100vw;
+   padding-left: 4rem;
+}
+
+@media(max-width:699px) {
+   .link h1 {
+      font-size: 6rem;
+   }
+}
+
+@media(max-height:799px) {
+   .link h1 {
+      font-size: 6rem;
+   }
+}
+
+@media(max-width:449px) {
+   .link h1 {
+      font-size: 4rem;
+   }
+}
+
+.linkSelectable {
+   cursor: pointer;
+}
+
+
+.linkNotSelected {
+   z-index: 80;
+   width: 100%;
+   /* background-color: red; */
+   transition: opacity .01s ease .5s;
+   opacity: 0;
+}
+
+.backgroundHover {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   z-index: 70;
+   transition: width .5s ease;
+   overflow: hidden;
+   background-color: green;
+}
+
+.backgroundCoverLink {
+   right: 0;
+   width: 100%;
+   z-index: 50;
+}
+
+.linkSelectable:hover .backgroundHover {
+   width: 100vw;
+}
+
+.linkSelected {
+   animation: pop 2s forwards
+}
+
+@keyframes pop {
+   0% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+/* z-index
+100 link
+90 totalCover
+80 not-selected
+70 background */
