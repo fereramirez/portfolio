@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import AnimationContext from "../../context/AnimationContext";
+
 import Grid from "../common/Grid";
 
 import css from "./Intro.module.css";
+import "./Intro.css";
 
-const Intro = () => {
+const Intro = (/* { runFadeOut } */) => {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [bottomCursor, setBottomCursor] = useState(false);
+  const location = useLocation();
+  const { runFadeOut, runPop } = useContext(AnimationContext);
 
   useEffect(() => {
     document.documentElement.style.overflow = "hidden";
@@ -38,25 +44,45 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className={css.container}>
-      <Grid />
-      <div className={css.textContainerOuter}>
-        <div className={css.textContainer}>
-          <p>{topText}</p>
-          <div className={css.topCursor}></div>
-        </div>
+    <>
+      <div
+        className={`${css.container}`}
+        style={{
+          /* animationName: `${
+            location.pathname !== "/" && runFadeOut ? "fadeOut" : "pop"
+          }`, */
+          animationName: `${
+            location.pathname !== "/" && runFadeOut
+              ? "fadeOut"
+              : runPop
+              ? "pop"
+              : "fadeOut"
+          }`,
+          animationDuration: "2s",
+          animationDelay: `${location.pathname !== "/" ? "7s" : "7s"}`,
+          animationFillMode: "forwards",
+        }}
+      >
+        <Grid />
+        <div className={css.textContainerOuter}>
+          <div className={css.textContainer}>
+            <p>{topText}</p>
+            <div className={css.topCursor}></div>
+          </div>
 
-        <div className={css.textContainer}>
-          <p>{bottomText}</p>
-          <div className={css.cursorWriting}></div>
-          <div
-            className={`${css.bottomCursor} ${
-              bottomCursor ? css.showBottomCursor : ""
-            }`}
-          ></div>
+          <div className={css.textContainer}>
+            <p>{bottomText}</p>
+            <div className={css.cursorWriting}></div>
+            <div
+              className={`${css.bottomCursor} ${
+                bottomCursor ? css.showBottomCursor : ""
+              }`}
+            ></div>
+          </div>
         </div>
       </div>
-    </div>
+      <Outlet />
+    </>
   );
 };
 

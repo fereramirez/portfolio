@@ -11,8 +11,46 @@
    width: 100vw;
    height: 100vh;
    z-index: 50;
+   opacity: 1;
    background-color: var(--background-color);
    overflow: hidden;
+   /* background-color: red; */
+}
+
+.notHome {
+   transition: opacity .5s ease;
+   animation:
+      fadeOut 1s .5s forwards,
+      toBottom 0s 2s forwards;
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 1
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes toBottom {
+   0% {
+      z-index: 50;
+   }
+
+   50% {
+      z-index: 99;
+
+   }
+
+   100% {
+      z-index: -1;
+   }
 }
 
 .greeting {
@@ -28,7 +66,7 @@
    font-size: 4rem;
 }
 
-.titleUnderline {
+/* .titleUnderline {
    background-color: green;
    height: 2px;
    width: 0;
@@ -41,7 +79,7 @@
 
 .name:hover+.titleUnderline {
    width: 100%;
-}
+} */
 
 @media(max-width:779px) {
    .titleUnderline {
@@ -65,7 +103,7 @@
    }
 }
 
-.content1 {
+/* .content1 {
    animation: 1s ease Content forwards;
    opacity: 0;
 }
@@ -90,7 +128,7 @@
       transform: translate(0);
       opacity: 1;
    }
-}
+} */
 
 .totalCover {
    width: 0;
@@ -102,6 +140,7 @@
    background-color: var(--background-color);
    z-index: 90;
    overflow: hidden;
+   /* background-color: purple; */
 }
 
 .totalCoverActive {

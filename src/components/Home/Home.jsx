@@ -1,16 +1,29 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Grid from "../common/Grid";
+import AnimationContext from "../../context/AnimationContext";
 
 import css from "./Home.module.css";
 /* import Title from "./Title"; */
-import Test from "./Title";
+import Title from "./Title";
 
-const Home = () => {
-  const [linkSelected, setLinkSelected] = useState("");
+const Home = (/* { setRunFadeOut } */) => {
+  //const [linkSelected, setLinkSelected] = useState("");
+  const location = useLocation();
+  const { linkSelected } = useContext(AnimationContext);
+
+  /* setTimeout(() => {
+    setLinkSelected("");
+  }, 3000); */
 
   return (
-    <div className={`${css.container}`}>
-      {/* <div className={`${css.greeting} ${css.content1}`}>
+    <>
+      <div
+        className={`${css.container} ${
+          location.pathname !== "/" ? css.notHome : ""
+        }`}
+      >
+        {/* <div className={`${css.greeting} ${css.content1}`}>
         {texts.homeGreeting}
         <span className={css.name}>
           <NavLink to={"/about"}>Fernando Ramirez</NavLink>
@@ -24,39 +37,50 @@ const Home = () => {
         <div className={css.titleUnderline}></div>
       </div> */}
 
-      <Grid position={"left"} />
+        {location.pathname === "/" && (
+          <>
+            <Grid position={"left"} />
 
-      <Test
-        text={"projects"}
-        setLinkSelected={setLinkSelected}
-        linkSelected={linkSelected}
-      />
-      <Test
-        text={"about"}
-        setLinkSelected={setLinkSelected}
-        linkSelected={linkSelected}
-      />
-      <Test
-        text={"contact"}
-        setLinkSelected={setLinkSelected}
-        linkSelected={linkSelected}
-      />
+            <>
+              <Title
+                text={"projects"}
+                /* setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
+                setRunFadeOut={setRunFadeOut} */
+              />
+              <Title
+                text={"about"}
+                /* setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
+                setRunFadeOut={setRunFadeOut} */
+              />
+              <Title
+                text={"contact"}
+                /* setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
+                setRunFadeOut={setRunFadeOut} */
+              />
+            </>
 
-      <div
-        className={`${css.totalCover} ${
-          linkSelected !== "" ? css.totalCoverActive : ""
-        }`}
-      >
-        <Grid color={"purple"} position={"right"} />
-      </div>
+            <div
+              className={`${css.totalCover} ${
+                linkSelected !== "" ? css.totalCoverActive : ""
+              }`}
+            >
+              <Grid color={"purple"} position={"right"} />
+            </div>
+          </>
+        )}
 
-      {/* <div className={css.content3}>
+        {/* <div className={css.content3}>
         <p className={css.title}>
-          <NavLink to={"/contact"}>{texts.homeDescription}</NavLink>
+        <NavLink to={"/contact"}>{texts.homeDescription}</NavLink>
         </p>
         <div className={css.titleUnderline}></div>
       </div> */}
-    </div>
+      </div>
+      <Outlet />
+    </>
   );
 };
 

@@ -13,18 +13,21 @@
    font-size: 2rem;
    flex-direction: column;
    user-select: none;
-   animation: fadeOut 2s 7s forwards;
-   /* background-color: transparent; */
+   /* animation: pop 2s 7s forwards; */
+   /* animation-name: pop;
+   animation-duration: 2s;
+   animation-delay: 7s;
+   animation-fill-mode: forwards; */
+   /* background-color: green; */
 }
 
-@keyframes fadeOut {
+@keyframes pop {
    0% {
       opacity: 1;
    }
 
    99% {
       opacity: 1;
-      /* z-index: 100; */
    }
 
    100% {
@@ -38,10 +41,10 @@
    flex-direction: column;
    width: 310px;
    height: 105px;
-   animation: fadeOutContent 2s 5s forwards;
+   animation: fadeOut 2s 5s forwards;
 }
 
-@keyframes fadeOutContent {
+@keyframes fadeOut {
    0% {
       opacity: 1;
    }
