@@ -4,7 +4,6 @@
    left: 0;
    width: 100vw;
    height: 100vh;
-   /* background-color: rgb(1, 48, 1); */
    background-color: var(--background-color);
    z-index: 1000;
    display: flex;
@@ -15,23 +14,25 @@
    user-select: none;
    /* animation: pop 2s 7s forwards; */
    /* animation-name: pop; */
-   animation-duration: 2s;
-   animation-delay: 7s;
+   /* animation-duration: 2s; */
+   /* animation-delay: 7s; */
    animation-fill-mode: forwards;
-   /* background-color: green; */
 }
 
 @keyframes pop {
    0% {
-      opacity: 1;
+      z-index: 1000;
+   }
+
+   /* 98% {
+      z-index: 1000;
    }
 
    99% {
-      opacity: 1;
-   }
+      z-index: 1000;
+   } */
 
    100% {
-      opacity: 0;
       z-index: -2;
    }
 }
@@ -50,7 +51,7 @@
    }
 
    50% {
-      opacity: 1
+      opacity: 1;
    }
 
    100% {

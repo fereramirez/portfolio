@@ -55,6 +55,20 @@ const Intro = () => {
               ? "pop"
               : "fadeOut"
           }`,
+          animationDelay: `${
+            location.pathname !== "/" && runFadeOut
+              ? "7s"
+              : runPop
+              ? "8s"
+              : "7s"
+          }`,
+          animationDuration: `${
+            location.pathname !== "/" && runFadeOut
+              ? "2s"
+              : runPop
+              ? "0.1s"
+              : "2s"
+          }`,
         }}
       >
         <Grid />
