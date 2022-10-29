@@ -104,7 +104,7 @@ const Form = () => {
     >
       {!showSuccess ? (
         <>
-          <div className={css.description}>{texts.contactForm}</div>
+          <div className={css.description}>{texts.form.title}</div>
           <form
             onSubmit={handleSubmit(sendEmail)}
             ref={formRef}

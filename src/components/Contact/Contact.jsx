@@ -22,8 +22,8 @@ const Contact = () => {
 
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>{texts.contactTitle}</div>
-      <div className={css.description}>{texts.contactLinks}</div>
+      <div className={css.title}>{texts.contact.title}</div>
+      <div className={css.description}>{texts.contact.links}</div>
 
       <div className={css.linksContainer}>
         <a
@@ -55,11 +55,11 @@ const Contact = () => {
       </div>
 
       <div className={css.description}>
-        {texts.contactEmail}{" "}
+        {texts.contact.email}{" "}
         <span className={css.email} onClick={handleCopy}>
           fer.eze.ram@gmail.com
           <span className={css.tooltip}>
-            {textCopied ? texts.contactCopied : texts.contactCopy}
+            {textCopied ? texts.contact.copied : texts.contact.copy}
           </span>
         </span>
         ,

@@ -21,7 +21,7 @@ const Title = ({ text }) => {
       }`}
     >
       <div className={css.title}>
-        <h1>{texts.homeLinks[text]}</h1>
+        <h1>{texts.home[text]}</h1>
       </div>
 
       <div className={css.backgroundHover}>{/* <Grid active={true} /> */}</div>
