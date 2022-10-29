@@ -12,12 +12,23 @@ const Projects = () => {
   return (
     <>
       <div className={`${css.container} ${common.content}`}>
-        <p className={css.title}>{texts.projectsTitle}</p>
+        <p className={css.title}>{texts.projects.title}</p>
 
         <div className={css.allProjectsContainer}>
+          {/* <ProjectsCard
+            name={"NAFTA Productions"}
+            text={"nafta"}
+            links={{
+              deploy: "https://nafta.vercel.app/",
+              repo: "https://github.com/fereramirez/Nafta",
+            }}
+            technologies={["react", "next", "typescript", "css-modules", "sass"]}
+            imageUrl={""}
+          /> */}
+
           <ProjectsCard
             name={"Provider Store"}
-            text={"projectsProviderDescription"}
+            text={"provider"}
             links={{
               deploy: "https://providerstore.vercel.app/",
               repo: "https://github.com/fereramirez/provider-client",
@@ -28,9 +39,10 @@ const Projects = () => {
               "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298641/Portfolio/video-provider2_axhz0j.gif"
             }
           />
+
           <ProjectsCard
             name={"Another DOGOS App"}
-            text={"projectsDogosDescription"}
+            text={"dogos"}
             links={{
               deploy: "https://another-dogos-app.vercel.app/",
               repo: "https://github.com/fereramirez/Another-DOGGOS-app",

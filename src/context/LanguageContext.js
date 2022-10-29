@@ -5,7 +5,7 @@ const LanguageContext = createContext();
 const initialLanguage = "en";
 const translations = {
   en: {
-    homeLinks: {
+    home: {
       projects: "Projects",
       about: "About",
       contact: "Contact",
@@ -14,32 +14,40 @@ const translations = {
     /*  navbarButtons: ["Home", "About", "Projects", "Contact"], */
     navbarButtons: ["About", "Projects", "Contact"],
 
-    aboutTitle: "Learning to build.",
-    aboutIm: "I'm",
-    aboutFirstParagraph:
-      ", self-taught Web Developer, who found his passion for programming just for curiosity.",
-    aboutSecondParagraph:
-      "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
-    aboutThirdParagraph:
-      "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
-    aboutTechnologies: "Technologies I currently work with",
-    aboutResume: "Here is my Resume.",
+    about: {
+      title: "Learning to build.",
+      im: "I'm",
+      firstParagraph:
+        ", self-taught Web Developer, who found his passion for programming just for curiosity.",
+      secondParagraph:
+        "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
+      thirdParagraph:
+        "I'm looking for my first job experience in IT as Frontend Developer, in a company where I can keep learning and grow both professionally and personally.",
+      technologies: "Technologies I currently work with",
+      resume: "Here is my Resume.",
+    },
 
-    projectsTitle: "Passion to create.",
-    projectsProviderDescription:
-      "eCommerce where each user can buy, publish, sell and write reviews. Group project applying MERN method.",
-    projectsDogosDescription:
-      "CRUD. My first project where I put all what I had learnt up to that moment.",
-    projectsPortfolioDescription: "My portfolio.",
+    projects: {
+      title: "Passion to create.",
+      nafta: "It was an excuse to start with TypeScript, Next.js and Sass.",
+      provider:
+        "eCommerce where each user can buy, publish, sell and write reviews. Group project applying MERN method.",
+      dogos:
+        "CRUD. My first project where I put all what I had learnt up to that moment.",
+      portfolio: "My portfolio.",
+    },
 
-    contactTitle: "Let's talk.",
-    contactLinks: "Get in touch via the following links",
-    contactEmail: "by emailing ",
-    contactCopy: "Click to copy",
-    contactCopied: "Copied to clipboard!",
-    contactForm: "or via the form below",
+    contact: {
+      title: "Let's talk.",
+      links: "Get in touch via the following links",
+      email: "by emailing ",
+      copy: "Click to copy",
+      copied: "Copied to clipboard!",
+    },
 
     form: {
+      title: "or via the form below",
+
       name: "Name",
       nameRequired: "Enter your name",
       nameLength: "Name must be at most 32 characters in length",
@@ -61,7 +69,7 @@ const translations = {
     },
   },
   es: {
-    homeLinks: {
+    home: {
       projects: "Proyectos",
       about: "Sobre mi",
       contact: "Contacto",
@@ -70,38 +78,40 @@ const translations = {
     navbarButtons: ["Sobre mi", "Proyectos", "Contacto"],
     /* navbarButtons: ["Inicio", "Sobre mi", "Proyectos", "Contacto"], */
 
-    homeGreeting: "Hola, soy ",
-    homeTitle: "Desarrollador Frontend.",
-    homeDescription: "Autodidacta.",
+    about: {
+      title: "Aprendiendo a construir.",
+      im: "Soy",
+      firstParagraph:
+        ", Desarrollador Web autodidacta, quien descubrió su pasión por la programación por curiosidad.",
+      secondParagraph:
+        "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por aprender a utilizar nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
+      thirdParagraph:
+        "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Frontend en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
+      technologies: "Tecnologías con las que trabajo actualmente",
+      resume: "Aquí puedes ver mi CV.",
+    },
 
-    aboutTitle: "Aprendiendo a construir.",
-    aboutIm: "Soy",
+    projects: {
+      title: "Pasión por crear.",
+      nafta: "Fue una excusa para empezar con TypeScript, Next.js y Sass.",
+      provider:
+        "eCommerce donde cada usuario puede comprar, publicar, vender y escribir reseñas. Proyecto grupal aplicando el método MERN.",
+      dogos:
+        "CRUD con consulta a api externa. Mi primer proyecto donde puse en práctica lo aprendido hasta el momento.",
+      portfolio: "Mi portfolio.",
+    },
 
-    aboutFirstParagraph:
-      ", Desarrollador Web autodidacta, quien descubrió su pasión por la programación por curiosidad.",
-    aboutSecondParagraph:
-      "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por aprender a utilizar nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
-    aboutThirdParagraph:
-      "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Frontend en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
-    aboutTechnologies: "Tecnologías con las que trabajo actualmente",
-    aboutResume: "Aquí puedes ver mi CV.",
-
-    projectsTitle: "Pasión por crear.",
-    projectsProviderDescription:
-      "eCommerce donde cada usuario puede comprar, publicar, vender y escribir reseñas. Proyecto grupal aplicando el método MERN.",
-    projectsDogosDescription:
-      "CRUD con consulta a api externa. Mi primer proyecto donde puse en práctica lo aprendido hasta el momento.",
-    projectsPortfolioDescription: "Mi portfolio.",
-
-    contactTitle: "Hablemos.",
-    contactLinks: "Puedes contactarme mediante los siguientes links",
-    contactEmail: "enviándome un email a ",
-    contactCopy: "Click para copiar",
-    contactCopied: "¡Copiado al portapapeles!",
-
-    contactForm: "o escribiéndome en el formulario de abajo",
+    contact: {
+      title: "Hablemos.",
+      links: "Puedes contactarme mediante los siguientes links",
+      email: "enviándome un email a ",
+      copy: "Click para copiar",
+      copied: "¡Copiado al portapapeles!",
+    },
 
     form: {
+      title: "o escribiéndome en el formulario de abajo",
+
       name: "Nombre",
       nameRequired: "Ingresa tu nombre",
       nameLength: "El nombre debe tener 32 caracteres como máximo",

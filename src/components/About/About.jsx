@@ -11,15 +11,15 @@ const About = () => {
 
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>{texts.aboutTitle}</div>
+      <div className={css.title}>{texts.about.title}</div>
       <div className={css.description}>
-        <span> {texts.aboutIm}</span>{" "}
+        <span> {texts.about.im}</span>{" "}
         <span className={css.name}>Fernando Ramirez</span>
-        <span>{texts.aboutFirstParagraph}</span>
+        <span>{texts.about.firstParagraph}</span>
       </div>
-      <div className={css.description}>{texts.aboutSecondParagraph}</div>
-      <div className={css.description}>{texts.aboutThirdParagraph}</div>
-      <div className={css.description}>{texts.aboutTechnologies}</div>
+      <div className={css.description}>{texts.about.secondParagraph}</div>
+      <div className={css.description}>{texts.about.thirdParagraph}</div>
+      <div className={css.description}>{texts.about.technologies}</div>
 
       <Technologies />
 
@@ -30,7 +30,7 @@ const About = () => {
           rel="noreferrer"
           className={css.resume}
         >
-          <span>{texts.aboutResume}</span>
+          <span>{texts.about.resume}</span>
           <span>
             <Cv />
           </span>

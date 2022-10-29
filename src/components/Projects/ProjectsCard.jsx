@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as ReactSvg } from "../../assets/svg/react.svg";
 import { ReactComponent as Redux } from "../../assets/svg/redux.svg";
@@ -14,6 +13,7 @@ import { ReactComponent as Chakra } from "../../assets/svg/chakraui.svg";
 import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
 import { ReactComponent as CssModules } from "../../assets/svg/cssmodules.svg";
 import { ReactComponent as Next } from "../../assets/svg/next.svg";
+import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import css from "./ProjectsCard.module.css";
 
@@ -24,7 +24,7 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
     <div className={css.project}>
       <div className={css.projectData}>
         <p className={css.projectName}>{name}</p>
-        <p className={css.projectDescription}>{texts[text]}</p>
+        <p className={css.projectDescription}>{texts.projects[text]}</p>
 
         <div className={css.projectImageMobile}>
           <img src={imageUrl} alt={name} />
@@ -70,6 +70,13 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
         </div>
 
         <div className={css.technologiesContainer}>
+          {technologies.includes("typescript") && (
+            <div className={css.technologyContainer}>
+              <Typescript />
+              <div className={css.tooltip}>TypeScript</div>
+            </div>
+          )}
+
           {technologies.includes("react") && (
             <div className={css.technologyContainer}>
               <ReactSvg />
