@@ -168,7 +168,7 @@
 }
 
 .cssModulesSvgContainer+.tooltip {
-   transform: translate(35%, 10px);
+   transform: translateX(35%, 10px);
 }
 
 .cssModulesSvgContainer svg {

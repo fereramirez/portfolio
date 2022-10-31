@@ -12,8 +12,8 @@ import { ReactComponent as Sequelize } from "../../assets/svg/sequelize.svg";
 import { ReactComponent as Github } from "../../assets/svg/github.svg"; */
 import { ReactComponent as Chakra } from "../../assets/svg/chakraui.svg";
 import { ReactComponent as CssModules } from "../../assets/svg/cssmodules.svg";
-/* import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
-import { ReactComponent as Next } from "../../assets/svg/next.svg"; */
+import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
+import { ReactComponent as Next } from "../../assets/svg/next.svg";
 import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import css from "./Technologies.module.css";
@@ -35,10 +35,10 @@ const Technologies = () => {
             <div className={css.tooltip}>JavaScript</div>
           </div> */}
 
-        {/* <div className={css.technologyContainer}>
+        <div className={css.technologyContainer}>
           <Typescript />
           <div className={css.tooltip}>TypeScript</div>
-        </div> */}
+        </div>
 
         <div className={css.technologyContainer}>
           <ReactSvg />
@@ -58,10 +58,10 @@ const Technologies = () => {
           </span>
           <div className={css.tooltip}>CSS Modules</div>
         </div>
-        {/* <div className={css.technologyContainer}>
-            <Sass />
-            <div className={css.tooltip}>Sass</div>
-          </div> */}
+        <div className={css.technologyContainer}>
+          <Sass />
+          <div className={css.tooltip}>Sass</div>
+        </div>
 
         {/* <div className={css.technologyContainer}>
             <Git />
@@ -94,9 +94,9 @@ const Technologies = () => {
         </div>
 
         {/* <div className={css.technologyContainer}>
-            <Next />
-            <div className={css.tooltip}>Next.js</div>
-          </div> */}
+          <Next />
+          <div className={css.tooltip}>Next.js</div>
+        </div> */}
       </div>
     </div>
   );
