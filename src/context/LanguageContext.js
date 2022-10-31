@@ -29,7 +29,8 @@ const translations = {
 
     projects: {
       title: "Passion to create.",
-      nafta: "It was an excuse to start with TypeScript, Next.js and Sass.",
+      nafta:
+        "A small project about a fake production agency. It was an excuse to start with TypeScript, Next.js and Sass.",
       provider:
         "eCommerce where each user can buy, publish, sell and write reviews. Group project applying MERN method.",
       dogos:
@@ -93,7 +94,8 @@ const translations = {
 
     projects: {
       title: "Pasión por crear.",
-      nafta: "Fue una excusa para empezar con TypeScript, Next.js y Sass.",
+      nafta:
+        "Un proyecto pequeño sobre una productora audivisual falsa. Fue una excusa para empezar con TypeScript, Next.js y Sass.",
       provider:
         "eCommerce donde cada usuario puede comprar, publicar, vender y escribir reseñas. Proyecto grupal aplicando el método MERN.",
       dogos:

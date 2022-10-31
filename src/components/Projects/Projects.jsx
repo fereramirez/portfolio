@@ -15,19 +15,27 @@ const Projects = () => {
         <p className={css.title}>{texts.projects.title}</p>
 
         <div className={css.allProjectsContainer}>
-          {/* <ProjectsCard
+          <ProjectsCard
             name={"NAFTA Productions"}
             text={"nafta"}
             links={{
               deploy: "https://nafta.vercel.app/",
-              repo: "https://github.com/fereramirez/Nafta",
+              repo: "https://github.com/fereramirez/nafta-productions",
             }}
-            technologies={["react", "next", "typescript", "css-modules", "sass"]}
-            imageUrl={""}
-          /> */}
+            technologies={[
+              "react",
+              "next",
+              "typescript",
+              "css-modules",
+              "sass",
+            ]}
+            imageUrl={
+              "https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_40/v1667187375/Portfolio/video-nafta_ihnjyo.gif"
+            }
+          />
 
           <ProjectsCard
-            name={"Provider Store"}
+            name={"PROVIDER Store"}
             text={"provider"}
             links={{
               deploy: "https://providerstore.vercel.app/",
