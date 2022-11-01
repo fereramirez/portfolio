@@ -17,7 +17,7 @@ const initialMessageDegrees = 0;
 
 const Form = () => {
   const { texts } = useContext(LanguageContext);
-  const [waitingResponse, setWaitingResponse] = useState(true);
+  const [waitingResponse, setWaitingResponse] = useState(false);
   const [response, setResponse] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [messageRemaining, setMessageRemaining] = useState(
