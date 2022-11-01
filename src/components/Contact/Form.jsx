@@ -17,7 +17,7 @@ const initialMessageDegrees = 0;
 
 const Form = () => {
   const { texts } = useContext(LanguageContext);
-  const [waitingResponse, setWaitingResponse] = useState(false);
+  const [waitingResponse, setWaitingResponse] = useState(true);
   const [response, setResponse] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [messageRemaining, setMessageRemaining] = useState(
@@ -131,7 +131,9 @@ const Form = () => {
                 type="text"
                 disabled={waitingResponse || response === "success"}
                 autoComplete="off"
-                className={`${css.input} ${errors.name ? css.inputError : ""}`}
+                className={`${css.input} ${errors.name ? css.inputError : ""} ${
+                  waitingResponse ? css.waiting : ""
+                }`}
                 {...register("name", {
                   required: true,
                   maxLength: 32,
@@ -163,7 +165,9 @@ const Form = () => {
                 type="text"
                 disabled={waitingResponse || response === "success"}
                 autoComplete="off"
-                className={`${css.input} ${errors.email ? css.inputError : ""}`}
+                className={`${css.input} ${
+                  errors.email ? css.inputError : ""
+                } ${waitingResponse ? css.waiting : ""}`}
                 {...register("email", {
                   required: true,
                   maxLength: 32,
@@ -196,7 +200,7 @@ const Form = () => {
                 id="message-text-area"
                 className={`${css.input} ${
                   errors.message ? css.inputError : ""
-                }`}
+                } ${waitingResponse ? css.waiting : ""}`}
                 {...register("message", {
                   required: true,
                   maxLength: initialMessageRemaining,
@@ -259,6 +263,7 @@ const Form = () => {
               <button
                 type="submit"
                 disabled={waitingResponse || Object.keys(errors).length}
+                className={`${waitingResponse ? css.waiting : ""}`}
               >
                 {waitingResponse ? (
                   <Spinner className={css.spinner} />
