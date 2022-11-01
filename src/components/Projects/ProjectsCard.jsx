@@ -99,7 +99,9 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
           )}
 
           {technologies.includes("css-modules") && (
-            <div className={css.technologyContainer}>
+            <div
+              className={`${css.technologyContainer} ${css.technologyContainerCssModules}`}
+            >
               <span className={css.cssModulesSvgContainer}>
                 <CssModules />
               </span>
