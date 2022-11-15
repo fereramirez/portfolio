@@ -102,8 +102,8 @@
 
 @media(min-width:589px) {
    .projectImage {
-      min-width: 305px;
-      min-height: 530px;
+      min-height: 305px;
+      min-width: 530px;
    }
 }
 
