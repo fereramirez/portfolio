@@ -1,0 +1,13 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  holee:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Echoooo
+        run: echo "sludos"
