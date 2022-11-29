@@ -8,7 +8,7 @@ import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
 import css from "./Contact.module.css";
 import common from "../../App.module.css";
 
-const Contact = () => {
+function Contact() {
   const { texts } = useContext(LanguageContext);
   const [textCopied, setTextCopied] = useState(false);
 
@@ -68,6 +68,6 @@ const Contact = () => {
       <Form />
     </div>
   );
-};
+}
 
 export default Contact;

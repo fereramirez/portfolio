@@ -7,7 +7,7 @@ const themeColors = {
   light: { backgroundColor: "#d5d1cc", fontColor: "#000000" },
 };
 
-export const useTheme = () => {
+const useTheme = () => {
   const [theme, setTheme] = useState(initialTheme);
 
   const handleTheme = (newTheme) => {
@@ -15,7 +15,7 @@ export const useTheme = () => {
 
     root.style.setProperty(
       "--background-color",
-      themeColors[newTheme].backgroundColor
+      themeColors[newTheme].backgroundColor,
     );
     root.style.setProperty("--font-color", themeColors[newTheme].fontColor);
 
@@ -24,3 +24,5 @@ export const useTheme = () => {
 
   return { theme, handleTheme };
 };
+
+export default useTheme;

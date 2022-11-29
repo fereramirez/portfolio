@@ -2,20 +2,19 @@ import React, { useState, useEffect, useContext } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import BurgerButton from "./BurgerButton";
 import LanguageContext from "../../context/LanguageContext";
-import { useTheme } from "../../hooks/useTheme";
+import useTheme from "../../hooks/useTheme";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
-
 import css from "./Navbar.module.css";
 import common from "../../App.module.css";
 
 /* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
 const SECTIONS = ["About", "Projects", "Contact"];
 
-const Navbar = () => {
+function Navbar() {
   const location = useLocation();
   const [buttonHover, setButtonHover] = useState(
-    location.pathname.substring(1).toLowerCase()
+    location.pathname.substring(1).toLowerCase(),
   );
   const [showMenu, setShowMenu] = useState(false);
   const { language, texts, handleLanguage } = useContext(LanguageContext);
@@ -28,7 +27,7 @@ const Navbar = () => {
   const handleHoverLeave = () => {
     const i = SECTIONS.findIndex(
       (section) =>
-        section.toLowerCase() === location.pathname.substring(1).toLowerCase()
+        section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
     );
 
     setButtonHover(i === -1 ? -2 : i);
@@ -39,7 +38,7 @@ const Navbar = () => {
 
     const i = SECTIONS.findIndex(
       (section) =>
-        section.toLowerCase() === location.pathname.substring(1).toLowerCase()
+        section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
     );
 
     setButtonHover(i === -1 ? -1.5 : i);
@@ -49,7 +48,7 @@ const Navbar = () => {
     <>
       <div className={`${css.container} ${common.content}`}>
         <span className={css.mobileHomeButton}>
-          <NavLink to={"/"}>Fernando</NavLink>
+          <NavLink to="/">Fernando</NavLink>
         </span>
 
         <div className={css.buttonsContainer}>
@@ -66,14 +65,14 @@ const Navbar = () => {
                     {texts.navbarButtons[i]}
                   </div>
                 </NavLink>
-              ))
+              )),
             )}
           </div>
 
           <div
             className={css.bottomSelector}
             style={{ transform: `translateX(${buttonHover * 100}%)` }}
-          ></div>
+          />
 
           <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
@@ -143,7 +142,7 @@ const Navbar = () => {
                   {texts.navbarButtons[i]}
                 </div>
               </NavLink>
-            ))
+            )),
           )}
 
           <div className={css.mobileSelectors}>
@@ -196,6 +195,6 @@ const Navbar = () => {
       </div>
     </>
   );
-};
+}
 
 export default Navbar;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import AnimationContext from "../../context/AnimationContext";
 
@@ -7,7 +7,7 @@ import Grid from "../common/Grid";
 import css from "./Intro.module.css";
 import "./Intro.css";
 
-const Intro = () => {
+function Intro() {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [bottomCursor, setBottomCursor] = useState(false);
@@ -75,23 +75,23 @@ const Intro = () => {
         <div className={css.textContainerOuter}>
           <div className={css.textContainer}>
             <p>{topText}</p>
-            <div className={css.topCursor}></div>
+            <div className={css.topCursor} />
           </div>
 
           <div className={css.textContainer}>
             <p>{bottomText}</p>
-            <div className={css.cursorWriting}></div>
+            <div className={css.cursorWriting} />
             <div
               className={`${css.bottomCursor} ${
                 bottomCursor ? css.showBottomCursor : ""
               }`}
-            ></div>
+            />
           </div>
         </div>
       </div>
       <Outlet />
     </>
   );
-};
+}
 
 export default Intro;

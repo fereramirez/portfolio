@@ -136,7 +136,7 @@ const translations = {
   },
 };
 
-const LanguageProvider = ({ children }) => {
+function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(initialLanguage);
   const [texts, setTexts] = useState(translations[language]);
 
@@ -152,7 +152,7 @@ const LanguageProvider = ({ children }) => {
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>
   );
-};
+}
 
 export { LanguageProvider };
 export default LanguageContext;

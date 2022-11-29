@@ -1,8 +1,6 @@
-import React from "react";
-
 import css from "./NotFound.module.css";
 
-const NotFound = () => {
+function NotFound() {
   return (
     <div className={css.container}>
       <div className={css.text} title="ERROR 404: Not Found">
@@ -25,6 +23,6 @@ const NotFound = () => {
       </div>
     </div>
   );
-};
+}
 
 export default NotFound;

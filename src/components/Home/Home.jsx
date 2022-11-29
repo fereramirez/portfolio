@@ -6,7 +6,7 @@ import AnimationContext from "../../context/AnimationContext";
 import css from "./Home.module.css";
 import Title from "./Title";
 
-const Home = () => {
+function Home() {
   const location = useLocation();
   const { runCoverFadeOut } = useContext(AnimationContext);
 
@@ -19,11 +19,11 @@ const Home = () => {
       >
         {location.pathname === "/" && (
           <>
-            <Grid position={"left"} />
+            <Grid position="left" />
 
-            <Title text={"projects"} />
-            <Title text={"about"} />
-            <Title text={"contact"} />
+            <Title text="projects" />
+            <Title text="about" />
+            <Title text="contact" />
           </>
         )}
 
@@ -32,12 +32,12 @@ const Home = () => {
             runCoverFadeOut ? css.totalCoverActive : ""
           }`}
         >
-          <Grid color={"purple"} position={"right"} />
+          <Grid color="purple" position="right" />
         </div>
       </div>
       <Outlet />
     </>
   );
-};
+}
 
 export default Home;

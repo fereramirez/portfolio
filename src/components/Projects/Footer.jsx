@@ -2,11 +2,11 @@ import { ReactComponent as Github } from "../../assets/svg/github.svg";
 
 import css from "./Footer.module.css";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className={css.container}>
       <a
-        href={"https://github.com/fereramirez/portfolio"}
+        href="https://github.com/fereramirez/portfolio"
         target="_blank"
         rel="noreferrer"
         className={css.link}
@@ -18,6 +18,6 @@ const Footer = () => {
       </a>
     </div>
   );
-};
+}
 
 export default Footer;

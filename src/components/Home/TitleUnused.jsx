@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
-import Grid from "../common/Grid";
+// import Grid from "../common/Grid";
 
 import "./Title.css";
 
-const Title = ({ text, setLinkSelected, linkSelected }) => {
+function Title({ text, setLinkSelected, linkSelected }) {
   const { texts } = useContext(LanguageContext);
   const navigate = useNavigate();
 
@@ -47,6 +47,6 @@ const Title = ({ text, setLinkSelected, linkSelected }) => {
       </div> */}
     </div>
   );
-};
+}
 
 export default Title;

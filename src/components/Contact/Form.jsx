@@ -1,11 +1,13 @@
 import { useContext, useState, useRef, useEffect } from "react";
 import { sendForm } from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+
 import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 import css from "./Form.module.css";
+
 const {
   REACT_APP_EMAILJS_SERVICE_ID,
   REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -15,20 +17,20 @@ const {
 const initialMessageRemaining = 512;
 const initialMessageDegrees = 0;
 
-const Form = () => {
+function Form() {
   const { texts } = useContext(LanguageContext);
   const [waitingResponse, setWaitingResponse] = useState(false);
   const [response, setResponse] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [messageRemaining, setMessageRemaining] = useState(
-    initialMessageRemaining
+    initialMessageRemaining,
   );
   const [messageDegrees, setMessageDegrees] = useState(initialMessageDegrees);
   // const [scrollHeight, setScrollHeight] = useState(null);
   const formRef = useRef();
   const messageRef = useRef();
 
-  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
   const {
     register,
@@ -57,7 +59,7 @@ const Form = () => {
     setMessageRemaining(
       watchMessage
         ? initialMessageRemaining - watchMessage.length
-        : initialMessageRemaining
+        : initialMessageRemaining,
     );
 
     const degrees = watchMessage
@@ -78,7 +80,7 @@ const Form = () => {
         REACT_APP_EMAILJS_SERVICE_ID,
         REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        REACT_APP_EMAILJS_PUBLIC_KEY
+        REACT_APP_EMAILJS_PUBLIC_KEY,
       );
 
       if (text === "OK") {
@@ -235,7 +237,7 @@ const Form = () => {
                         messageRemaining > 0 ? "white" : "white"
                       }`,
                     }}
-                  ></div>
+                  />
 
                   <span
                     style={{
@@ -284,6 +286,6 @@ const Form = () => {
       )}
     </div>
   );
-};
+}
 
 export default Form;

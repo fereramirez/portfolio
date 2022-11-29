@@ -6,7 +6,7 @@ import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 import css from "./About.module.css";
 import common from "../../App.module.css";
 
-const About = () => {
+function About() {
   const { texts } = useContext(LanguageContext);
 
   return (
@@ -38,6 +38,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+}
 
 export default About;

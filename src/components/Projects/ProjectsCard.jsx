@@ -17,7 +17,7 @@ import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import css from "./ProjectsCard.module.css";
 
-const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
+function ProjectsCard({ name, text, links, technologies, imageUrl }) {
   const { texts } = useContext(LanguageContext);
 
   return (
@@ -165,6 +165,6 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ProjectsCard;

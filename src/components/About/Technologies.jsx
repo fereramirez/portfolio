@@ -13,12 +13,12 @@ import { ReactComponent as Github } from "../../assets/svg/github.svg"; */
 import { ReactComponent as Chakra } from "../../assets/svg/chakraui.svg";
 import { ReactComponent as CssModules } from "../../assets/svg/cssmodules.svg";
 import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
-import { ReactComponent as Next } from "../../assets/svg/next.svg";
+// import { ReactComponent as Next } from "../../assets/svg/next.svg";
 import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import css from "./Technologies.module.css";
 
-const Technologies = () => {
+function Technologies() {
   return (
     <div className={css.technologiesSection}>
       <div className={css.technologiesContainer}>
@@ -100,6 +100,6 @@ const Technologies = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Technologies;

@@ -7,7 +7,7 @@ const initialFadeOut = true;
 const initialPop = true;
 const initialCoverFadeOut = false;
 
-const AnimationProvider = ({ children }) => {
+function AnimationProvider({ children }) {
   const [runFadeOut, setRunFadeOut] = useState(initialFadeOut);
   const [runPop, setRunPop] = useState(initialPop);
   const [runCoverFadeOut, setRunCoverFadeOut] = useState(initialCoverFadeOut);
@@ -51,7 +51,7 @@ const AnimationProvider = ({ children }) => {
       {children}
     </AnimationContext.Provider>
   );
-};
+}
 
 export { AnimationProvider };
 export default AnimationContext;
