@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const AnimationContext = createContext();
@@ -16,7 +16,7 @@ function AnimationProvider({ children }) {
   const location = useLocation();
 
   useEffect(() => {
-    location.pathname !== "/" && setRunPop(false);
+    if (location.pathname !== "/") setRunPop(false);
     // eslint-disable-next-line
   }, []);
 
@@ -38,13 +38,16 @@ function AnimationProvider({ children }) {
     }, 5000);
   };
 
-  const data = {
-    runFadeOut,
-    runPop,
-    runCoverFadeOut,
-    linkSelected,
-    handleLinkSelected,
-  };
+  const data = useMemo(
+    () => ({
+      runFadeOut,
+      runPop,
+      runCoverFadeOut,
+      linkSelected,
+      handleLinkSelected,
+    }),
+    {},
+  );
 
   return (
     <AnimationContext.Provider value={data}>

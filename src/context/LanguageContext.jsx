@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 
 const LanguageContext = createContext();
 
@@ -147,7 +147,7 @@ function LanguageProvider({ children }) {
     }
   };
 
-  const data = { language, texts, handleLanguage };
+  const data = useMemo(() => ({ language, texts, handleLanguage }), []);
 
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>

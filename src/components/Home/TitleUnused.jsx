@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LanguageContext from "../../context/LanguageContext";
 // import Grid from "../common/Grid";
 
-import "./Title.css";
+import "./TitleUnused.css";
 
 function Title({ text, setLinkSelected, linkSelected }) {
   const { texts } = useContext(LanguageContext);
