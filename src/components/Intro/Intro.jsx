@@ -24,13 +24,13 @@ function Intro() {
 
     setInterval(() => {
       setTopText(name.slice(0, i + 1));
-      i++;
+      i += 1;
     }, 60);
 
     setTimeout(() => {
       setInterval(() => {
         setBottomText(title.slice(0, j + 1));
-        j++;
+        j += 1;
       }, 60);
     }, 2000);
 

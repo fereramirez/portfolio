@@ -17,7 +17,7 @@ function Contact() {
       setTextCopied(true);
       return navigator.clipboard.writeText("fer.eze.ram@gmail.com");
     }
-    return Promise.reject("The Clipboard API is not available.");
+    return Promise.reject(new Error("The Clipboard API is not available."));
   };
 
   return (
@@ -55,8 +55,14 @@ function Contact() {
       </div>
 
       <div className={css.description}>
-        {texts.contact.email}{" "}
-        <span className={css.email} onClick={handleCopy}>
+        {texts.contact.email}
+        <span
+          className={css.email}
+          onClick={handleCopy}
+          onKeyDown={handleCopy}
+          role="button"
+          tabIndex={0}
+        >
           fer.eze.ram@gmail.com
           <span className={css.tooltip}>
             {textCopied ? texts.contact.copied : texts.contact.copy}

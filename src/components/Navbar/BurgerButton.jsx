@@ -2,7 +2,11 @@ import css from "./BurgerButton.module.css";
 
 function BurgerButton({ setShowMenu, showMenu }) {
   return (
-    <label className={css.hamburger} onClick={() => setShowMenu(!showMenu)}>
+    <label
+      className={css.hamburger}
+      onClick={() => setShowMenu(!showMenu)}
+      onKeyDown={() => setShowMenu(!showMenu)}
+    >
       <span
         className={`${css.hamburgerTopBread} ${
           showMenu ? css.hamburgerTopBreadOpen : ""

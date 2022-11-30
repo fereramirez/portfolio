@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  holee:
+  loguear:
     runs-on: ubuntu-22.04
     steps:
-      - name: Echoooo
-        run: echo "sludos"
+      - name: logueando
+        run: echo "este es el log"

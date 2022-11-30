@@ -12,6 +12,9 @@ function Title({ text }) {
   return (
     <div
       onClick={() => handleLinkSelected(text)}
+      onKeyDown={() => handleLinkSelected(text)}
+      role="button"
+      tabIndex={0}
       className={`${css.link} ${
         linkSelected === text
           ? css.linkSelected
