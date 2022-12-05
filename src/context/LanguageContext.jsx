@@ -147,7 +147,10 @@ function LanguageProvider({ children }) {
     }
   };
 
-  const data = useMemo(() => ({ language, texts, handleLanguage }), []);
+  const data = useMemo(
+    () => ({ language, texts, handleLanguage }),
+    [language, texts],
+  );
 
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>

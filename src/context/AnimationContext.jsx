@@ -46,7 +46,7 @@ function AnimationProvider({ children }) {
       linkSelected,
       handleLinkSelected,
     }),
-    {},
+    [runFadeOut, runPop, runCoverFadeOut, linkSelected],
   );
 
   return (

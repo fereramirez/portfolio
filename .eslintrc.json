@@ -7,7 +7,7 @@
   "extends": [
     "react-app",
     "react-app/jest",
-    "airbnb",
+    "airbnb-base",
     "plugin:prettier/recommended"
   ],
   "overrides": [],
@@ -25,7 +25,10 @@
     "no-shadow": "off",
     "no-nested-ternary": "off",
     "prefer-template": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
     "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",

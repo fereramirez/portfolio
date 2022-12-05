@@ -265,7 +265,9 @@ function Form() {
               <button
                 type="submit"
                 disabled={waitingResponse || Object.keys(errors).length}
-                className={`${waitingResponse ? css.waiting : ""}`}
+                className={`${waitingResponse ? css.waiting : ""} ${
+                  Object.keys(errors).length ? css.buttonError : ""
+                }`}
               >
                 {waitingResponse ? (
                   <Spinner className={css.spinner} />

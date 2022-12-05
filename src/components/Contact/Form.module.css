@@ -216,3 +216,7 @@ button[type="submit"]:hover.waiting,
 .input:disabled.waiting {
    cursor: wait;
 }
+
+button[type="submit"]:hover.buttonError {
+   background-color: red;
+}

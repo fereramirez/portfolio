@@ -1,7 +1,11 @@
+.technologiesSection {
+   width: 100%;
+}
+
 .technologiesContainer {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-evenly;
 }
 
 .technologiesContainer svg {
