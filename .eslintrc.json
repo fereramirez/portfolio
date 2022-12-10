@@ -23,6 +23,7 @@
     "react/react-in-jsx-scope": ["off"],
     "react/jsx-props-no-spreading": ["warn"],
     "no-shadow": "off",
+    "no-plusplus": "off",
     "no-nested-ternary": "off",
     "prefer-template": "off",
     "import/no-unresolved": "off",
