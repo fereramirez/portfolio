@@ -25,7 +25,7 @@ function About() {
 
       <div className={css.description}>
         <a
-          href="https://drive.google.com/file/d/1aCoeYC6wihbg5_vXOBfz8h1PD-8G4-RP/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Jc8UyhxUJGqPA4FFnPPN86OUCnVJ3ifc/view?usp=share_link"
           target="_blank"
           rel="noreferrer"
           className={css.resume}
