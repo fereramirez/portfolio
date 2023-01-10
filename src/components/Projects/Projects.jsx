@@ -44,7 +44,7 @@ function Projects() {
             imageUrl="https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298641/Portfolio/video-provider2_axhz0j.gif"
           />
 
-          <ProjectsCard
+          {/* <ProjectsCard
             name="Another DOGOS App"
             text="dogos"
             links={{
@@ -59,7 +59,7 @@ function Projects() {
               "sequelize",
             ]}
             imageUrl="https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
-          />
+          /> */}
         </div>
       </div>
       <Footer />
