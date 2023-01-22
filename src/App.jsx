@@ -18,7 +18,6 @@ function App() {
 
   useEffect(() => {
     handleTheme("dark");
-    // eslint-disable-next-line
   }, []);
 
   return (
