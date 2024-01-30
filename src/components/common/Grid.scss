@@ -1,0 +1,32 @@
+.grid-container {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.grid-item {
+  margin: 0.1rem;
+  background-color: green;
+  height: 90px;
+  width: 90px;
+}
+
+.grid-active {
+}
+
+.grid-inactive .grid-item {
+  transform: scale(1);
+  opacity: 0;
+  transition: opacity 2s ease 0.4s, transform 0.8s ease;
+}
+
+.grid-inactive .grid-item:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  transform: scale(1.04);
+}
