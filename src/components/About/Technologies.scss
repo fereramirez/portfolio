@@ -1,0 +1,49 @@
+.technologies-section {
+  width: 100%;
+}
+
+.technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.technologies-container svg {
+  height: 50px;
+}
+
+.technology-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0.8rem;
+  position: relative;
+}
+
+.tooltip {
+  /*! VOLVER A VER normalizar tooltip */
+  position: absolute;
+  top: -25px;
+  opacity: 0;
+  color: #d5d1cc;
+  /* background-color: rgb(85, 1, 85); */
+  background-color: green;
+  padding: 0.2rem 0.5rem;
+  /* transform: translateX(35%); */
+  transition: opacity 0.2s ease;
+  border-radius: 2px;
+  min-width: max-content;
+}
+
+.technology-container:hover > .tooltip {
+  opacity: 1;
+}
+
+.css-modules-svg-container + .tooltip {
+  /* transform: translate(35%, 10px); */
+}
+
+.css-modules-svg-container svg {
+  height: 70px;
+}

@@ -16,86 +16,86 @@ import { ReactComponent as Sass } from "../../assets/svg/sass.svg";
 // import { ReactComponent as Next } from "../../assets/svg/next.svg";
 import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
-import css from "./Technologies.module.css";
+import "./Technologies.scss";
 
 function Technologies() {
   return (
-    <div className={css.technologiesSection}>
-      <div className={css.technologiesContainer}>
-        {/* <div className={css.technologyContainer}>
+    <div className="technologies-section">
+      <div className="technologies-container">
+        {/* <div className="technology-container">
             <HTML />
-            <div className={css.tooltip}>HTML</div>
+            <div className="tooltip">HTML</div>
           </div>
-          <div className={css.technologyContainer}>
+          <div className="technology-container">
             <CSS />
-            <div className={css.tooltip}>CSS</div>
+            <div className="tooltip">CSS</div>
           </div>
-          <div className={css.technologyContainer}>
+          <div className="technology-container">
             <JS />
-            <div className={css.tooltip}>JavaScript</div>
+            <div className="tooltip">JavaScript</div>
           </div> */}
 
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Typescript />
-          <div className={css.tooltip}>TypeScript</div>
+          <div className="tooltip">TypeScript</div>
         </div>
 
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <ReactSvg />
-          <div className={css.tooltip}>React.js</div>
+          <div className="tooltip">React.js</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Redux />
-          <div className={css.tooltip}>Redux.js</div>
+          <div className="tooltip">Redux.js</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Chakra />
-          <div className={css.tooltip}>Chakra UI</div>
+          <div className="tooltip">Chakra UI</div>
         </div>
-        <div className={css.technologyContainer}>
-          <span className={css.cssModulesSvgContainer}>
+        <div className="technology-container">
+          <span className="css-modules-svg-container">
             <CssModules />
           </span>
-          <div className={css.tooltip}>CSS Modules</div>
+          <div className="tooltip">CSS Modules</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Sass />
-          <div className={css.tooltip}>Sass</div>
+          <div className="tooltip">Sass</div>
         </div>
 
-        {/* <div className={css.technologyContainer}>
+        {/* <div className="technology-container">
             <Git />
-            <div className={css.tooltip}>Git</div>
+            <div className="tooltip">Git</div>
           </div>
-          <div className={css.technologyContainer}>
+          <div className="technology-container">
             <Github />
-            <div className={css.tooltip}>GitHub</div>
+            <div className="tooltip">GitHub</div>
           </div> */}
 
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Nodejs />
-          <div className={css.tooltip}>Node.js</div>
+          <div className="tooltip">Node.js</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Express />
-          <div className={css.tooltip}>Express.js</div>
+          <div className="tooltip">Express.js</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Mongo />
-          <div className={css.tooltip}>MongoDB</div>
+          <div className="tooltip">MongoDB</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <PostgresSql />
-          <div className={css.tooltip}>PostgreSQL</div>
+          <div className="tooltip">PostgreSQL</div>
         </div>
-        <div className={css.technologyContainer}>
+        <div className="technology-container">
           <Sequelize />
-          <div className={css.tooltip}>Sequelize</div>
+          <div className="tooltip">Sequelize</div>
         </div>
 
-        {/* <div className={css.technologyContainer}>
+        {/* <div className="technology-container">
           <Next />
-          <div className={css.tooltip}>Next.js</div>
+          <div className="tooltip">Next.js</div>
         </div> */}
       </div>
     </div>

@@ -34,6 +34,12 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off"
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    "no-unused-vars": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "no-continue": "off",
+    "testing-library/no-unnecessary-act": "off",
+    "testing-library/prefer-screen-queries": "off"
   }
 }

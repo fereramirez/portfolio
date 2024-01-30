@@ -66,6 +66,7 @@ a {
   color: inherit;
 }
 
+/* VOLVER A VER agregar .content a ABOUT CONTACT NAVBAR PROJECTS */
 .content {
   animation: 1s ease Content forwards;
 }
