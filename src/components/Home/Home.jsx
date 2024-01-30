@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <>
       <div
-        className={`home-container ${
-          location.pathname !== "/" ? "not-home" : ""
+        className={`home-container${
+          location.pathname !== "/" ? " not-home" : ""
         }`}
       >
         {location.pathname === "/" && (
@@ -29,8 +29,8 @@ const Home = () => {
         )}
 
         <div
-          className={`total-cover ${
-            runCoverFadeOut ? "total-cover-active" : ""
+          className={`total-cover${
+            runCoverFadeOut ? " total-cover-active" : ""
           }`}
         >
           <Grid color="purple" position="right" />

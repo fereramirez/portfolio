@@ -1,0 +1,158 @@
+.intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-direction: column;
+  user-select: none;
+  /* animation: pop 2s 7s forwards; */
+  /* animation-name: pop; */
+  /* animation-duration: 2s; */
+  /* animation-delay: 7s; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+  0% {
+    z-index: 1000;
+  }
+
+  /* 98% {
+      z-index: 1000;
+   }
+
+   99% {
+      z-index: 1000;
+   } */
+
+  100% {
+    z-index: -2;
+  }
+}
+
+/* @keyframes pop {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+} */
+
+.text-container-outer {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  height: 105px;
+  animation: fadeOut 2s 5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.text-container {
+  display: flex;
+}
+
+.top-cursor {
+  height: 2rem;
+  width: 2px;
+  margin-left: 6px;
+  background-color: var(--font-color);
+  animation: topCursor 1s 1.5s forwards;
+}
+
+.cursor-writing {
+  height: 0;
+  width: 2px;
+  margin-left: 6px;
+  background-color: transparent;
+  animation: cursorWriting 2s 2s forwards;
+}
+
+@keyframes cursorWriting {
+  0% {
+    background-color: var(--font-color);
+    height: 2rem;
+  }
+
+  99% {
+    background-color: var(--font-color);
+    height: 2rem;
+  }
+
+  100% {
+    background-color: transparent;
+    height: 2rem;
+  }
+}
+
+.bottom-cursor {
+  height: 0;
+  width: 2px;
+  margin-left: 6px;
+  background-color: transparent;
+  transform: translateX(-8px);
+}
+
+.show-bottom-cursor {
+  height: 2rem;
+  animation: bottomCursor 1s infinite 2.5s forwards;
+}
+
+@keyframes topCursor {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes bottomCursor {
+  0% {
+    opacity: 1;
+    background-color: var(--font-color);
+  }
+
+  50% {
+    background-color: var(--font-color);
+    opacity: 1;
+  }
+
+  51% {
+    background-color: var(--font-color);
+    opacity: 0;
+  }
+
+  100% {
+    background-color: var(--font-color);
+    opacity: 0;
+  }
+}
