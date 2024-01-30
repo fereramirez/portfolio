@@ -9,7 +9,7 @@ function Footer() {
         href="https://github.com/fereramirez/portfolio"
         target="_blank"
         rel="noreferrer"
-        className={css.link}
+        className={css.footerLink}
       >
         Portfolio Repo
         <div className={css.svgContainer}>

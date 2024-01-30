@@ -12,13 +12,13 @@
    margin-top: 1rem;
 }
 
-.link {
+.footerLink {
    display: flex;
    align-items: center;
    transition: color .2s ease;
 }
 
-.link:hover {
+.footerLink:hover {
    color: green;
 }
 
@@ -33,6 +33,6 @@
    transition: fill .2s ease;
 }
 
-.link:hover .svgContainer svg g {
+.footerLink:hover .svgContainer svg g {
    fill: green;
 }
