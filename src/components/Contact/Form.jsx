@@ -6,7 +6,8 @@ import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
-import css from "./Form.module.css";
+
+import "./Form.scss";
 
 const {
   REACT_APP_EMAILJS_SERVICE_ID,
@@ -100,24 +101,24 @@ function Form() {
 
   return (
     <div
-      className={`${css.formContainer} ${
-        response === "success" ? css.containerHideForm : ""
-      } ${showSuccess ? css.showSuccess : ""}`}
+      className={`form-container ${
+        response === "success" ? "container-hide-form" : ""
+      } ${showSuccess ? "show-success" : ""}`}
     >
       {!showSuccess ? (
         <>
-          <div className={css.formText}>{texts.form.title}</div>
+          <div className="form-text">{texts.form.title}</div>
           <form
             onSubmit={handleSubmit(sendEmail)}
             ref={formRef}
-            className={css.form}
+            className="form"
           >
-            <span className={css.inputContainer}>
-              <div className={css.fieldNameContainer}>
+            <span className="input-container">
+              <div className="field-name-container">
                 {!errors.name ? (
-                  <p className={css.fieldName}>{texts.form.name}</p>
+                  <p className="field-name">{texts.form.name}</p>
                 ) : (
-                  <div className={css.error}>
+                  <div className="error">
                     <Warning />
                     {errors.name?.type === "required" && (
                       <span>{texts.form.nameRequired}</span>
@@ -133,8 +134,8 @@ function Form() {
                 type="text"
                 disabled={waitingResponse || response === "success"}
                 autoComplete="off"
-                className={`${css.input} ${errors.name ? css.inputError : ""} ${
-                  waitingResponse ? css.waiting : ""
+                className={`input ${errors.name ? "input-error" : ""} ${
+                  waitingResponse ? "waiting" : ""
                 }`}
                 {...register("name", {
                   required: true,
@@ -143,12 +144,12 @@ function Form() {
               />
             </span>
 
-            <span className={css.inputContainer}>
-              <div className={css.fieldNameContainer}>
+            <span className="input-container">
+              <div className="field-name-container">
                 {!errors.email ? (
-                  <p className={css.fieldName}>Email</p>
+                  <p className="field-name">Email</p>
                 ) : (
-                  <div className={css.error}>
+                  <div className="error">
                     <Warning />
                     {errors.email?.type === "required" && (
                       <p>{texts.form.emailRequired}</p>
@@ -167,9 +168,9 @@ function Form() {
                 type="text"
                 disabled={waitingResponse || response === "success"}
                 autoComplete="off"
-                className={`${css.input} ${
-                  errors.email ? css.inputError : ""
-                } ${waitingResponse ? css.waiting : ""}`}
+                className={`input ${errors.email ? "input-error" : ""} ${
+                  waitingResponse ? "waiting" : ""
+                }`}
                 {...register("email", {
                   required: true,
                   maxLength: 32,
@@ -178,12 +179,12 @@ function Form() {
               />
             </span>
 
-            <span className={css.inputContainer}>
-              <div className={css.fieldNameContainer}>
+            <span className="input-container">
+              <div className="field-name-container">
                 {!errors.message ? (
-                  <p className={css.fieldName}>{texts.form.message}</p>
+                  <p className="field-name">{texts.form.message}</p>
                 ) : (
-                  <div className={css.error}>
+                  <div className="error">
                     <Warning />
                     {errors.message?.type === "required" && (
                       <p>{texts.form.messageRequired}</p>
@@ -200,9 +201,9 @@ function Form() {
                 autoComplete="off"
                 ref={messageRef}
                 id="message-text-area"
-                className={`${css.input} ${
-                  errors.message ? css.inputError : ""
-                } ${waitingResponse ? css.waiting : ""}`}
+                className={`input ${errors.message ? "input-error" : ""} ${
+                  waitingResponse ? "waiting" : ""
+                }`}
                 {...register("message", {
                   required: true,
                   maxLength: initialMessageRemaining,
@@ -211,7 +212,7 @@ function Form() {
 
               {!waitingResponse && response !== "success" && (
                 <div
-                  className={css.radialProgress}
+                  className="radial-progress"
                   style={{
                     background: `${
                       messageRemaining >= 0
@@ -231,7 +232,7 @@ function Form() {
                   }}
                 >
                   <div
-                    className={css.radialProgressBefore}
+                    className="radial-progress-before"
                     style={{
                       backgroundColor: `${
                         messageRemaining > 0 ? "white" : "white"
@@ -250,27 +251,27 @@ function Form() {
               )}
             </span>
 
-            <span className={`${css.inputContainer} ${css.submitContainer}`}>
-              <div className={css.fieldNameContainer}>
+            <span className="input-container submit-container">
+              <div className="field-name-container">
                 {response === "error" ? (
-                  <div className={css.error}>
+                  <div className="error">
                     <Warning />
                     <p>{texts.form.responseError}</p>
                   </div>
                 ) : (
-                  <p className={css.errorPlaceholder}>hidden text</p>
+                  <p className="error-placeholder">hidden text</p>
                 )}
               </div>
 
               <button
                 type="submit"
                 disabled={waitingResponse || Object.keys(errors).length}
-                className={`${waitingResponse ? css.waiting : ""} ${
-                  Object.keys(errors).length ? css.buttonError : ""
+                className={`${waitingResponse ? "waiting" : ""} ${
+                  Object.keys(errors).length ? "button-error" : ""
                 }`}
               >
                 {waitingResponse ? (
-                  <Spinner className={css.spinner} />
+                  <Spinner className="spinner" />
                 ) : Object.keys(errors).length ? (
                   texts.form.submitError
                 ) : (
@@ -281,9 +282,9 @@ function Form() {
           </form>
         </>
       ) : (
-        <div className={css.success}>
+        <div className="success">
           <Brick />
-          <span className={css.formText}>{texts.form.responseSuccess}</span>
+          <span className="form-text">{texts.form.responseSuccess}</span>
         </div>
       )}
     </div>
