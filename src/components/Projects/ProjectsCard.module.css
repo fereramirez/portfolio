@@ -1,4 +1,4 @@
-.project {
+.projectCard {
    height: fit-content;
    display: flex;
    width: 100%;
@@ -55,7 +55,7 @@
       display: none;
    }
 
-   .project {
+   .projectCard {
       flex-direction: column;
       justify-content: center;
    }
@@ -71,7 +71,7 @@
       display: none;
    }
 
-   .project {
+   .projectCard {
       width: 70vw;
       justify-content: space-between;
       padding: 1.5rem;
@@ -83,7 +83,7 @@
       width: 100%;
    }
 
-   .project {
+   .projectCard {
       padding: 1.5rem 0;
    }
 
@@ -107,25 +107,25 @@
    }
 }
 
-.links {
+.projectLinksContainer {
    margin-top: 1rem;
 }
 
-.link svg {
+.projectLink svg {
    fill: var(--font-color);
    transition: fill .2s ease;
 }
 
-.link:hover svg {
+.projectLink:hover svg {
    fill: green
 }
 
-.link svg g {
+.projectLink svg g {
    fill: var(--font-color);
    transition: fill .2s ease;
 }
 
-.link:hover svg g {
+.projectLink:hover svg g {
    fill: green
 }
 
@@ -174,7 +174,7 @@
    opacity: 1
 }
 
-.link:hover .tooltip {
+.projectLink:hover .tooltip {
    opacity: 1
 }
 

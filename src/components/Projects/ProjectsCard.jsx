@@ -21,7 +21,7 @@ function ProjectsCard({ name, text, links, technologies, imageUrl }) {
   const { texts } = useContext(LanguageContext);
 
   return (
-    <div className={css.project}>
+    <div className={css.projectCard}>
       <div className={css.projectData}>
         <p className={css.projectName}>{name}</p>
         <p className={css.projectDescription}>{texts.projects[text]}</p>
@@ -30,12 +30,14 @@ function ProjectsCard({ name, text, links, technologies, imageUrl }) {
           <img src={imageUrl} alt={name} />
         </div>
 
-        <div className={`${css.links} ${css.technologiesContainer}`}>
+        <div
+          className={`${css.projectLinksContainer} ${css.technologiesContainer}`}
+        >
           <a
             href={links.deploy}
             target="_blank"
             rel="noreferrer"
-            className={css.link}
+            className={css.projectLink}
           >
             <div className={css.technologyContainer}>
               <Earth />
@@ -46,7 +48,7 @@ function ProjectsCard({ name, text, links, technologies, imageUrl }) {
             href={links.repo}
             target="_blank"
             rel="noreferrer"
-            className={css.link}
+            className={css.projectLink}
           >
             <div className={css.technologyContainer}>
               <Github />
@@ -59,7 +61,7 @@ function ProjectsCard({ name, text, links, technologies, imageUrl }) {
               href={links.repo2}
               target="_blank"
               rel="noreferrer"
-              className={css.link}
+              className={css.projectLink}
             >
               <div className={css.technologyContainer}>
                 <Github />
