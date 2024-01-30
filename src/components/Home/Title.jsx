@@ -15,7 +15,7 @@ function Title({ text }) {
       onKeyDown={() => handleLinkSelected(text)}
       role="button"
       tabIndex={0}
-      className={`${css.link} ${
+      className={`${css.titleLink} ${
         linkSelected === text
           ? css.linkSelected
           : linkSelected !== ""

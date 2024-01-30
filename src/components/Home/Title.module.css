@@ -1,4 +1,4 @@
-.link {
+.titleLink {
    display: flex;
    justify-content: flex-start;
    width: 750px;
@@ -103,7 +103,7 @@
 }
 
 /* z-index
-100 link
+100 titleLink
 90 totalCover
 80 not-selected
 70 background */
