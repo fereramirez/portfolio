@@ -1,4 +1,4 @@
-.titleLink {
+.title-link {
    display: flex;
    justify-content: flex-start;
    width: 750px;
@@ -9,7 +9,7 @@
    opacity: 1;
 }
 
-.titleContainer h1 {
+.title-container h1 {
    font-weight: 500;
    letter-spacing: -.4rem;
    height: 100%;
@@ -17,14 +17,14 @@
    display: inline;
 }
 
-.titleContainer {
+.title-container {
    z-index: 100;
    height: 100%;
    transition: width .5s ease;
    position: relative;
 }
 
-.titleContainer h1 {
+.title-container h1 {
    color: var(--font-color);
    height: 100%;
    width: 100vw;
@@ -32,29 +32,29 @@
 }
 
 @media(max-width:699px) {
-   .titleContainer h1 {
+   .title-container h1 {
       font-size: 6rem;
    }
 }
 
 @media(max-height:799px) {
-   .titleContainer h1 {
+   .title-container h1 {
       font-size: 6rem;
    }
 }
 
 @media(max-width:449px) {
-   .titleContainer h1 {
+   .title-container h1 {
       font-size: 4rem;
    }
 }
 
-.linkSelectable {
+.link-selectable {
    cursor: pointer;
 }
 
 
-.linkNotSelected {
+.link-not-selected {
    z-index: 80;
    width: 100%;
    /* background-color: red; */
@@ -62,7 +62,7 @@
    opacity: 0;
 }
 
-.backgroundHover {
+.background-hover {
    position: absolute;
    top: 0;
    left: 0;
@@ -80,11 +80,11 @@
    z-index: 50;
 }
 
-.linkSelectable:hover .backgroundHover {
+.link-selectable:hover .background-hover {
    width: 100vw;
 }
 
-.linkSelected {
+.link-selected {
    animation: fadeOut 2s .5s forwards
 }
 
@@ -103,7 +103,7 @@
 }
 
 /* z-index
-100 titleLink
+100 title-link
 90 totalCover
 80 not-selected
 70 background */

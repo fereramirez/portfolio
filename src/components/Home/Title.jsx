@@ -4,7 +4,7 @@ import LanguageContext from "../../context/LanguageContext";
 import AnimationContext from "../../context/AnimationContext";
 // import Grid from "../common/Grid";
 
-import css from "./Title.module.css";
+import "./Title.scss";
 
 const Title = ({ text }) => {
   const { texts } = useContext(LanguageContext);
@@ -16,19 +16,19 @@ const Title = ({ text }) => {
       onKeyDown={() => handleLinkSelected(text)}
       role="button"
       tabIndex={0}
-      className={`${css.titleLink} ${
+      className={`title-link ${
         linkSelected === text
-          ? css.linkSelected
+          ? "link-selected"
           : linkSelected !== ""
-          ? css.linkNotSelected
-          : css.linkSelectable
+          ? "link-not-selected"
+          : "link-selectable"
       }`}
     >
-      <div className={css.titleContainer}>
+      <div className="title-container">
         <h1>{texts.home[text]}</h1>
       </div>
 
-      <div className={css.backgroundHover}>{/* <Grid active={true} /> */}</div>
+      <div className="background-hover">{/* <Grid active={true} /> */}</div>
     </div>
   );
 };
