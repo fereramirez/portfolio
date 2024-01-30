@@ -109,7 +109,7 @@ function Navbar() {
           </div>
 
           <div
-            className={css.language}
+            className={css.languageButton}
             onClick={() => handleLanguage(language === "en" ? "es" : "en")}
           >
             <span className={css.languageCurrent}>

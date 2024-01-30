@@ -30,7 +30,7 @@
    color: green;
 }
 
-.language {
+.languageButton {
    width: 3rem;
    height: 30px;
    font-size: .9rem;
@@ -42,11 +42,11 @@
    overflow: hidden;
 }
 
-.language:hover .languageHover {
+.languageButton:hover .languageHover {
    top: 5px;
 }
 
-.language:hover .languageCurrent {
+.languageButton:hover .languageCurrent {
    top: 28px;
 }
 
