@@ -1,13 +1,13 @@
 import { useEffect, useState, useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import AnimationContext from "../../context/AnimationContext";
 
+import AnimationContext from "../../context/AnimationContext";
 import Grid from "../common/Grid";
 
 import css from "./Intro.module.css";
 import "./Intro.css";
 
-function Intro() {
+const Intro = () => {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [bottomCursor, setBottomCursor] = useState(false);
@@ -92,6 +92,6 @@ function Intro() {
       <Outlet />
     </>
   );
-}
+};
 
 export default Intro;

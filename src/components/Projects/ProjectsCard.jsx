@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import LanguageContext from "../../context/LanguageContext";
 import { ReactComponent as ReactSvg } from "../../assets/svg/react.svg";
 import { ReactComponent as Redux } from "../../assets/svg/redux.svg";
@@ -17,7 +18,7 @@ import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import css from "./ProjectsCard.module.css";
 
-function ProjectsCard({ name, text, links, technologies, imageUrl }) {
+const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
   const { texts } = useContext(LanguageContext);
 
   return (
@@ -167,6 +168,6 @@ function ProjectsCard({ name, text, links, technologies, imageUrl }) {
       </div>
     </div>
   );
-}
+};
 
 export default ProjectsCard;

@@ -9,6 +9,7 @@ import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 
 import "./Form.scss";
 
+//! VOLVER A VER agregar config para exportar .env
 const {
   REACT_APP_EMAILJS_SERVICE_ID,
   REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -18,7 +19,7 @@ const {
 const initialMessageRemaining = 512;
 const initialMessageDegrees = 0;
 
-function Form() {
+const Form = () => {
   const { texts } = useContext(LanguageContext);
   const [waitingResponse, setWaitingResponse] = useState(false);
   const [response, setResponse] = useState(null);
@@ -289,6 +290,6 @@ function Form() {
       )}
     </div>
   );
-}
+};
 
 export default Form;

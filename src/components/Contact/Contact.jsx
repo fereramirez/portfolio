@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+
 import LanguageContext from "../../context/LanguageContext";
 import Form from "./Form";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
@@ -8,7 +9,7 @@ import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
 import css from "./Contact.module.css";
 import common from "../../App.module.css";
 
-function Contact() {
+const Contact = () => {
   const { texts } = useContext(LanguageContext);
   const [textCopied, setTextCopied] = useState(false);
 
@@ -75,6 +76,6 @@ function Contact() {
       <Form />
     </div>
   );
-}
+};
 
 export default Contact;

@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useLocation, NavLink } from "react-router-dom";
-import BurgerButton from "./BurgerButton";
+
 import LanguageContext from "../../context/LanguageContext";
+import BurgerButton from "./BurgerButton";
 import useTheme from "../../hooks/useTheme";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
+
 import css from "./Navbar.module.css";
 import common from "../../App.module.css";
 
 /* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
 const SECTIONS = ["About", "Projects", "Contact"];
 
-function Navbar() {
+const Navbar = () => {
   const location = useLocation();
   const [buttonHover, setButtonHover] = useState(
     location.pathname.substring(1).toLowerCase(),
@@ -195,6 +197,6 @@ function Navbar() {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;

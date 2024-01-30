@@ -2,7 +2,7 @@ import { ReactComponent as Github } from "../../assets/svg/github.svg";
 
 import css from "./Footer.module.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className={css.footerContainer}>
       <a
@@ -18,6 +18,6 @@ function Footer() {
       </a>
     </footer>
   );
-}
+};
 
 export default Footer;

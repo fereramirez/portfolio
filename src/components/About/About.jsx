@@ -1,4 +1,6 @@
 import { useContext } from "react";
+//! VOLVER A VER agregar useContext hook?
+
 import LanguageContext from "../../context/LanguageContext";
 import Technologies from "./Technologies";
 import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
@@ -6,7 +8,7 @@ import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 import css from "./About.module.css";
 import common from "../../App.module.css";
 
-function About() {
+const About = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
@@ -43,6 +45,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;

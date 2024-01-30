@@ -1,12 +1,13 @@
 import { useContext } from "react";
+
+import LanguageContext from "../../context/LanguageContext";
 import ProjectsCard from "./ProjectsCard";
 import Footer from "./Footer";
-import LanguageContext from "../../context/LanguageContext";
 
 import css from "./Projects.module.css";
 import common from "../../App.module.css";
 
-function Projects() {
+const Projects = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
@@ -62,9 +63,10 @@ function Projects() {
           /> */}
         </div>
       </div>
+
       <Footer />
     </>
   );
-}
+};
 
 export default Projects;

@@ -1,6 +1,6 @@
 import css from "./BurgerButton.module.css";
 
-function BurgerButton({ setShowMenu, showMenu }) {
+const BurgerButton = ({ setShowMenu, showMenu }) => {
   return (
     <label
       className={css.hamburger}
@@ -24,6 +24,6 @@ function BurgerButton({ setShowMenu, showMenu }) {
       />
     </label>
   );
-}
+};
 
 export default BurgerButton;

@@ -1,6 +1,6 @@
 import css from "./NotFound.module.css";
 
-function NotFound() {
+const NotFound = () => {
   return (
     <div className={css.notFoundContainer}>
       <div className={css.notFoundText} title="ERROR 404: Not Found">
@@ -23,6 +23,6 @@ function NotFound() {
       </div>
     </div>
   );
-}
+};
 
 export default NotFound;

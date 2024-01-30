@@ -18,7 +18,7 @@ import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
 import "./Technologies.scss";
 
-function Technologies() {
+const Technologies = () => {
   return (
     <div className="technologies-section">
       <div className="technologies-container">
@@ -100,6 +100,6 @@ function Technologies() {
       </div>
     </div>
   );
-}
+};
 
 export default Technologies;

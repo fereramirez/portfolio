@@ -1,6 +1,6 @@
 import "./Grid.scss";
 
-function Grid({ active, color, position }) {
+const Grid = ({ active, color, position }) => {
   return (
     <div
       className={`grid-container ${active ? "grid-active" : "grid-inactive"}`}
@@ -765,6 +765,6 @@ function Grid({ active, color, position }) {
       <div className="grid-item" style={{ backgroundColor: color }} />
     </div>
   );
-}
+};
 
 export default Grid;
