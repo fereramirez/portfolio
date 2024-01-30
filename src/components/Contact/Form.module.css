@@ -7,7 +7,8 @@
    margin-top: 1rem;
 }
 
-.description {
+/* VOLVER A VER normalizar description */
+.formText {
    font-size: 1.5rem;
 }
 
@@ -67,17 +68,17 @@
    outline: none;
 }
 
-button {
+.inputContainer button {
    border: 1px solid transparent;
 }
 
 .input:disabled,
-button[type="submit"]:disabled {
+.inputContainer button[type="submit"]:disabled {
    cursor: not-allowed;
 }
 
 .input:disabled,
-button[type="submit"]:disabled,
+.inputContainer button[type="submit"]:disabled,
 input.input:-internal-autofill-selected {
    background-color: rgba(239, 239, 239, 0.3) !important;
    /* background-color: red !important; */
@@ -102,7 +103,7 @@ input:-webkit-autofill {
    border-color: red;
 }
 
-.form button:disabled {
+.inputContainer button:disabled {
    cursor: not-allowed;
 }
 
@@ -178,14 +179,14 @@ input:-webkit-autofill {
    color: var(--font-color);
    scale: .8;
    margin-top: .1rem;
-   /*! ver aca */
+   /*! VOLVER A VER ver aca */
 }
 
 .errorPlaceholder {
    visibility: hidden;
 }
 
-button[type="submit"] {
+.inputContainer button[type="submit"] {
    width: 10rem;
    height: 2.5rem;
    cursor: pointer;
@@ -196,7 +197,7 @@ button[type="submit"] {
    font-weight: 600;
 }
 
-button[type="submit"]:hover {
+.inputContainer button[type="submit"]:hover {
    background-color: rgb(0, 176, 0);
    background-color: green;
    transition: background-color 0.2s ease, color 0.2s ease;
@@ -208,16 +209,16 @@ button[type="submit"]:hover {
 }
 
 @media(max-width:599px) {
-   .description {
+   .formText {
       font-size: 1.2rem;
    }
 }
 
-button[type="submit"]:hover.waiting,
+.inputContainer button[type="submit"]:hover.waiting,
 .input:disabled.waiting {
    cursor: wait;
 }
 
-button[type="submit"]:hover.buttonError {
+.inputContainer button[type="submit"]:hover.buttonError {
    background-color: red;
 }

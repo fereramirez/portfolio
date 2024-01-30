@@ -106,7 +106,7 @@ function Form() {
     >
       {!showSuccess ? (
         <>
-          <div className={css.description}>{texts.form.title}</div>
+          <div className={css.formText}>{texts.form.title}</div>
           <form
             onSubmit={handleSubmit(sendEmail)}
             ref={formRef}
@@ -283,7 +283,7 @@ function Form() {
       ) : (
         <div className={css.success}>
           <Brick />
-          <span className={css.description}>{texts.form.responseSuccess}</span>
+          <span className={css.formText}>{texts.form.responseSuccess}</span>
         </div>
       )}
     </div>
