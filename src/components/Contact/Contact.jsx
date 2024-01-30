@@ -22,7 +22,7 @@ function Contact() {
 
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>{texts.contact.title}</div>
+      <h1 className={css.title}>{texts.contact.title}</h1>
       <div className={css.description}>{texts.contact.links}</div>
 
       <div className={css.linksContainer}>
@@ -67,6 +67,7 @@ function Contact() {
           <span className={css.tooltip}>
             {textCopied ? texts.contact.copied : texts.contact.copy}
           </span>
+          {/* //! VOLVER A VER ponerle z index -1 */}
         </span>
         ,
       </div>

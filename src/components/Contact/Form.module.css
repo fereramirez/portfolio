@@ -15,6 +15,7 @@
    max-height: 0;
 }
 
+/* VOLVER A VER normalizar todos los transition */
 .showSuccess {
    max-height: 10rem;
    transition: max-height 1s ease;
@@ -43,14 +44,14 @@
    position: relative;
 }
 
-.titleContainer {
+.fieldNameContainer {
    min-height: 2.5rem;
    height: fit-content;
    display: flex;
    align-items: center;
 }
 
-.title {
+.fieldName {
    font-weight: 600;
 }
 

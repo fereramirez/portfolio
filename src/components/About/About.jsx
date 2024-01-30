@@ -11,7 +11,7 @@ function About() {
 
   return (
     <div className={`${css.container} ${common.content}`}>
-      <div className={css.title}>{texts.about.title}</div>
+      <h1 className={css.title}>{texts.about.title}</h1>
       <div className={css.description}>
         <span> {texts.about.im}</span>{" "}
         <span className={css.name}>Fernando Ramirez</span>

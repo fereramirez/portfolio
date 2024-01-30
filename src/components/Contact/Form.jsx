@@ -113,9 +113,9 @@ function Form() {
             className={css.form}
           >
             <span className={css.inputContainer}>
-              <div className={css.titleContainer}>
+              <div className={css.fieldNameContainer}>
                 {!errors.name ? (
-                  <p className={css.title}>{texts.form.name}</p>
+                  <p className={css.fieldName}>{texts.form.name}</p>
                 ) : (
                   <div className={css.error}>
                     <Warning />
@@ -144,9 +144,9 @@ function Form() {
             </span>
 
             <span className={css.inputContainer}>
-              <div className={css.titleContainer}>
+              <div className={css.fieldNameContainer}>
                 {!errors.email ? (
-                  <p className={css.title}>Email</p>
+                  <p className={css.fieldName}>Email</p>
                 ) : (
                   <div className={css.error}>
                     <Warning />
@@ -179,9 +179,9 @@ function Form() {
             </span>
 
             <span className={css.inputContainer}>
-              <div className={css.titleContainer}>
+              <div className={css.fieldNameContainer}>
                 {!errors.message ? (
-                  <p className={css.title}>{texts.form.message}</p>
+                  <p className={css.fieldName}>{texts.form.message}</p>
                 ) : (
                   <div className={css.error}>
                     <Warning />
@@ -251,7 +251,7 @@ function Form() {
             </span>
 
             <span className={`${css.inputContainer} ${css.submitContainer}`}>
-              <div className={css.titleContainer}>
+              <div className={css.fieldNameContainer}>
                 {response === "error" ? (
                   <div className={css.error}>
                     <Warning />

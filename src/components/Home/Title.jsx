@@ -23,7 +23,7 @@ function Title({ text }) {
           : css.linkSelectable
       }`}
     >
-      <div className={css.title}>
+      <div className={css.titleContainer}>
         <h1>{texts.home[text]}</h1>
       </div>
 

@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
@@ -12,7 +12,9 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",
     "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "sass": "^1.70.0",
+    "validator": "^13.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,15 +38,20 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "prettier": "^2.8.0"
+    "eslint-plugin-testing-library": "^6.2.0",
+    "prettier": "2.8.3",
+    "husky": "^8.0.0"
   }
 }

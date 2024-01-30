@@ -12,7 +12,7 @@ function Projects() {
   return (
     <>
       <div className={`${css.container} ${common.content}`}>
-        <p className={css.title}>{texts.projects.title}</p>
+        <h1 className={css.title}>{texts.projects.title}</h1>
 
         <div className={css.allProjectsContainer}>
           <ProjectsCard
