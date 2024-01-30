@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <div
-        className={`${css.container} ${
+        className={`${css.homeContainer} ${
           location.pathname !== "/" ? css.notHome : ""
         }`}
       >

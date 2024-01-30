@@ -100,7 +100,7 @@ function Form() {
 
   return (
     <div
-      className={`${css.container} ${
+      className={`${css.formContainer} ${
         response === "success" ? css.containerHideForm : ""
       } ${showSuccess ? css.showSuccess : ""}`}
     >

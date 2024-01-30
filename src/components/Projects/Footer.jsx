@@ -4,7 +4,7 @@ import css from "./Footer.module.css";
 
 function Footer() {
   return (
-    <footer className={css.container}>
+    <footer className={css.footerContainer}>
       <a
         href="https://github.com/fereramirez/portfolio"
         target="_blank"

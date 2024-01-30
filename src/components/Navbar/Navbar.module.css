@@ -1,4 +1,4 @@
-.container {
+.navbarContainer {
    position: sticky;
    top: 0;
    background-color: var(--background-color);
@@ -107,7 +107,7 @@
       display: none;
    }
 
-   .container {
+   .navbarContainer {
       height: 3.5rem;
    }
 

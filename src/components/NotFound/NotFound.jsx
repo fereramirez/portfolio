@@ -2,7 +2,7 @@ import css from "./NotFound.module.css";
 
 function NotFound() {
   return (
-    <div className={css.container}>
+    <div className={css.notFoundContainer}>
       <div className={css.text} title="ERROR 404: Not Found">
         ERROR 404:
       </div>

@@ -3,7 +3,7 @@ import css from "./Grid.module.css";
 function Grid({ active, color, position }) {
   return (
     <div
-      className={`${css.container} ${
+      className={`${css.gridContainer} ${
         active ? css.gridActive : css.gridInactive
       }`}
       style={{ [position]: "0" }}

@@ -46,7 +46,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={`${css.container} ${common.content}`}>
+      <div className={`${css.navbarContainer} ${common.content}`}>
         <span className={css.mobileHomeButton}>
           <NavLink to="/">Fernando</NavLink>
         </span>

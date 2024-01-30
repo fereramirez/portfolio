@@ -1,4 +1,5 @@
-.container {
+/* VOLVER A VERA normalizar .container */
+.projectscontainer {
    display: flex;
    flex-direction: column;
    padding: 5% 3rem 1.5rem;
@@ -23,7 +24,7 @@
       font-size: 3rem;
    }
 
-   .container {
+   .projectscontainer {
       padding: 1.5rem;
    }
 }

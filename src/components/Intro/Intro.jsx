@@ -46,7 +46,7 @@ function Intro() {
   return (
     <>
       <div
-        className={`${css.container}`}
+        className={`${css.introContainer}`}
         style={{
           animationName: `${
             location.pathname !== "/" && runFadeOut

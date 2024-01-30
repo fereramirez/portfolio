@@ -11,7 +11,7 @@ function Projects() {
 
   return (
     <>
-      <div className={`${css.container} ${common.content}`}>
+      <div className={`${css.projectscontainer} ${common.content}`}>
         <h1 className={css.title}>{texts.projects.title}</h1>
 
         <div className={css.allProjectsContainer}>
