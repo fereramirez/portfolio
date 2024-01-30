@@ -8,7 +8,7 @@
    flex-wrap: wrap;
 }
 
-.text {
+.notFoundText {
    animation: glitch 1s linear infinite;
    font-weight: 200;
    color: purple;
@@ -16,7 +16,7 @@
 }
 
 @media(max-width:549px) {
-   .text {
+   .notFoundText {
       font-size: 3rem;
    }
 }
@@ -38,14 +38,14 @@
    }
 }
 
-.text:before,
-.text:after {
+.notFoundText:before,
+.notFoundText:after {
    content: attr(title);
    position: absolute;
    left: 0;
 }
 
-.text:before {
+.notFoundText:before {
    animation: glitchTop 1s linear infinite;
    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -68,7 +68,7 @@
    }
 }
 
-.text:after {
+.notFoundText:after {
    animation: glitchBotom 1.5s linear infinite;
    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
