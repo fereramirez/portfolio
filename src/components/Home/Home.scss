@@ -1,4 +1,4 @@
-.homeContainer {
+.home-container {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -17,7 +17,7 @@
    /* background-color: red; */
 }
 
-.notHome {
+.not-home {
    transition: opacity .5s ease;
    animation:
       fadeOut 1s .5s forwards,
@@ -53,7 +53,7 @@
    }
 }
 
-.totalCover {
+.total-cover {
    width: 0;
    height: 100%;
    position: absolute;
@@ -66,7 +66,7 @@
    /* background-color: white; */
 }
 
-.totalCoverActive {
+.total-cover-active {
    /* background-color: purple; */
    width: 100%;
    /* animation: fadeOut 2s forwards; */

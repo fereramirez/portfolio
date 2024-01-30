@@ -1,20 +1,21 @@
 import { useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Grid from "../common/Grid";
-import AnimationContext from "../../context/AnimationContext";
 
-import css from "./Home.module.css";
+import AnimationContext from "../../context/AnimationContext";
+import Grid from "../common/Grid";
 import Title from "./Title";
 
-function Home() {
+import "./Home.scss";
+
+const Home = () => {
   const location = useLocation();
   const { runCoverFadeOut } = useContext(AnimationContext);
 
   return (
     <>
       <div
-        className={`${css.homeContainer} ${
-          location.pathname !== "/" ? css.notHome : ""
+        className={`home-container ${
+          location.pathname !== "/" ? "not-home" : ""
         }`}
       >
         {location.pathname === "/" && (
@@ -28,16 +29,17 @@ function Home() {
         )}
 
         <div
-          className={`${css.totalCover} ${
-            runCoverFadeOut ? css.totalCoverActive : ""
+          className={`total-cover ${
+            runCoverFadeOut ? "total-cover-active" : ""
           }`}
         >
           <Grid color="purple" position="right" />
         </div>
       </div>
+
       <Outlet />
     </>
   );
-}
+};
 
 export default Home;
