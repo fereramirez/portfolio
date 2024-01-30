@@ -4,7 +4,7 @@ import css from "./Footer.module.css";
 
 function Footer() {
   return (
-    <div className={css.container}>
+    <footer className={css.container}>
       <a
         href="https://github.com/fereramirez/portfolio"
         target="_blank"
@@ -16,7 +16,7 @@ function Footer() {
           <Github />
         </div>
       </a>
-    </div>
+    </footer>
   );
 }
 
