@@ -12,25 +12,30 @@ function About() {
   return (
     <div className={`${css.container} ${common.content}`}>
       <h1 className={css.title}>{texts.about.title}</h1>
-      <div className={css.description}>
-        <span> {texts.about.im}</span>{" "}
-        <span className={css.name}>Fernando Ramirez</span>
-        <span>{texts.about.firstParagraph}</span>
+
+      <div className={css.paragraph}>
+        <span>
+          {texts.about.im}{" "}
+          <strong className={css.name}>Fernando Ramirez</strong>
+          {texts.about.firstParagraph}
+        </span>
       </div>
-      <div className={css.description}>{texts.about.secondParagraph}</div>
-      <div className={css.description}>{texts.about.thirdParagraph}</div>
-      <div className={css.description}>{texts.about.technologies}</div>
+
+      <div className={css.paragraph}>{texts.about.secondParagraph}</div>
+      <div className={css.paragraph}>{texts.about.thirdParagraph}</div>
+      <div className={css.paragraph}>{texts.about.technologies}</div>
 
       <Technologies />
 
-      <div className={css.description}>
+      <div className={css.paragraph}>
         <a
           href="https://drive.google.com/file/d/1Jc8UyhxUJGqPA4FFnPPN86OUCnVJ3ifc/view?usp=share_link"
           target="_blank"
           rel="noreferrer"
-          className={css.resume}
+          className={css.resumeLink}
         >
           <span>{texts.about.resume}</span>
+
           <span>
             <Cv />
           </span>
