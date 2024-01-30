@@ -13,7 +13,7 @@
    font-weight: 100;
 }
 
-.description {
+.contactText {
    font-size: 1.5rem;
 }
 
@@ -41,7 +41,7 @@
    height: 50px;
 }
 
-.email {
+.emailButton {
    color: green;
    cursor: pointer;
    position: relative;
@@ -63,7 +63,8 @@
    font-size: 1rem;
 }
 
-.email:hover>.tooltip {
+/* VOLVER A VER normalizar tooltip */
+.emailButton:hover>.tooltip {
    opacity: 1
 }
 
@@ -72,7 +73,7 @@
       font-size: 3rem;
    }
 
-   .description {
+   .contactText {
       font-size: 1.2rem;
    }
 

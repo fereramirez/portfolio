@@ -23,7 +23,7 @@ function Contact() {
   return (
     <div className={`${css.container} ${common.content}`}>
       <h1 className={css.title}>{texts.contact.title}</h1>
-      <div className={css.description}>{texts.contact.links}</div>
+      <div className={css.contactText}>{texts.contact.links}</div>
 
       <div className={css.linksContainer}>
         <a
@@ -54,10 +54,10 @@ function Contact() {
         </a>
       </div>
 
-      <div className={css.description}>
+      <div className={css.contactText}>
         {texts.contact.email}
         <span
-          className={css.email}
+          className={css.emailButton}
           onClick={handleCopy}
           onKeyDown={handleCopy}
           role="button"
