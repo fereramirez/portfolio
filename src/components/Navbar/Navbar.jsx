@@ -8,7 +8,7 @@ import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 
 import "../../App.css";
-import css from "./Navbar.module.css";
+import "./Navbar.scss";
 
 /* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
 const SECTIONS = ["About", "Projects", "Contact"];
@@ -48,19 +48,19 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`${css.navbarContainer} content`}>
-        <span className={css.mobileHomeButton}>
+      <div className="navbar-container content">
+        <span className="mobile-home-button">
           <NavLink to="/">Fernando</NavLink>
         </span>
 
-        <div className={css.buttonsContainer}>
-          <div className={css.buttonsBox}>
+        <div className="buttons-container">
+          <div className="buttons-box">
             {React.Children.toArray(
               SECTIONS.map((section, i) => (
                 /*  <NavLink to={i === 0 ? "/" : section.toLowerCase()}> */
                 <NavLink to={section.toLowerCase()}>
                   <div
-                    className={css.button}
+                    className="button"
                     onPointerEnter={() => handleHover(i)}
                     onPointerLeave={handleHoverLeave}
                   >
@@ -72,23 +72,23 @@ const Navbar = () => {
           </div>
 
           <div
-            className={css.bottomSelector}
+            className="bottom-selector"
             style={{ transform: `translateX(${buttonHover * 100}%)` }}
           />
 
           <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
 
-        <div className={css.selectors}>
-          <div className={css.themeButtons}>
+        <div className="selectors">
+          <div className="theme-buttons">
             {theme === "dark" && (
               <span
-                className={css.lightThemeButton}
+                className="light-theme-button"
                 onClick={() => handleTheme("light")}
               >
-                <span className={css.themeSelected}>
+                <span>
                   <Dark />
-                  <span className={css.rays}>
+                  <span className="rays">
                     <Rays />
                   </span>
                 </span>
@@ -97,12 +97,12 @@ const Navbar = () => {
 
             {theme === "light" && (
               <span
-                className={css.darkThemeButton}
+                className="dark-theme-button"
                 onClick={() => handleTheme("dark")}
               >
                 <span>
                   <Dark />
-                  <span className={css.rays}>
+                  <span className="rays">
                     <Rays />
                   </span>
                 </span>
@@ -111,23 +111,19 @@ const Navbar = () => {
           </div>
 
           <div
-            className={css.languageButton}
+            className="language-button"
             onClick={() => handleLanguage(language === "en" ? "es" : "en")}
           >
-            <span className={css.languageCurrent}>
-              {language.toUpperCase()}
-            </span>
-            <span className={css.languageHover}>
+            <span className="language-current">{language.toUpperCase()}</span>
+            <span className="language-hover">
               {language === "en" ? "ES" : "EN"}
             </span>
           </div>
         </div>
       </div>
 
-      <div
-        className={`${css.mobileMenu} ${showMenu ? css.showMobileMenu : ""}`}
-      >
-        <div className={css.mobileButtonsContainer}>
+      <div className={`mobile-menu${showMenu ? " show-mobile-menu" : ""}`}>
+        <div className="mobile-buttons-container">
           {React.Children.toArray(
             SECTIONS.map((section, i) => (
               <NavLink
@@ -135,11 +131,11 @@ const Navbar = () => {
                 /* onClick={() => setShowMenu(false)} */
               >
                 <div
-                  className={`${
+                  className={
                     section.toLowerCase() === location.pathname.substring(1)
-                      ? css.mobileCurrentSection
-                      : css.mobileButton
-                  }`}
+                      ? "mobile-current-section"
+                      : "mobile-button"
+                  }
                 >
                   {texts.navbarButtons[i]}
                 </div>
@@ -147,31 +143,31 @@ const Navbar = () => {
             )),
           )}
 
-          <div className={css.mobileSelectors}>
-            <div className={css.languageMobileContainer}>
+          <div className="mobile-selectors">
+            <div className="language-mobile-container">
               <div
-                className={css.languageMobile}
+                className="language-mobile"
                 onClick={() => handleLanguage(language === "en" ? "es" : "en")}
               >
-                <span className={css.languageMobileCurrent}>
+                <span className="language-mobile-current">
                   {language.toUpperCase()}
                 </span>
 
-                <span className={css.languageMobileHover}>
+                <span className="language-mobile-hover">
                   {language === "en" ? "ES" : "EN"}
                 </span>
               </div>
             </div>
 
-            <div className={css.themeButtons}>
+            <div className="theme-buttons">
               {theme === "dark" && (
                 <span
-                  className={css.lightThemeButton}
+                  className="light-theme-button"
                   onClick={() => handleTheme("light")}
                 >
-                  <span className={css.themeSelected}>
+                  <span>
                     <Dark />
-                    <span className={css.rays}>
+                    <span className="rays">
                       <Rays />
                     </span>
                   </span>
@@ -180,12 +176,12 @@ const Navbar = () => {
 
               {theme === "light" && (
                 <span
-                  className={css.darkThemeButton}
+                  className="dark-theme-button"
                   onClick={() => handleTheme("dark")}
                 >
                   <span>
                     <Dark />
-                    <span className={css.rays}>
+                    <span className="rays">
                       <Rays />
                     </span>
                   </span>
