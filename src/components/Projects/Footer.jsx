@@ -1,18 +1,18 @@
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 
-import css from "./Footer.module.css";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer className={css.footerContainer}>
+    <footer className="footer-container">
       <a
         href="https://github.com/fereramirez/portfolio"
         target="_blank"
         rel="noreferrer"
-        className={css.footerLink}
+        className="footer-link"
       >
         Portfolio Repo
-        <div className={css.svgContainer}>
+        <div className="footer-svg-container">
           <Github />
         </div>
       </a>

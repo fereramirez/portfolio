@@ -1,0 +1,37 @@
+.footer-container {
+  background-color: var(--background-color);
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: #45525f5b 0px 1px 4px;
+  margin-top: 1rem;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: green;
+}
+
+.footer-svg-container {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+.footer-svg-container svg g {
+  fill: var(--font-color);
+  transition: fill 0.2s ease;
+}
+
+.footer-link:hover .footer-svg-container svg g {
+  fill: green;
+}
