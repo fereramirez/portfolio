@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import LanguageContext from "../../context/LanguageContext";
-import ProjectsCard from "./ProjectsCard";
+import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 
 import css from "./Projects.module.css";
@@ -16,7 +16,7 @@ const Projects = () => {
         <h1 className={css.title}>{texts.projects.title}</h1>
 
         <div className={css.allProjectsContainer}>
-          <ProjectsCard
+          <ProjectCard
             name="NAFTA Productions"
             text="nafta"
             links={{
@@ -33,7 +33,7 @@ const Projects = () => {
             imageUrl="https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_40/v1667187375/Portfolio/video-nafta_ihnjyo.gif"
           />
 
-          <ProjectsCard
+          <ProjectCard
             name="PROVIDER Store"
             text="provider"
             links={{
@@ -45,7 +45,7 @@ const Projects = () => {
             imageUrl="https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298641/Portfolio/video-provider2_axhz0j.gif"
           />
 
-          {/* <ProjectsCard
+          {/* <ProjectCard
             name="Another DOGOS App"
             text="dogos"
             links={{

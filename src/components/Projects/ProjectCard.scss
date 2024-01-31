@@ -1,4 +1,4 @@
-.projectCard {
+.project-card {
    height: fit-content;
    display: flex;
    width: 100%;
@@ -8,33 +8,33 @@
    border-bottom: 2px solid green;
 }
 
-.projectData {
+.project-data {
    display: flex;
    flex-direction: column;
    width: 70%;
    padding-right: 1.5rem;
 }
 
-.projectName {
+.project-name {
    font-size: 1.5rem;
    color: green;
    margin-bottom: 1rem;
 }
 
-.projectImage {
+.project-image {
    height: fit-content;
    width: fit-content;
    background-color: rgba(0, 128, 0, 0.114);
 }
 
-.projectImage img {
+.project-image img {
    width: auto;
    max-height: 300px;
    padding: .4rem;
    padding-bottom: .1rem;
 }
 
-.projectImageMobile {
+.project-image-mobile {
    margin-top: 1.5rem;
    align-self: center;
 
@@ -43,7 +43,7 @@
    background-color: rgba(0, 128, 0, 0.114);
 }
 
-.projectImageMobile img {
+.project-image-mobile img {
    width: auto;
    max-height: 300px;
    padding: .4rem;
@@ -51,27 +51,27 @@
 }
 
 @media(max-width:1239px) {
-   .projectImage {
+   .project-image {
       display: none;
    }
 
-   .projectCard {
+   .project-card {
       flex-direction: column;
       justify-content: center;
    }
 
-   .projectData {
+   .project-data {
       padding: 0;
       /* width: 100%; */
    }
 }
 
 @media(min-width:1240px) {
-   .projectImageMobile {
+   .project-image-mobile {
       display: none;
    }
 
-   .projectCard {
+   .project-card {
       width: 70vw;
       justify-content: space-between;
       padding: 1.5rem;
@@ -79,20 +79,20 @@
 }
 
 @media(max-width:919px) {
-   .projectData {
+   .project-data {
       width: 100%;
    }
 
-   .projectCard {
+   .project-card {
       padding: 1.5rem 0;
    }
 
-   .projectImageMobile {
+   .project-image-mobile {
       height: fit-content;
       width: fit-content;
    }
 
-   .projectImageMobile img {
+   .project-image-mobile img {
       /* width: auto;
       max-height: 300px; */
       height: auto;
@@ -101,45 +101,45 @@
 }
 
 @media(min-width:589px) {
-   .projectImage {
+   .project-image {
       min-height: 305px;
       min-width: 530px;
    }
 }
 
-.projectLinksContainer {
+.project-links-container {
    margin-top: 1rem;
 }
 
-.projectLink svg {
+.project-link svg {
    fill: var(--font-color);
    transition: fill .2s ease;
 }
 
-.projectLink:hover svg {
+.project-link:hover svg {
    fill: green
 }
 
-.projectLink svg g {
+.project-link svg g {
    fill: var(--font-color);
    transition: fill .2s ease;
 }
 
-.projectLink:hover svg g {
+.project-link:hover svg g {
    fill: green
 }
 
-.technologiesContainer {
+.technologies-container {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
 }
 
-.technologiesContainer svg {
+.technologies-container svg {
    height: 30px;
 }
 
-.technologyContainer {
+.technology-container {
    display: flex;
    flex-direction: column-reverse;
    align-items: center;
@@ -150,7 +150,7 @@
    max-width: fit-content; */
 }
 
-.technologyContainerCssModules {
+.technology-container-css-modules {
    margin: 6px
 }
 
@@ -170,24 +170,25 @@
    min-width: max-content;
 }
 
-.technologyContainer:hover>.tooltip {
+.technology-container:hover>.tooltip {
    opacity: 1
 }
 
-.projectLink:hover .tooltip {
+.project-link:hover .tooltip {
    opacity: 1
 }
 
-.cssModulesSvgContainer+.tooltip {
+/* VOLVER A VER esta clase se repite? */
+.css-modules-svg-container+.tooltip {
    transform: translateX(35%, 10px);
 }
 
-.cssModulesSvgContainer svg {
+.css-modules-svg-container svg {
    height: 50px;
 }
 
 @media(max-width:599px) {
-   .projectDescription {
+   .project-description {
       font-size: 1rem;
    }
 

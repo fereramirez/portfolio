@@ -16,31 +16,29 @@ import { ReactComponent as CssModules } from "../../assets/svg/cssmodules.svg";
 import { ReactComponent as Next } from "../../assets/svg/next.svg";
 import { ReactComponent as Typescript } from "../../assets/svg/typescript.svg";
 
-import css from "./ProjectsCard.module.css";
+import "./ProjectCard.scss";
 
-const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
+const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
   const { texts } = useContext(LanguageContext);
 
   return (
-    <div className={css.projectCard}>
-      <div className={css.projectData}>
-        <p className={css.projectName}>{name}</p>
-        <p className={css.projectDescription}>{texts.projects[text]}</p>
+    <div className="project-card">
+      <div className="project-data">
+        <p className="project-name">{name}</p>
+        <p className="project-description">{texts.projects[text]}</p>
 
-        <div className={css.projectImageMobile}>
+        <div className="project-image-mobile">
           <img src={imageUrl} alt={name} />
         </div>
 
-        <div
-          className={`${css.projectLinksContainer} ${css.technologiesContainer}`}
-        >
+        <div className="project-links-container technologies-container">
           <a
             href={links.deploy}
             target="_blank"
             rel="noreferrer"
-            className={css.projectLink}
+            className="project-link"
           >
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Earth />
             </div>
           </a>
@@ -49,11 +47,11 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
             href={links.repo}
             target="_blank"
             rel="noreferrer"
-            className={css.projectLink}
+            className="project-link"
           >
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Github />
-              {links?.repo2 && <div className={css.tooltip}>Client Repo</div>}
+              {links?.repo2 && <div className="tooltip">Client Repo</div>}
             </div>
           </a>
 
@@ -62,112 +60,110 @@ const ProjectsCard = ({ name, text, links, technologies, imageUrl }) => {
               href={links.repo2}
               target="_blank"
               rel="noreferrer"
-              className={css.projectLink}
+              className="project-link"
             >
-              <div className={css.technologyContainer}>
+              <div className="technology-container">
                 <Github />
-                <div className={css.tooltip}>Backend Repo</div>
+                <div className="tooltip">Backend Repo</div>
               </div>
             </a>
           )}
         </div>
 
-        <div className={css.technologiesContainer}>
+        <div className="technologies-container">
           {technologies.includes("typescript") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Typescript />
-              <div className={css.tooltip}>TypeScript</div>
+              <div className="tooltip">TypeScript</div>
             </div>
           )}
 
           {technologies.includes("react") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <ReactSvg />
-              <div className={css.tooltip}>React.js</div>
+              <div className="tooltip">React.js</div>
             </div>
           )}
 
           {technologies.includes("redux") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Redux />
-              <div className={css.tooltip}>Redux.js</div>
+              <div className="tooltip">Redux.js</div>
             </div>
           )}
 
           {technologies.includes("chakra") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Chakra />
-              <div className={css.tooltip}>Chakra UI</div>
+              <div className="tooltip">Chakra UI</div>
             </div>
           )}
 
           {technologies.includes("css-modules") && (
-            <div
-              className={`${css.technologyContainer} ${css.technologyContainerCssModules}`}
-            >
-              <span className={css.cssModulesSvgContainer}>
+            <div className="technology-container technology-container-css-modules">
+              <span className="css-modules-svg-container">
                 <CssModules />
               </span>
-              <div className={css.tooltip}>CSS Modules</div>
+              <div className="tooltip">CSS Modules</div>
             </div>
           )}
 
           {technologies.includes("sass") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Sass />
-              <div className={css.tooltip}>Sass</div>
+              <div className="tooltip">Sass</div>
             </div>
           )}
 
           {technologies.includes("node") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Nodejs />
-              <div className={css.tooltip}>Node.js</div>
+              <div className="tooltip">Node.js</div>
             </div>
           )}
 
           {technologies.includes("express") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Express />
-              <div className={css.tooltip}>Express.js</div>
+              <div className="tooltip">Express.js</div>
             </div>
           )}
 
           {technologies.includes("mongo") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Mongo />
-              <div className={css.tooltip}>MongoDB</div>
+              <div className="tooltip">MongoDB</div>
             </div>
           )}
 
           {technologies.includes("postgresql") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <PostgresSql />
-              <div className={css.tooltip}>PostgreSQL</div>
+              <div className="tooltip">PostgreSQL</div>
             </div>
           )}
 
           {technologies.includes("sequelize") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Sequelize />
-              <div className={css.tooltip}>Sequelize</div>
+              <div className="tooltip">Sequelize</div>
             </div>
           )}
 
           {technologies.includes("next") && (
-            <div className={css.technologyContainer}>
+            <div className="technology-container">
               <Next />
-              <div className={css.tooltip}>Next.js</div>
+              <div className="tooltip">Next.js</div>
             </div>
           )}
         </div>
       </div>
 
-      <div className={css.projectImage}>
+      <div className="project-image">
         <img src={imageUrl} alt={name} />
       </div>
     </div>
   );
 };
 
-export default ProjectsCard;
+export default ProjectCard;
