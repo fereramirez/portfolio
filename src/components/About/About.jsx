@@ -2,7 +2,7 @@ import { useContext } from "react";
 //! VOLVER A VER agregar useContext hook?
 
 import LanguageContext from "../../context/LanguageContext";
-import Technologies from "./Technologies";
+import AboutTechnologies from "./AboutTechnologies";
 import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
 import "../../App.css";
@@ -27,7 +27,7 @@ const About = () => {
       <div className={css.paragraph}>{texts.about.thirdParagraph}</div>
       <div className={css.paragraph}>{texts.about.technologies}</div>
 
-      <Technologies />
+      <AboutTechnologies />
 
       <div className={css.paragraph}>
         <a

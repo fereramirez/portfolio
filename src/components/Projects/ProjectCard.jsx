@@ -31,14 +31,14 @@ const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
           <img src={imageUrl} alt={name} />
         </div>
 
-        <div className="project-links-container technologies-container">
+        <div className="project-links-container project-technologies-container">
           <a
             href={links.deploy}
             target="_blank"
             rel="noreferrer"
             className="project-link"
           >
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Earth />
             </div>
           </a>
@@ -49,7 +49,7 @@ const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
             rel="noreferrer"
             className="project-link"
           >
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Github />
               {links?.repo2 && <div className="tooltip">Client Repo</div>}
             </div>
@@ -62,7 +62,7 @@ const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
               rel="noreferrer"
               className="project-link"
             >
-              <div className="technology-container">
+              <div className="project-technology-container">
                 <Github />
                 <div className="tooltip">Backend Repo</div>
               </div>
@@ -70,37 +70,37 @@ const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
           )}
         </div>
 
-        <div className="technologies-container">
+        <div className="project-technologies-container">
           {technologies.includes("typescript") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Typescript />
               <div className="tooltip">TypeScript</div>
             </div>
           )}
 
           {technologies.includes("react") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <ReactSvg />
               <div className="tooltip">React.js</div>
             </div>
           )}
 
           {technologies.includes("redux") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Redux />
               <div className="tooltip">Redux.js</div>
             </div>
           )}
 
           {technologies.includes("chakra") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Chakra />
               <div className="tooltip">Chakra UI</div>
             </div>
           )}
 
           {technologies.includes("css-modules") && (
-            <div className="technology-container technology-container-css-modules">
+            <div className="project-technology-container project-technology-container-css-modules">
               <span className="css-modules-svg-container">
                 <CssModules />
               </span>
@@ -109,49 +109,49 @@ const ProjectCard = ({ name, text, links, technologies, imageUrl }) => {
           )}
 
           {technologies.includes("sass") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Sass />
               <div className="tooltip">Sass</div>
             </div>
           )}
 
           {technologies.includes("node") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Nodejs />
               <div className="tooltip">Node.js</div>
             </div>
           )}
 
           {technologies.includes("express") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Express />
               <div className="tooltip">Express.js</div>
             </div>
           )}
 
           {technologies.includes("mongo") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Mongo />
               <div className="tooltip">MongoDB</div>
             </div>
           )}
 
           {technologies.includes("postgresql") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <PostgresSql />
               <div className="tooltip">PostgreSQL</div>
             </div>
           )}
 
           {technologies.includes("sequelize") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Sequelize />
               <div className="tooltip">Sequelize</div>
             </div>
           )}
 
           {technologies.includes("next") && (
-            <div className="technology-container">
+            <div className="project-technology-container">
               <Next />
               <div className="tooltip">Next.js</div>
             </div>

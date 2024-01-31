@@ -1,204 +1,204 @@
 .project-card {
-   height: fit-content;
-   display: flex;
-   width: 100%;
-   align-items: center;
-   justify-content: space-between;
-   padding: 1.5rem;
-   border-bottom: 2px solid green;
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 2px solid green;
 }
 
 .project-data {
-   display: flex;
-   flex-direction: column;
-   width: 70%;
-   padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-right: 1.5rem;
 }
 
 .project-name {
-   font-size: 1.5rem;
-   color: green;
-   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: green;
+  margin-bottom: 1rem;
 }
 
 .project-image {
-   height: fit-content;
-   width: fit-content;
-   background-color: rgba(0, 128, 0, 0.114);
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba(0, 128, 0, 0.114);
 }
 
 .project-image img {
-   width: auto;
-   max-height: 300px;
-   padding: .4rem;
-   padding-bottom: .1rem;
+  width: auto;
+  max-height: 300px;
+  padding: 0.4rem;
+  padding-bottom: 0.1rem;
 }
 
 .project-image-mobile {
-   margin-top: 1.5rem;
-   align-self: center;
+  margin-top: 1.5rem;
+  align-self: center;
 
-   height: fit-content;
-   width: fit-content;
-   background-color: rgba(0, 128, 0, 0.114);
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba(0, 128, 0, 0.114);
 }
 
 .project-image-mobile img {
-   width: auto;
-   max-height: 300px;
-   padding: .4rem;
-   padding-bottom: .2rem;
+  width: auto;
+  max-height: 300px;
+  padding: 0.4rem;
+  padding-bottom: 0.2rem;
 }
 
-@media(max-width:1239px) {
-   .project-image {
-      display: none;
-   }
+@media (max-width: 1239px) {
+  .project-image {
+    display: none;
+  }
 
-   .project-card {
-      flex-direction: column;
-      justify-content: center;
-   }
+  .project-card {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-   .project-data {
-      padding: 0;
-      /* width: 100%; */
-   }
+  .project-data {
+    padding: 0;
+    /* width: 100%; */
+  }
 }
 
-@media(min-width:1240px) {
-   .project-image-mobile {
-      display: none;
-   }
+@media (min-width: 1240px) {
+  .project-image-mobile {
+    display: none;
+  }
 
-   .project-card {
-      width: 70vw;
-      justify-content: space-between;
-      padding: 1.5rem;
-   }
+  .project-card {
+    width: 70vw;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
 }
 
-@media(max-width:919px) {
-   .project-data {
-      width: 100%;
-   }
+@media (max-width: 919px) {
+  .project-data {
+    width: 100%;
+  }
 
-   .project-card {
-      padding: 1.5rem 0;
-   }
+  .project-card {
+    padding: 1.5rem 0;
+  }
 
-   .project-image-mobile {
-      height: fit-content;
-      width: fit-content;
-   }
+  .project-image-mobile {
+    height: fit-content;
+    width: fit-content;
+  }
 
-   .project-image-mobile img {
-      /* width: auto;
+  .project-image-mobile img {
+    /* width: auto;
       max-height: 300px; */
-      height: auto;
-      width: 100%;
-   }
+    height: auto;
+    width: 100%;
+  }
 }
 
-@media(min-width:589px) {
-   .project-image {
-      min-height: 305px;
-      min-width: 530px;
-   }
+@media (min-width: 589px) {
+  .project-image {
+    min-height: 305px;
+    min-width: 530px;
+  }
 }
 
 .project-links-container {
-   margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .project-link svg {
-   fill: var(--font-color);
-   transition: fill .2s ease;
+  fill: var(--font-color);
+  transition: fill 0.2s ease;
 }
 
 .project-link:hover svg {
-   fill: green
+  fill: green;
 }
 
 .project-link svg g {
-   fill: var(--font-color);
-   transition: fill .2s ease;
+  fill: var(--font-color);
+  transition: fill 0.2s ease;
 }
 
 .project-link:hover svg g {
-   fill: green
+  fill: green;
 }
 
-.technologies-container {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+.project-technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.technologies-container svg {
-   height: 30px;
+.project-technologies-container svg {
+  height: 30px;
 }
 
-.technology-container {
-   display: flex;
-   flex-direction: column-reverse;
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   margin: 1rem;
-   /* max-height: fit-content;
+.project-technology-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 1rem;
+  /* max-height: fit-content;
    max-width: fit-content; */
 }
 
-.technology-container-css-modules {
-   margin: 6px
+.project-technology-container-css-modules {
+  margin: 6px;
 }
 
 .tooltip {
-   position: absolute;
-   top: -22px;
-   right: 0;
-   opacity: 0;
-   color: #d5d1cc;
-   /* background-color: rgb(85, 1, 85); */
-   background-color: green;
-   padding: .2rem .5rem;
-   transform: translate(35%, -5px);
-   transition: opacity .2s ease;
-   border-radius: 2px;
-   /* font-weight: 600; */
-   min-width: max-content;
+  position: absolute;
+  top: -22px;
+  right: 0;
+  opacity: 0;
+  color: #d5d1cc;
+  /* background-color: rgb(85, 1, 85); */
+  background-color: green;
+  padding: 0.2rem 0.5rem;
+  transform: translate(35%, -5px);
+  transition: opacity 0.2s ease;
+  border-radius: 2px;
+  /* font-weight: 600; */
+  min-width: max-content;
 }
 
-.technology-container:hover>.tooltip {
-   opacity: 1
+.project-technology-container:hover > .tooltip {
+  opacity: 1;
 }
 
 .project-link:hover .tooltip {
-   opacity: 1
+  opacity: 1;
 }
 
 /* VOLVER A VER esta clase se repite? */
-.css-modules-svg-container+.tooltip {
-   transform: translateX(35%, 10px);
+.css-modules-svg-container + .tooltip {
+  transform: translateX(35%, 10px);
 }
 
 .css-modules-svg-container svg {
-   height: 50px;
+  height: 50px;
 }
 
-@media(max-width:599px) {
-   .project-description {
-      font-size: 1rem;
-   }
+@media (max-width: 599px) {
+  .project-description {
+    font-size: 1rem;
+  }
 
-   .tooltip {
-      display: none;
-   }
+  .tooltip {
+    display: none;
+  }
 }
 
-@media(max-width:499px) {
-   /* .tooltip {
+@media (max-width: 499px) {
+  /* .tooltip {
       transform: translate(0, -5px);
    } */
 }

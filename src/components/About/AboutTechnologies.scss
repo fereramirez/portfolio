@@ -1,18 +1,18 @@
-.technologies-section {
+.about-technologies-section {
   width: 100%;
 }
 
-.technologies-container {
+.about-technologies-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.technologies-container svg {
+.about-technologies-container svg {
   height: 50px;
 }
 
-.technology-container {
+.about-technology-container {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -36,7 +36,7 @@
   min-width: max-content;
 }
 
-.technology-container:hover > .tooltip {
+.about-technology-container:hover > .tooltip {
   opacity: 1;
 }
 
