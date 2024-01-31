@@ -7,9 +7,9 @@
   cursor: pointer;
 }
 
-.hamburgerBottomBread,
-.hamburgerPatty,
-.hamburgerTopBread {
+.hamburger-bottom-bread,
+.hamburger-patty,
+.hamburger-top-bread {
   position: absolute;
   display: block;
   width: 20px;
@@ -23,39 +23,39 @@
 }
 
 /* HAMBURGUESA */
-.hamburgerTopBread {
+.hamburger-top-bread {
   margin-top: -8px;
 }
 
-.hamburgerPatty {
+.hamburger-patty {
   margin-top: -0.6666666667px;
 }
 
-.hamburgerBottomBread {
+.hamburger-bottom-bread {
   margin-top: 6px;
 }
 
 /* HAMBURGUESA FINA */
-/* .hamburgerTopBread {
+/* .hamburger-top-bread {
   margin-top: -5px;
 }
-.hamburgerPatty {
+.hamburger-patty {
   margin-top: -1px;
 }
-.hamburgerBottomBread {
+.hamburger-bottom-bread {
   margin-top: 3px;
 } */
 
 /* TRANSFORMACION A X */
-.hamburgerTopBreadOpen {
+.hamburger-top-bread-open {
   transform: translate(0, 8px) rotate(45deg);
 }
 
-.hamburgerPattyOpen {
+.hamburger-patty-open {
   transform: scale(0, 0);
 }
 
-.hamburgerBottomBreadOpen {
+.hamburger-bottom-bread-open {
   transform: translate(0, -6px) rotate(-45deg);
 }
 

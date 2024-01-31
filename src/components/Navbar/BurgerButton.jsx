@@ -1,25 +1,25 @@
-import css from "./BurgerButton.module.css";
+import "./BurgerButton.scss";
 
 const BurgerButton = ({ setShowMenu, showMenu }) => {
   return (
     <label
-      className={css.hamburger}
+      className="hamburger"
       onClick={() => setShowMenu(!showMenu)}
       onKeyDown={() => setShowMenu(!showMenu)}
     >
       <span
-        className={`${css.hamburgerTopBread} ${
-          showMenu ? css.hamburgerTopBreadOpen : ""
+        className={`hamburger-top-bread${
+          showMenu ? " hamburger-top-bread-open" : ""
         }`}
       />
+
       <span
-        className={`${css.hamburgerPatty} ${
-          showMenu ? css.hamburgerPattyOpen : ""
-        }`}
+        className={`hamburger-patty${showMenu ? " hamburger-patty-open" : ""}`}
       />
+
       <span
-        className={`${css.hamburgerBottomBread} ${
-          showMenu ? css.hamburgerBottomBreadOpen : ""
+        className={`hamburger-bottom-bread${
+          showMenu ? " hamburger-bottom-bread-open" : ""
         }`}
       />
     </label>
