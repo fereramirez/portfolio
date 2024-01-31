@@ -101,3 +101,10 @@ body {
     opacity: 1;
   }
 }
+
+:root {
+  --red: red;
+  --green: green;
+  --yellow: rgb(255, 187, 0);
+  --black: rgb(0, 0, 0);
+}

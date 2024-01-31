@@ -2,12 +2,15 @@ import { useContext, useState, useRef, useEffect } from "react";
 import { sendForm } from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
+import useValidations from "../../helpers/useValidations";
 import LanguageContext from "../../context/LanguageContext";
+import InputContainer from "./InputContainer";
 import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 
 import "./Form.scss";
+import TextAreaContainer from "./TextAreaContainer";
 
 //! VOLVER A VER agregar config para exportar .env
 const {
@@ -31,8 +34,8 @@ const Form = () => {
   // const [scrollHeight, setScrollHeight] = useState(null);
   const formRef = useRef();
   const messageRef = useRef();
-
-  const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  const { nameValidation, emailValidation, messageValidation } =
+    useValidations();
 
   const {
     register,
@@ -44,34 +47,34 @@ const Form = () => {
 
   const watchMessage = watch("message");
 
-  const handleResize = () => {
-    const textarea = document.getElementById("message-text-area");
+  // const handleResize = () => {
+  //   const textarea = document.getElementById("message-text-area");
 
-    /*  if (scrollHeight !== textarea.scrollHeight) {
-      textarea.style.height = textarea.scrollHeight + 5 + "px";
-      textarea.scrollTop = textarea.scrollHeight;
-    }
+  //   /*  if (scrollHeight !== textarea.scrollHeight) {
+  //     textarea.style.height = textarea.scrollHeight + 5 + "px";
+  //     textarea.scrollTop = textarea.scrollHeight;
+  //   }
 
-    setScrollHeight(textarea.scrollHeight); */
+  //   setScrollHeight(textarea.scrollHeight); */
 
-    textarea.scrollTop = textarea.scrollHeight;
-  };
+  //   textarea.scrollTop = textarea.scrollHeight;
+  // };
 
-  useEffect(() => {
-    setMessageRemaining(
-      watchMessage
-        ? initialMessageRemaining - watchMessage.length
-        : initialMessageRemaining,
-    );
+  // useEffect(() => {
+  //   setMessageRemaining(
+  //     watchMessage
+  //       ? initialMessageRemaining - watchMessage.length
+  //       : initialMessageRemaining,
+  //   );
 
-    const degrees = watchMessage
-      ? (watchMessage.length * 360) / initialMessageRemaining
-      : 0;
-    setMessageDegrees(degrees > 360 ? 360 : degrees);
+  //   const degrees = watchMessage
+  //     ? (watchMessage.length * 360) / initialMessageRemaining
+  //     : 0;
+  //   setMessageDegrees(degrees > 360 ? 360 : degrees);
 
-    handleResize();
-    // eslint-disable-next-line
-  }, [watchMessage]);
+  //   handleResize();
+  //   // eslint-disable-next-line
+  // }, [watchMessage]);
 
   const sendEmail = async () => {
     setWaitingResponse(true);
@@ -114,143 +117,33 @@ const Form = () => {
             ref={formRef}
             className="form"
           >
-            <span className="input-container">
-              <div className="field-name-container">
-                {!errors.name ? (
-                  <p className="field-name">{texts.form.name}</p>
-                ) : (
-                  <div className="error">
-                    <Warning />
-                    {errors.name?.type === "required" && (
-                      <span>{texts.form.nameRequired}</span>
-                    )}
-                    {errors.name?.type === "maxLength" && (
-                      <span>{texts.form.nameLength}</span>
-                    )}
-                  </div>
-                )}
-              </div>
+            <InputContainer
+              register={register("name", nameValidation)}
+              label={texts.form.name.label}
+              isLoading={waitingResponse}
+              error={errors.name}
+              disabled={waitingResponse || response === "success"}
+            />
 
-              <input
-                type="text"
-                disabled={waitingResponse || response === "success"}
-                autoComplete="off"
-                className={`input ${errors.name ? "input-error" : ""} ${
-                  waitingResponse ? "waiting" : ""
-                }`}
-                {...register("name", {
-                  required: true,
-                  maxLength: 32,
-                })}
-              />
-            </span>
+            <InputContainer
+              register={register("email", emailValidation)}
+              label={texts.form.email.label}
+              isLoading={waitingResponse}
+              error={errors.email}
+              disabled={waitingResponse || response === "success"}
+            />
 
-            <span className="input-container">
-              <div className="field-name-container">
-                {!errors.email ? (
-                  <p className="field-name">Email</p>
-                ) : (
-                  <div className="error">
-                    <Warning />
-                    {errors.email?.type === "required" && (
-                      <p>{texts.form.emailRequired}</p>
-                    )}
-                    {errors.email?.type === "maxLength" && (
-                      <p>{texts.form.emailLength}</p>
-                    )}
-                    {errors.email?.type === "pattern" && (
-                      <p>{texts.form.emailPattern}</p>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              <input
-                type="text"
-                disabled={waitingResponse || response === "success"}
-                autoComplete="off"
-                className={`input ${errors.email ? "input-error" : ""} ${
-                  waitingResponse ? "waiting" : ""
-                }`}
-                {...register("email", {
-                  required: true,
-                  maxLength: 32,
-                  pattern: emailRegex,
-                })}
-              />
-            </span>
-
-            <span className="input-container">
-              <div className="field-name-container">
-                {!errors.message ? (
-                  <p className="field-name">{texts.form.message}</p>
-                ) : (
-                  <div className="error">
-                    <Warning />
-                    {errors.message?.type === "required" && (
-                      <p>{texts.form.messageRequired}</p>
-                    )}
-                    {errors.message?.type === "maxLength" && (
-                      <p>{texts.form.messageLength}</p>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              <textarea
-                disabled={waitingResponse || response === "success"}
-                autoComplete="off"
-                ref={messageRef}
-                id="message-text-area"
-                className={`input ${errors.message ? "input-error" : ""} ${
-                  waitingResponse ? "waiting" : ""
-                }`}
-                {...register("message", {
-                  required: true,
-                  maxLength: initialMessageRemaining,
-                })}
-              />
-
-              {!waitingResponse && response !== "success" && (
-                <div
-                  className="radial-progress"
-                  style={{
-                    background: `${
-                      messageRemaining >= 0
-                        ? messageRemaining === 0
-                          ? "conic-gradient(red " +
-                            messageDegrees +
-                            "deg, white 0deg)"
-                          : messageRemaining < initialMessageRemaining / 4
-                          ? "conic-gradient(rgb(255, 187, 0) " +
-                            messageDegrees +
-                            "deg, white 0deg)"
-                          : "conic-gradient(green " +
-                            messageDegrees +
-                            "deg, white 0deg)"
-                        : "white"
-                    }`,
-                  }}
-                >
-                  <div
-                    className="radial-progress-before"
-                    style={{
-                      backgroundColor: `${
-                        messageRemaining > 0 ? "white" : "white"
-                      }`,
-                    }}
-                  />
-
-                  <span
-                    style={{
-                      color: `${messageRemaining <= 0 ? "red" : "#000000"}`,
-                    }}
-                  >
-                    {messageRemaining}
-                  </span>
-                </div>
-              )}
-            </span>
+            <TextAreaContainer
+              register={register("message", messageValidation)}
+              name="message"
+              label="Message"
+              error={errors.message}
+              isLoading={waitingResponse}
+              disabled={waitingResponse || response === "success"}
+              watch={watch}
+              minLength={messageValidation.minLength.value}
+              maxLength={messageValidation.maxLength.value}
+            />
 
             <span className="input-container submit-container">
               <div className="field-name-container">
