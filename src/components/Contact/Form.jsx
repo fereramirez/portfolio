@@ -2,7 +2,7 @@ import { useContext, useState, useRef } from "react";
 import { sendForm } from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
-import useValidations from "../../helpers/useValidations";
+import useValidations from "../../hooks/useValidations";
 import LanguageContext from "../../context/LanguageContext";
 import InputContainer from "./InputContainer";
 import TextAreaContainer from "./TextAreaContainer";

@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import LanguageContext from "../../context/LanguageContext";
 import Form from "./Form";
+import { useClipboard } from "../../hooks/useClipboard";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
 import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
@@ -11,19 +12,13 @@ import "./Contact.scss";
 
 const Contact = () => {
   const { texts } = useContext(LanguageContext);
-  const [textCopied, setTextCopied] = useState(false);
 
-  const handleCopy = () => {
-    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
-      setTextCopied(true);
-      return navigator.clipboard.writeText("fer.eze.ram@gmail.com");
-    }
-    return Promise.reject(new Error("The Clipboard API is not available."));
-  };
+  const { copyToClipboard, textCopied } = useClipboard();
 
   return (
     <main className="contact-container content">
       <h1 className="title">{texts.contact.title}</h1>
+
       <div className="contact-text">{texts.contact.links}</div>
 
       <div className="contact-links-container">
@@ -59,8 +54,8 @@ const Contact = () => {
         {texts.contact.email}
         <span
           className="email-button"
-          onClick={handleCopy}
-          onKeyDown={handleCopy}
+          onClick={() => copyToClipboard("fer.eze.ram@gmail.com")}
+          onKeyDown={() => copyToClipboard("fer.eze.ram@gmail.com")}
           role="button"
           tabIndex={0}
         >
