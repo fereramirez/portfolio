@@ -7,7 +7,7 @@ import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
 import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
 
 import "../../App.css";
-import css from "./Contact.module.css";
+import "./Contact.scss";
 
 const Contact = () => {
   const { texts } = useContext(LanguageContext);
@@ -22,16 +22,16 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${css.container} content`}>
-      <h1 className={css.title}>{texts.contact.title}</h1>
-      <div className={css.contactText}>{texts.contact.links}</div>
+    <div className="contact-container content">
+      <h1 className="title">{texts.contact.title}</h1>
+      <div className="contact-text">{texts.contact.links}</div>
 
-      <div className={css.linksContainer}>
+      <div className="contact-links-container">
         <a
           href="https://www.linkedin.com/in/fernando-e-ramirez/"
           target="_blank"
           rel="noreferrer"
-          className={css.svgLinkedin}
+          className="svg-linkedin"
         >
           <Linkedin />
         </a>
@@ -40,7 +40,7 @@ const Contact = () => {
           href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=fer.eze.ram@gmail.com"
           target="_blank"
           rel="noreferrer"
-          className={css.svgLinkedin}
+          className="svg-linkedin"
         >
           <Gmail />
         </a>
@@ -49,23 +49,23 @@ const Contact = () => {
           href="https://github.com/fereramirez"
           target="_blank"
           rel="noreferrer"
-          className={css.svgGithub}
+          className="svg-github"
         >
           <Github />
         </a>
       </div>
 
-      <div className={css.contactText}>
+      <div className="contact-text">
         {texts.contact.email}
         <span
-          className={css.emailButton}
+          className="email-button"
           onClick={handleCopy}
           onKeyDown={handleCopy}
           role="button"
           tabIndex={0}
         >
           fer.eze.ram@gmail.com
-          <span className={css.tooltip}>
+          <span className="tooltip">
             {textCopied ? texts.contact.copied : texts.contact.copy}
           </span>
           {/* //! VOLVER A VER ponerle z index -1 */}

@@ -1,4 +1,5 @@
-.container {
+/* VOLVER A VER normalizar container para todos los archivos */
+.contact-container {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -7,6 +8,7 @@
    user-select: none;
 }
 
+/* VOLVER A VER normalizar title para todos los archivos */
 .title {
    font-size: 4rem;
    margin: 1rem 0;
@@ -14,35 +16,35 @@
 }
 
 /* VOLVER A VER normalizar description */
-.contactText {
+.contact-text {
    font-size: 1.5rem;
 }
 
-.linksContainer {
+.contact-links-container {
    display: flex;
 }
 
-.linksContainer a {
+.contact-links-container a {
    margin: 1rem;
 }
 
-.svgLinkedin svg,
-.svgGithub svg g {
+.svg-linkedin svg,
+.svg-github svg g {
    fill: var(--font-color);
 }
 
-.svgLinkedin:hover svg,
-.svgGithub:hover svg g {
+.svg-linkedin:hover svg,
+.svg-github:hover svg g {
    fill: green;
    transition: fill .2s ease;
 }
 
-.svgLinkedin svg,
-.svgGithub svg {
+.svg-linkedin svg,
+.svg-github svg {
    height: 50px;
 }
 
-.emailButton {
+.email-button {
    color: green;
    cursor: pointer;
    position: relative;
@@ -65,7 +67,7 @@
 }
 
 /* VOLVER A VER normalizar tooltip */
-.emailButton:hover>.tooltip {
+.email-button:hover>.tooltip {
    opacity: 1
 }
 
@@ -74,11 +76,11 @@
       font-size: 3rem;
    }
 
-   .contactText {
+   .contact-text {
       font-size: 1.2rem;
    }
 
-   .container {
+   .contact-container {
       padding: 1.5rem;
    }
 }
