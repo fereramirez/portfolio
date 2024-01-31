@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container content">
+    <main className="contact-container content">
       <h1 className="title">{texts.contact.title}</h1>
       <div className="contact-text">{texts.contact.links}</div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
       </div>
 
       <Form />
-    </div>
+    </main>
   );
 };
 

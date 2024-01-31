@@ -1,0 +1,31 @@
+/* VOLVER A VERA normalizar .container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 3rem 1.5rem;
+  text-align: left;
+  user-select: none;
+}
+
+/* VOLVER A VER normalizar title para todos los archivos */
+.title {
+  font-size: 4rem;
+  margin: 1rem 0;
+  font-weight: 100;
+}
+
+.all-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .projects-container {
+    padding: 1.5rem;
+  }
+}

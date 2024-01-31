@@ -5,17 +5,17 @@ import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 
 import "../../App.css";
-import css from "./Projects.module.css";
+import "./Projects.scss";
 
 const Projects = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
     <>
-      <div className={`${css.projectscontainer} content`}>
-        <h1 className={css.title}>{texts.projects.title}</h1>
+      <main className="projects-container content">
+        <h1 className="title">{texts.projects.title}</h1>
 
-        <div className={css.allProjectsContainer}>
+        <div className="all-projects-container">
           <ProjectCard
             name="NAFTA Productions"
             text="nafta"
@@ -62,7 +62,7 @@ const Projects = () => {
             imageUrl="https://res.cloudinary.com/fenkratos/video/upload/e_loop/dl_30/v1666298304/Portfolio/video-dogos2_ayrgua.gif"
           /> */}
         </div>
-      </div>
+      </main>
 
       <Footer />
     </>
