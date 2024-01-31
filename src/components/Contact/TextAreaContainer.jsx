@@ -1,11 +1,11 @@
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 import TextArea from "./TextArea";
 
-import "./TextAreaContainer.scss";
+import "./InputContainer.scss";
 
 const TextAreaContainer = ({
-  register,
   label,
+  register,
   error,
   isLoading,
   disabled,
@@ -21,7 +21,7 @@ const TextAreaContainer = ({
         {!error ? (
           <p className="field-name">{label}</p>
         ) : (
-          <div className="error">
+          <div className="error-message">
             <Warning />
 
             {error?.message && <span>{error.message}</span>}
@@ -30,7 +30,6 @@ const TextAreaContainer = ({
       </div>
 
       <TextArea
-        {...props}
         register={register}
         error={error}
         isLoading={isLoading}
@@ -39,6 +38,7 @@ const TextAreaContainer = ({
         watch={watch}
         minLength={minLength}
         maxLength={maxLength}
+        {...props}
       />
     </span>
   );

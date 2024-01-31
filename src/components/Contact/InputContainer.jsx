@@ -1,12 +1,13 @@
+import Input from "./Input";
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 
 import "./InputContainer.scss";
 
 const InputContainer = ({
-  register,
   label,
-  isLoading,
+  register,
   error,
+  isLoading,
   disabled,
   ...props
 }) => {
@@ -16,7 +17,7 @@ const InputContainer = ({
         {!error ? (
           <p className="field-name">{label}</p>
         ) : (
-          <div className="error">
+          <div className="error-message">
             <Warning />
 
             {error?.message && <span>{error.message}</span>}
@@ -24,15 +25,12 @@ const InputContainer = ({
         )}
       </div>
 
-      <input
-        {...props}
-        type="text"
+      <Input
+        register={register}
+        error={error}
+        isLoading={isLoading}
         disabled={disabled}
-        autoComplete="off"
-        className={`input${error ? " input-error" : ""}${
-          isLoading ? " waiting" : ""
-        }`}
-        {...register}
+        {...props}
       />
     </span>
   );

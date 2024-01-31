@@ -1,5 +1,6 @@
 import RadialProgress from "./RadialProgress.jsx";
 
+import "./Input.scss";
 import "./TextArea.scss";
 
 const TextArea = ({

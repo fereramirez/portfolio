@@ -15,30 +15,34 @@
   font-weight: 600;
 }
 
-.input {
-  margin-top: 0.2rem;
-  padding: 0.3rem;
-  border: 1px solid var(--font-color);
-  border-color: transparent;
-  width: 100%;
+.error-message {
+  color: red;
+  /* color: purple; */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-.input:focus {
-  outline: none;
+.error-message svg {
+  color: red;
+  margin-right: 0.5rem;
+  min-height: 24px;
+  min-width: 24px;
+}
+
+.input-container button:disabled {
+  cursor: not-allowed;
 }
 
 .input-container button {
   border: 1px solid transparent;
 }
 
-.input:disabled,
 .input-container button[type="submit"]:disabled {
   cursor: not-allowed;
 }
 
-.input:disabled,
-.input-container button[type="submit"]:disabled,
-input.input:-internal-autofill-selected {
+.input-container button[type="submit"]:disabled {
   background-color: rgba(239, 239, 239, 0.3) !important;
   /* background-color: red !important; */
   /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */
@@ -57,7 +61,3 @@ input:-webkit-autofill {
    box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
    -webkit-box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
 } */
-
-.input-error {
-  border-color: red;
-}

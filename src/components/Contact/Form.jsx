@@ -1,16 +1,16 @@
-import { useContext, useState, useRef, useEffect } from "react";
+import { useContext, useState, useRef } from "react";
 import { sendForm } from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
 import useValidations from "../../helpers/useValidations";
 import LanguageContext from "../../context/LanguageContext";
 import InputContainer from "./InputContainer";
+import TextAreaContainer from "./TextAreaContainer";
 import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
 import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
 import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 
 import "./Form.scss";
-import TextAreaContainer from "./TextAreaContainer";
 
 //! VOLVER A VER agregar config para exportar .env
 const {
@@ -19,21 +19,13 @@ const {
   REACT_APP_EMAILJS_PUBLIC_KEY,
 } = process.env;
 
-const initialMessageRemaining = 512;
-const initialMessageDegrees = 0;
-
 const Form = () => {
   const { texts } = useContext(LanguageContext);
   const [waitingResponse, setWaitingResponse] = useState(false);
   const [response, setResponse] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [messageRemaining, setMessageRemaining] = useState(
-    initialMessageRemaining,
-  );
-  const [messageDegrees, setMessageDegrees] = useState(initialMessageDegrees);
-  // const [scrollHeight, setScrollHeight] = useState(null);
+
   const formRef = useRef();
-  const messageRef = useRef();
   const { nameValidation, emailValidation, messageValidation } =
     useValidations();
 
@@ -45,37 +37,7 @@ const Form = () => {
     watch,
   } = useForm();
 
-  const watchMessage = watch("message");
-
-  // const handleResize = () => {
-  //   const textarea = document.getElementById("message-text-area");
-
-  //   /*  if (scrollHeight !== textarea.scrollHeight) {
-  //     textarea.style.height = textarea.scrollHeight + 5 + "px";
-  //     textarea.scrollTop = textarea.scrollHeight;
-  //   }
-
-  //   setScrollHeight(textarea.scrollHeight); */
-
-  //   textarea.scrollTop = textarea.scrollHeight;
-  // };
-
-  // useEffect(() => {
-  //   setMessageRemaining(
-  //     watchMessage
-  //       ? initialMessageRemaining - watchMessage.length
-  //       : initialMessageRemaining,
-  //   );
-
-  //   const degrees = watchMessage
-  //     ? (watchMessage.length * 360) / initialMessageRemaining
-  //     : 0;
-  //   setMessageDegrees(degrees > 360 ? 360 : degrees);
-
-  //   handleResize();
-  //   // eslint-disable-next-line
-  // }, [watchMessage]);
-
+  //! VOLVER A VER mover a helper
   const sendEmail = async () => {
     setWaitingResponse(true);
     setResponse(null);
@@ -112,34 +74,35 @@ const Form = () => {
       {!showSuccess ? (
         <>
           <div className="form-text">{texts.form.title}</div>
+
           <form
             onSubmit={handleSubmit(sendEmail)}
             ref={formRef}
             className="form"
           >
             <InputContainer
-              register={register("name", nameValidation)}
               label={texts.form.name.label}
-              isLoading={waitingResponse}
+              register={register("name", nameValidation)}
               error={errors.name}
+              isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
             />
 
             <InputContainer
-              register={register("email", emailValidation)}
               label={texts.form.email.label}
-              isLoading={waitingResponse}
+              register={register("email", emailValidation)}
               error={errors.email}
+              isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
             />
 
             <TextAreaContainer
-              register={register("message", messageValidation)}
-              name="message"
               label="Message"
+              register={register("message", messageValidation)}
               error={errors.message}
               isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
+              name="message"
               watch={watch}
               minLength={messageValidation.minLength.value}
               maxLength={messageValidation.maxLength.value}
@@ -148,7 +111,8 @@ const Form = () => {
             <span className="input-container submit-container">
               <div className="field-name-container">
                 {response === "error" ? (
-                  <div className="error">
+                  /* VOLVER A VER crear ErrorMessage y mover clase error-message */
+                  <div className="error-message">
                     <Warning />
                     <p>{texts.form.responseError}</p>
                   </div>

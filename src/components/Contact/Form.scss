@@ -39,88 +39,6 @@
   flex-direction: column;
 }
 
-// .input-container {
-//   margin: 0.5rem 0;
-//   height: fit-content;
-//   position: relative;
-// }
-
-// .field-name-container {
-//   min-height: 2.5rem;
-//   height: fit-content;
-//   display: flex;
-//   align-items: center;
-// }
-
-// .field-name {
-//   font-weight: 600;
-// }
-
-// .input {
-//   margin-top: 0.2rem;
-//   padding: 0.3rem;
-//   border: 1px solid var(--font-color);
-//   border-color: transparent;
-//   width: 100%;
-// }
-
-// .input:focus {
-//   outline: none;
-// }
-
-// .input-container button {
-//   border: 1px solid transparent;
-// }
-
-// .input:disabled,
-// .input-container button[type="submit"]:disabled {
-//   cursor: not-allowed;
-// }
-
-// .input:disabled,
-// .input-container button[type="submit"]:disabled,
-// input.input:-internal-autofill-selected {
-//   background-color: rgba(239, 239, 239, 0.3) !important;
-//   /* background-color: red !important; */
-//   /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */
-//   /* color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170)) !important; */
-//   color: rgba(151, 151, 151, 0.501) !important;
-//   border-color: rgba(118, 118, 118, 0.3) !important;
-// }
-
-// /* input:-webkit-autofill,
-// input:-webkit-autofill:focus {
-//    transition: background-color 600000s 0s, color 600000s 0s;
-// }
-
-// input:-webkit-autofill {
-//    box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
-//    -webkit-box-shadow: 0 0 0px 1000px rgba(239, 239, 239, 0.3) inset;
-// } */
-
-// .input-error {
-//   border-color: red;
-// }
-
-.input-container button:disabled {
-  cursor: not-allowed;
-}
-
-.error {
-  color: red;
-  /* color: purple; */
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.error svg {
-  color: red;
-  margin-right: 0.5rem;
-  min-height: 24px;
-  min-width: 24px;
-}
-
 .submit-container {
   display: flex;
   flex-direction: column;
@@ -166,8 +84,7 @@
   }
 }
 
-.input-container button[type="submit"]:hover.waiting,
-.input:disabled.waiting {
+.input-container button[type="submit"]:hover.waiting {
   cursor: wait;
 }
 
