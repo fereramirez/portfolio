@@ -5,14 +5,14 @@ import LanguageContext from "../../context/LanguageContext";
 import Technologies from "./Technologies";
 import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
+import "../../App.css";
 import css from "./About.module.css";
-import common from "../../App.module.css";
 
 const About = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
-    <div className={`${css.container} ${common.content}`}>
+    <div className={`${css.container} content`}>
       <h1 className={css.title}>{texts.about.title}</h1>
 
       <div className={css.paragraph}>

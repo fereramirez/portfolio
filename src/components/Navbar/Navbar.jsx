@@ -7,8 +7,8 @@ import useTheme from "../../hooks/useTheme";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 
+import "../../App.css";
 import css from "./Navbar.module.css";
-import common from "../../App.module.css";
 
 /* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
 const SECTIONS = ["About", "Projects", "Contact"];
@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`${css.navbarContainer} ${common.content}`}>
+      <div className={`${css.navbarContainer} content`}>
         <span className={css.mobileHomeButton}>
           <NavLink to="/">Fernando</NavLink>
         </span>

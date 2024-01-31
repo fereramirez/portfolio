@@ -4,15 +4,15 @@ import LanguageContext from "../../context/LanguageContext";
 import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 
+import "../../App.css";
 import css from "./Projects.module.css";
-import common from "../../App.module.css";
 
 const Projects = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
     <>
-      <div className={`${css.projectscontainer} ${common.content}`}>
+      <div className={`${css.projectscontainer} content`}>
         <h1 className={css.title}>{texts.projects.title}</h1>
 
         <div className={css.allProjectsContainer}>

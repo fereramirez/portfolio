@@ -6,8 +6,8 @@ import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
 import { ReactComponent as Gmail } from "../../assets/svg/gmail.svg";
 
+import "../../App.css";
 import css from "./Contact.module.css";
-import common from "../../App.module.css";
 
 const Contact = () => {
   const { texts } = useContext(LanguageContext);
@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${css.container} ${common.content}`}>
+    <div className={`${css.container} content`}>
       <h1 className={css.title}>{texts.contact.title}</h1>
       <div className={css.contactText}>{texts.contact.links}</div>
 
