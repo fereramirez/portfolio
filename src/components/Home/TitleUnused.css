@@ -111,10 +111,10 @@
 }
 
 .title-container-link-selected {
-   animation: pop 2s forwards
+   animation: titleUnusedPop 2s forwards
 }
 
-@keyframes pop {
+@keyframes titleUnusedPop {
    0% {
       opacity: 1;
    }

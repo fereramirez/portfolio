@@ -4,8 +4,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import AnimationContext from "../../context/AnimationContext";
 import Grid from "../common/Grid";
 
-import css from "./Intro.module.css";
-import "./Intro.css";
+import "./Intro.scss";
 
 const Intro = () => {
   const [topText, setTopText] = useState("");
@@ -46,14 +45,14 @@ const Intro = () => {
   return (
     <>
       <div
-        className={`${css.introContainer}`}
+        className="intro-container"
         style={{
           animationName: `${
             location.pathname !== "/" && runFadeOut
-              ? "fadeOut"
+              ? "introFadeOut"
               : runPop
-              ? "pop"
-              : "fadeOut"
+              ? "introPop"
+              : "introFadeOut"
           }`,
           animationDelay: `${
             location.pathname !== "/" && runFadeOut
@@ -72,23 +71,25 @@ const Intro = () => {
         }}
       >
         <Grid />
-        <div className={css.textContainerOuter}>
-          <div className={css.textContainer}>
+
+        <div className="text-container-outer">
+          <div className="text-container">
             <p>{topText}</p>
-            <div className={css.topCursor} />
+            <div className="top-cursor" />
           </div>
 
-          <div className={css.textContainer}>
+          <div className="text-container">
             <p>{bottomText}</p>
-            <div className={css.cursorWriting} />
+            <div className="cursor-writing" />
             <div
-              className={`${css.bottomCursor} ${
-                bottomCursor ? css.showBottomCursor : ""
+              className={`bottom-cursor${
+                bottomCursor ? " show-bottom-cursor" : ""
               }`}
             />
           </div>
         </div>
       </div>
+
       <Outlet />
     </>
   );

@@ -1,105 +1,105 @@
 .title-link {
-   display: flex;
-   justify-content: flex-start;
-   width: 750px;
-   position: relative;
-   top: 0;
-   margin-top: .1rem;
-   z-index: 100;
-   opacity: 1;
+  display: flex;
+  justify-content: flex-start;
+  width: 750px;
+  position: relative;
+  top: 0;
+  margin-top: 0.1rem;
+  z-index: 100;
+  opacity: 1;
 }
 
 .title-container h1 {
-   font-weight: 500;
-   letter-spacing: -.4rem;
-   height: 100%;
-   font-size: 10.1rem;
-   display: inline;
+  font-weight: 500;
+  letter-spacing: -0.4rem;
+  height: 100%;
+  font-size: 10.1rem;
+  display: inline;
 }
 
 .title-container {
-   z-index: 100;
-   height: 100%;
-   transition: width .5s ease;
-   position: relative;
+  z-index: 100;
+  height: 100%;
+  transition: width 0.5s ease;
+  position: relative;
 }
 
 .title-container h1 {
-   color: var(--font-color);
-   height: 100%;
-   width: 100vw;
-   padding-left: 4rem;
+  color: var(--font-color);
+  height: 100%;
+  width: 100vw;
+  padding-left: 4rem;
 }
 
-@media(max-width:699px) {
-   .title-container h1 {
-      font-size: 6rem;
-   }
+@media (max-width: 699px) {
+  .title-container h1 {
+    font-size: 6rem;
+  }
 }
 
-@media(max-height:799px) {
-   .title-container h1 {
-      font-size: 6rem;
-   }
+@media (max-height: 799px) {
+  .title-container h1 {
+    font-size: 6rem;
+  }
 }
 
-@media(max-width:449px) {
-   .title-container h1 {
-      font-size: 4rem;
-   }
+@media (max-width: 449px) {
+  .title-container h1 {
+    font-size: 4rem;
+  }
 }
 
 .link-selectable {
-   cursor: pointer;
+  cursor: pointer;
 }
 
-
 .link-not-selected {
-   z-index: 80;
-   width: 100%;
-   /* background-color: red; */
-   transition: opacity .01s ease .5s;
-   opacity: 0;
+  z-index: 80;
+  width: 100%;
+  /* background-color: red; */
+  transition: opacity 0.01s ease 0.5s;
+  opacity: 0;
 }
 
 .background-hover {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 0;
-   height: 100%;
-   z-index: 70;
-   transition: width .5s ease;
-   overflow: hidden;
-   background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 70;
+  transition: width 0.5s ease;
+  overflow: hidden;
+  background-color: green;
 }
 
 .backgroundCoverLink {
-   right: 0;
-   width: 100%;
-   z-index: 50;
+  right: 0;
+  width: 100%;
+  z-index: 50;
 }
 
 .link-selectable:hover .background-hover {
-   width: 100vw;
+  width: 100vw;
 }
 
 .link-selected {
-   animation: fadeOut 2s .5s forwards
+  animation: linkFadeOut 2s 0.5s forwards;
 }
 
-@keyframes fadeOut {
-   0% {
-      opacity: 1;
-   }
+/* VOLVER A VER cambiar nombre a fadeOut */
+@keyframes linkFadeOut {
+  0% {
+    opacity: 1;
+  }
 
-   50% {
-      opacity: 1;
-   }
+  50% {
+    opacity: 1;
+  }
 
-   100% {
-      opacity: 0;
-   }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* z-index

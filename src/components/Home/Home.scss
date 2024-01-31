@@ -1,87 +1,70 @@
 .home-container {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   padding-top: 185px;
-   text-align: left;
-   user-select: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   z-index: 50;
-   opacity: 1;
-   background-color: var(--background-color);
-   overflow: hidden;
-   /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 185px;
+  text-align: left;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  opacity: 1;
+  background-color: var(--background-color);
+  overflow: hidden;
+  /* background-color: red; */
 }
 
 .not-home {
-   transition: opacity .5s ease;
-   animation:
-      fadeOut 1s .5s forwards,
-      toBottom 0s 2s forwards;
+  transition: opacity 0.5s ease;
+  animation: coverFadeOut 1s 0.5s forwards, toBottom 0s 2s forwards;
 }
 
-@keyframes fadeOut {
-   0% {
-      opacity: 1;
-   }
+@keyframes coverFadeOut {
+  0% {
+    opacity: 1;
+  }
 
-   50% {
-      opacity: 1
-   }
+  50% {
+    opacity: 1;
+  }
 
-   100% {
-      opacity: 0;
-   }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes toBottom {
-   0% {
-      z-index: 50;
-   }
+  0% {
+    z-index: 50;
+  }
 
-   50% {
-      z-index: 99;
+  50% {
+    z-index: 99;
+  }
 
-   }
-
-   100% {
-      z-index: -1;
-   }
+  100% {
+    z-index: -1;
+  }
 }
 
 .total-cover {
-   width: 0;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   right: 0;
-   transition: width .5s ease;
-   background-color: var(--background-color);
-   z-index: 90;
-   overflow: hidden;
-   /* background-color: white; */
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: width 0.5s ease;
+  background-color: var(--background-color);
+  z-index: 90;
+  overflow: hidden;
+  /* background-color: white; */
 }
 
 .total-cover-active {
-   /* background-color: purple; */
-   width: 100%;
-   /* animation: fadeOut 2s forwards; */
-}
-
-@keyframes fadeOut {
-   0% {
-      opacity: 1;
-   }
-
-   50% {
-      opacity: 1;
-   }
-
-   100% {
-      opacity: 0;
-   }
+  /* background-color: purple; */
+  width: 100%;
+  /* animation: coverFadeOut 2s forwards; */
 }
