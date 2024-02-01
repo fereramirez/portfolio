@@ -43,7 +43,7 @@ const Form = () => {
               register={register("name", nameValidation)}
               error={errors.name}
               isLoading={waitingResponse}
-              disabled={true}
+              disabled={waitingResponse || response === "success"}
             />
 
             <InputContainer
@@ -51,7 +51,7 @@ const Form = () => {
               register={register("email", emailValidation)}
               error={errors.email}
               isLoading={waitingResponse}
-              disabled={true}
+              disabled={waitingResponse || response === "success"}
             />
 
             <TextAreaContainer
@@ -59,7 +59,7 @@ const Form = () => {
               register={register("message", messageValidation)}
               error={errors.message}
               isLoading={waitingResponse}
-              disabled={true}
+              disabled={waitingResponse || response === "success"}
               name="message"
               watch={watch}
               minLength={messageValidation.minLength.value}
