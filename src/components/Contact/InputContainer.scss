@@ -30,19 +30,12 @@
   min-width: 24px;
 }
 
-.input-container button:disabled {
-  cursor: not-allowed;
-}
-
 .input-container button {
   border: 1px solid transparent;
 }
 
 .input-container button[type="submit"]:disabled {
   cursor: not-allowed;
-}
-
-.input-container button[type="submit"]:disabled {
   background-color: rgba(239, 239, 239, 0.3) !important;
   /* background-color: red !important; */
   /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */

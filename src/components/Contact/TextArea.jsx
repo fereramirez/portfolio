@@ -31,6 +31,7 @@ const TextArea = ({
       />
 
       <RadialProgress
+        disabled={disabled}
         watcher={watch(name)}
         minLength={minLength}
         maxLength={maxLength}

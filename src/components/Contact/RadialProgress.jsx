@@ -2,7 +2,7 @@ import useRadialProgress from "../../hooks/useRadialProgress.jsx";
 
 import "./RadialProgress.scss";
 
-const RadialProgress = ({ watcher, minLength, maxLength }) => {
+const RadialProgress = ({ disabled, watcher, minLength, maxLength }) => {
   const { messageRemaining, messageDegrees } = useRadialProgress(
     watcher,
     maxLength,
@@ -19,17 +19,28 @@ const RadialProgress = ({ watcher, minLength, maxLength }) => {
         background: `${
           messageRemaining >= 0
             ? messageRemaining === 0 || messageRemaining > maxLength - minLength
-              ? `conic-gradient(var(--red) ${messageDegrees}deg, white 0deg)`
+              ? `conic-gradient(var(--red) ${messageDegrees}deg, ${
+                  disabled ? "rgba(239, 239, 239, 0.3)" : "white"
+                } 0deg)`
               : messageRemaining < maxLength / 4
-              ? `conic-gradient(var(--yellow) ${messageDegrees}deg, white 0deg)`
-              : `conic-gradient(var(--green) ${messageDegrees}deg, white 0deg)`
-            : "white"
+              ? `conic-gradient(var(--yellow) ${messageDegrees}deg, ${
+                  disabled ? "rgba(239, 239, 239, 0.3)" : "white"
+                } 0deg)`
+              : `conic-gradient(var(--green) ${messageDegrees}deg, ${
+                  disabled ? "rgba(239, 239, 239, 0.3)" : "white"
+                } 0deg)`
+            : `white`
         }`,
       }}
     >
-      <div className="radial-progress-before" />
+      <div
+        className={`radial-progress-before${
+          disabled ? " radial-progress-before-disabled" : ""
+        }`}
+      />
 
       <span
+        className={disabled ? "radial-progress-number-disabled" : ""}
         style={{
           color: `${messageRemaining <= 0 ? "var(--red)" : "var(--black)"}`,
           /* fontWeight: `${messageRemaining <= 0 ? "700" : "500"}`, */

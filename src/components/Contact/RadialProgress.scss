@@ -24,3 +24,21 @@
   border-radius: 50%;
   background: white;
 }
+
+/* VOLVER A VER arreglar color de radialprogress para disabled */
+.radial-progress-before-disabled,
+.radial-progress-number-disabled {
+  cursor: not-allowed;
+  background-color: rgba(239, 239, 239, 0.3) !important;
+  color: rgba(151, 151, 151, 0.501) !important;
+  border-color: rgba(118, 118, 118, 0.3) !important;
+  /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */
+  /* color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170)) !important; */
+}
+/* .radial-progress-disabled {
+  cursor: not-allowed;
+  background-color: rgba(239, 239, 239, 0.3) !important;
+  color: rgba(151, 151, 151, 0.501) !important;
+  border-color: rgba(118, 118, 118, 0.3) !important;
+}
+ */

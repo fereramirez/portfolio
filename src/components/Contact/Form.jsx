@@ -1,7 +1,7 @@
-import { useContext, useState, useRef } from "react";
-import { sendForm } from "@emailjs/browser";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 
+import useSubmit from "../../hooks/useSubmit";
 import useValidations from "../../hooks/useValidations";
 import LanguageContext from "../../context/LanguageContext";
 import InputContainer from "./InputContainer";
@@ -12,23 +12,8 @@ import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 
 import "./Form.scss";
 
-//! VOLVER A VER agregar config para exportar .env
-const {
-  REACT_APP_EMAILJS_SERVICE_ID,
-  REACT_APP_EMAILJS_TEMPLATE_ID,
-  REACT_APP_EMAILJS_PUBLIC_KEY,
-} = process.env;
-
 const Form = () => {
   const { texts } = useContext(LanguageContext);
-  const [waitingResponse, setWaitingResponse] = useState(false);
-  const [response, setResponse] = useState(null);
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const formRef = useRef();
-  const { nameValidation, emailValidation, messageValidation } =
-    useValidations();
-
   const {
     register,
     handleSubmit,
@@ -37,33 +22,10 @@ const Form = () => {
     watch,
   } = useForm();
 
-  //! VOLVER A VER mover a helper
-  const sendEmail = async () => {
-    setWaitingResponse(true);
-    setResponse(null);
-
-    try {
-      const { text } = await sendForm(
-        REACT_APP_EMAILJS_SERVICE_ID,
-        REACT_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        REACT_APP_EMAILJS_PUBLIC_KEY,
-      );
-
-      if (text === "OK") {
-        setResponse("success");
-        setTimeout(() => {
-          setShowSuccess(true);
-        }, 800);
-
-        reset();
-      }
-    } catch (error) {
-      setResponse("error");
-    } finally {
-      setWaitingResponse(false);
-    }
-  };
+  const { sendEmail, waitingResponse, response, showSuccess } =
+    useSubmit(reset);
+  const { nameValidation, emailValidation, messageValidation } =
+    useValidations();
 
   return (
     <div
@@ -75,17 +37,13 @@ const Form = () => {
         <>
           <div className="form-text">{texts.form.title}</div>
 
-          <form
-            onSubmit={handleSubmit(sendEmail)}
-            ref={formRef}
-            className="form"
-          >
+          <form onSubmit={handleSubmit(sendEmail)} className="form">
             <InputContainer
               label={texts.form.name.label}
               register={register("name", nameValidation)}
               error={errors.name}
               isLoading={waitingResponse}
-              disabled={waitingResponse || response === "success"}
+              disabled={true}
             />
 
             <InputContainer
@@ -93,7 +51,7 @@ const Form = () => {
               register={register("email", emailValidation)}
               error={errors.email}
               isLoading={waitingResponse}
-              disabled={waitingResponse || response === "success"}
+              disabled={true}
             />
 
             <TextAreaContainer
@@ -101,7 +59,7 @@ const Form = () => {
               register={register("message", messageValidation)}
               error={errors.message}
               isLoading={waitingResponse}
-              disabled={waitingResponse || response === "success"}
+              disabled={true}
               name="message"
               watch={watch}
               minLength={messageValidation.minLength.value}
