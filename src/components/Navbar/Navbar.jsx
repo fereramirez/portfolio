@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import useNavbarLinks from "../../hooks/useNavbarLinks";
-import useBurgerButton from "../../hooks/useBurgerButton";
-import useTheme from "../../hooks/useTheme";
+import useMobileMenu from "../../hooks/useMobileMenu";
 import LanguageContext from "../../context/LanguageContext";
 import NavbarLink from "./NavbarLink";
+import ThemeButton from "./ThemeButton";
 import BurgerButton from "./BurgerButton";
 import MobileMenu from "./MobileMenu";
-import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
-import { ReactComponent as Rays } from "../../assets/svg/light.svg";
 import { SECTIONS } from "../../utils/constants";
 
 import "../../App.css";
@@ -17,11 +15,10 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const { language, texts, handleLanguage } = useContext(LanguageContext);
-  const { theme, handleTheme } = useTheme();
 
   const { buttonHover, handleHover, handleHoverLeave } =
     useNavbarLinks(SECTIONS);
-  const { showMenu, handleShowMenu } = useBurgerButton();
+  const { showMenu, handleShowMenu } = useMobileMenu();
 
   return (
     <>
@@ -58,35 +55,7 @@ const Navbar = () => {
         </div>
 
         <div className="selectors">
-          <div className="theme-buttons">
-            {theme === "dark" && (
-              <span
-                className="light-theme-button"
-                onClick={() => handleTheme("light")}
-              >
-                <span>
-                  <Dark />
-                  <span className="rays">
-                    <Rays />
-                  </span>
-                </span>
-              </span>
-            )}
-
-            {theme === "light" && (
-              <span
-                className="dark-theme-button"
-                onClick={() => handleTheme("dark")}
-              >
-                <span>
-                  <Dark />
-                  <span className="rays">
-                    <Rays />
-                  </span>
-                </span>
-              </span>
-            )}
-          </div>
+          <ThemeButton />
 
           <div
             className="language-button"
