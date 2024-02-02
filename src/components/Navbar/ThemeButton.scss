@@ -1,4 +1,4 @@
-.mobile-selectors .theme-buttons {
+.mobile-selectors .theme-button {
   width: 4rem;
   margin: 0 1rem;
 }
@@ -21,7 +21,7 @@
   fill: var(--font-color);
 }
 
-.theme-buttons {
+.theme-button {
   margin-right: 0.5rem;
   position: relative;
 }
@@ -37,7 +37,7 @@
   top: -2px;
 }
 
-.theme-buttons svg {
+.theme-button svg {
   fill: var(--font-color);
   transition: fill 0.3s ease;
 }

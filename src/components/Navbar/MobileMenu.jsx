@@ -3,12 +3,13 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import LanguageContext from "../../context/LanguageContext";
 import ThemeButton from "./ThemeButton";
+import LanguageButton from "./LanguageButton";
 
 import "./MobileMenu.scss";
 
 const MobileMenu = ({ sections, showMenu }) => {
   const location = useLocation();
-  const { language, texts, handleLanguage } = useContext(LanguageContext);
+  const { texts } = useContext(LanguageContext);
 
   return (
     <div className={`mobile-menu${showMenu ? " show-mobile-menu" : ""}`}>
@@ -33,20 +34,7 @@ const MobileMenu = ({ sections, showMenu }) => {
         )}
 
         <div className="mobile-selectors">
-          <div className="language-mobile-container">
-            <div
-              className="language-mobile"
-              onClick={() => handleLanguage(language === "en" ? "es" : "en")}
-            >
-              <span className="language-mobile-current">
-                {language.toUpperCase()}
-              </span>
-
-              <span className="language-mobile-hover">
-                {language === "en" ? "ES" : "EN"}
-              </span>
-            </div>
-          </div>
+          <LanguageButton />
 
           <ThemeButton />
         </div>

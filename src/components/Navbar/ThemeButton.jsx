@@ -8,7 +8,7 @@ const ThemeButton = () => {
   const { theme, handleTheme } = useTheme();
 
   return (
-    <div className="theme-buttons">
+    <div className="theme-button">
       {theme === "dark" && (
         <span
           className="light-theme-button"

@@ -6,6 +6,7 @@ import useMobileMenu from "../../hooks/useMobileMenu";
 import LanguageContext from "../../context/LanguageContext";
 import NavbarLink from "./NavbarLink";
 import ThemeButton from "./ThemeButton";
+import LanguageButton from "./LanguageButton";
 import BurgerButton from "./BurgerButton";
 import MobileMenu from "./MobileMenu";
 import { SECTIONS } from "../../utils/constants";
@@ -14,7 +15,7 @@ import "../../App.css";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const { language, texts, handleLanguage } = useContext(LanguageContext);
+  const { texts } = useContext(LanguageContext);
 
   const { buttonHover, handleHover, handleHoverLeave } =
     useNavbarLinks(SECTIONS);
@@ -57,15 +58,7 @@ const Navbar = () => {
         <div className="selectors">
           <ThemeButton />
 
-          <div
-            className="language-button"
-            onClick={() => handleLanguage(language === "en" ? "es" : "en")}
-          >
-            <span className="language-current">{language.toUpperCase()}</span>
-            <span className="language-hover">
-              {language === "en" ? "ES" : "EN"}
-            </span>
-          </div>
+          <LanguageButton />
         </div>
       </div>
 

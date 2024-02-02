@@ -14,43 +14,6 @@
   z-index: 40;
 }
 
-.language-button {
-  width: 3rem;
-  height: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  padding: 0.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.language-button:hover .language-hover {
-  top: 5px;
-}
-
-.language-button:hover .language-current {
-  top: 28px;
-}
-
-.language-current {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  transition: top 0.1s ease;
-}
-
-.language-hover {
-  position: absolute;
-  top: -15px;
-  left: 0;
-  right: 0;
-  transition: top 0.1s ease;
-  color: green;
-}
-
 .buttons-container {
   display: flex;
   flex-direction: column;

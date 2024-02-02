@@ -1,0 +1,90 @@
+.language-button-container {
+  width: 3rem;
+  height: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+
+.language-button-container:hover .language-hover {
+  top: 5px;
+}
+
+.language-button-container:hover .language-current {
+  top: 28px;
+}
+
+.language-current {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  transition: top 0.1s ease;
+}
+
+.language-hover {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  transition: top 0.1s ease;
+  color: green;
+}
+
+.language-mobile-button-container {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-mobile-button {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-mobile-button-current {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: top 0.1s ease;
+}
+
+.language-mobile-button-hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: top 0.1s ease;
+  top: -22px;
+  color: var(--font-color);
+}
+
+.language-mobile-button:hover .language-mobile-button-current {
+  top: 22px;
+}
+
+.language-mobile-button:hover .language-mobile-button-hover {
+  top: 0;
+}
+
+@media (min-width: 720px) {
+  .language-mobile-button-container {
+    display: none;
+  }
+
+  .language-button-container {
+    display: block;
+  }
+}
