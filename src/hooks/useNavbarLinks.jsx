@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const useNavbarLinks = (SECTIONS) => {
+const useNavbarLinks = (sections) => {
   const location = useLocation();
   const [buttonHover, setButtonHover] = useState(
     location.pathname.substring(1).toLowerCase(),
@@ -12,7 +12,7 @@ const useNavbarLinks = (SECTIONS) => {
   };
 
   const handleHoverLeave = () => {
-    const i = SECTIONS.findIndex(
+    const i = sections.findIndex(
       (section) =>
         section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
     );
@@ -21,7 +21,7 @@ const useNavbarLinks = (SECTIONS) => {
   };
 
   useEffect(() => {
-    const i = SECTIONS.findIndex(
+    const i = sections.findIndex(
       (section) =>
         section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
     );

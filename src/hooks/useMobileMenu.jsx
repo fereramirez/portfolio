@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const useBurgerButton = () => {
+const useMobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
 
@@ -16,4 +16,4 @@ const useBurgerButton = () => {
   return { showMenu, handleShowMenu };
 };
 
-export default useBurgerButton;
+export default useMobileMenu;
