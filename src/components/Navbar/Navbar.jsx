@@ -1,50 +1,27 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
+import useNavbarLinks from "../../hooks/useNavbarLinks";
+import useBurgerButton from "../../hooks/useBurgerButton";
+import useTheme from "../../hooks/useTheme";
 import LanguageContext from "../../context/LanguageContext";
 import BurgerButton from "./BurgerButton";
-import useTheme from "../../hooks/useTheme";
+import NavbarLink from "./NavbarLink";
 import { ReactComponent as Dark } from "../../assets/svg/lightbulb-outline.svg";
 import { ReactComponent as Rays } from "../../assets/svg/light.svg";
+import { SECTIONS } from "../../utils/constants";
 
 import "../../App.css";
 import "./Navbar.scss";
 
-/* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
-const SECTIONS = ["About", "Projects", "Contact"];
-
 const Navbar = () => {
   const location = useLocation();
-  const [buttonHover, setButtonHover] = useState(
-    location.pathname.substring(1).toLowerCase(),
-  );
-  const [showMenu, setShowMenu] = useState(false);
   const { language, texts, handleLanguage } = useContext(LanguageContext);
   const { theme, handleTheme } = useTheme();
 
-  const handleHover = (i) => {
-    setButtonHover(i);
-  };
-
-  const handleHoverLeave = () => {
-    const i = SECTIONS.findIndex(
-      (section) =>
-        section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
-    );
-
-    setButtonHover(i === -1 ? -2 : i);
-  };
-
-  useEffect(() => {
-    setShowMenu(false);
-
-    const i = SECTIONS.findIndex(
-      (section) =>
-        section.toLowerCase() === location.pathname.substring(1).toLowerCase(),
-    );
-
-    setButtonHover(i === -1 ? -1.5 : i);
-  }, [location.pathname]);
+  const { buttonHover, handleHover, handleHoverLeave } =
+    useNavbarLinks(SECTIONS);
+  const { showMenu, handleShowMenu } = useBurgerButton();
 
   return (
     <>
@@ -58,15 +35,12 @@ const Navbar = () => {
             {React.Children.toArray(
               SECTIONS.map((section, i) => (
                 /*  <NavLink to={i === 0 ? "/" : section.toLowerCase()}> */
-                <NavLink to={section.toLowerCase()}>
-                  <div
-                    className="button"
-                    onPointerEnter={() => handleHover(i)}
-                    onPointerLeave={handleHoverLeave}
-                  >
-                    {texts.navbarButtons[i]}
-                  </div>
-                </NavLink>
+                <NavbarLink
+                  section={section.toLowerCase()}
+                  label={texts.navbarButtons[i]}
+                  onPointerEnter={() => handleHover(i)}
+                  onPointerLeave={handleHoverLeave}
+                />
               )),
             )}
           </div>
@@ -76,7 +50,11 @@ const Navbar = () => {
             style={{ transform: `translateX(${buttonHover * 100}%)` }}
           />
 
-          <BurgerButton setShowMenu={setShowMenu} showMenu={showMenu} />
+          <BurgerButton
+            showMenu={showMenu}
+            onClick={handleShowMenu}
+            onKeyDown={handleShowMenu}
+          />
         </div>
 
         <div className="selectors">
@@ -128,7 +106,7 @@ const Navbar = () => {
             SECTIONS.map((section, i) => (
               <NavLink
                 to={section.toLowerCase()}
-                /* onClick={() => setShowMenu(false)} */
+                /* onClick={() => handleShowMenu(false)} */
               >
                 <div
                   className={

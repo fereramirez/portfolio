@@ -1,12 +1,8 @@
 import "./BurgerButton.scss";
 
-const BurgerButton = ({ setShowMenu, showMenu }) => {
+const BurgerButton = ({ showMenu, ...props }) => {
   return (
-    <label
-      className="hamburger"
-      onClick={() => setShowMenu(!showMenu)}
-      onKeyDown={() => setShowMenu(!showMenu)}
-    >
+    <label className="hamburger" {...props}>
       <span
         className={`hamburger-top-bread${
           showMenu ? " hamburger-top-bread-open" : ""
