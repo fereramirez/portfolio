@@ -14,22 +14,6 @@
   z-index: 40;
 }
 
-.mobile-home-button {
-  width: 6rem;
-  height: 2rem;
-  margin-left: 1rem;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s ease;
-}
-
-.mobile-home-button:hover {
-  color: green;
-}
-
 .language-button {
   width: 3rem;
   height: 30px;
@@ -115,81 +99,11 @@
   }
 }
 
-@media (min-width: 720px) {
-  .mobile-menu {
-    display: none;
-  }
-
-  .mobile-home-button {
-    display: none;
-  }
-
-  .selectors {
-    display: flex;
-  }
-}
-
-.mobile-menu {
-  position: fixed;
-  width: 100vw;
-  height: 100%;
-  background-color: green;
-  top: -110%;
-  transition: top 0.5s ease;
-  z-index: 30;
-  user-select: none;
-}
-
-.show-mobile-menu {
-  top: 3.5rem;
-}
-
-.mobile-buttons-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--background-color);
-  padding-top: 1rem;
-}
-
-.mobile-buttons-container a:hover {
-  width: 9rem;
-  transition: color 0.2s ease;
-}
-
-.mobile-buttons-container a:hover {
-  color: var(--font-color);
-}
-
-.mobile-button {
-  width: 7rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin: 1.5rem 1rem;
-}
-
-.mobile-button:hover {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin: 1.5rem 1rem;
-}
-
-.mobile-current-section {
-  width: 7rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin: 1.5rem 1rem;
-  color: var(--font-color);
-}
-
 .selectors {
   margin-right: 2rem;
 }
 
+/* VOLVER A VER hacia abajo se repiten todas las clases en MobileMenu */
 .theme-buttons {
   margin-right: 0.5rem;
   position: relative;
@@ -232,80 +146,4 @@
 .light-theme-button:hover svg,
 .dark-theme-button:hover svg {
   fill: #00ab00;
-}
-
-.mobile-selectors {
-  display: flex;
-  align-items: center;
-  width: 15rem;
-  border-top: 2px solid var(--font-color);
-  margin-top: 1rem;
-  padding: 2.5rem 1rem;
-  justify-content: center;
-}
-
-.language-mobile-container {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin: 0 1rem;
-  transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.language-mobile {
-  cursor: pointer;
-  height: 1.5rem;
-  width: 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.language-mobile-current {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: top 0.1s ease;
-}
-
-.language-mobile-hover {
-  position: absolute;
-  left: 0;
-  right: 0;
-  transition: top 0.1s ease;
-  top: -22px;
-  color: var(--font-color);
-}
-
-.language-mobile:hover .language-mobile-current {
-  top: 22px;
-}
-
-.language-mobile:hover .language-mobile-hover {
-  top: 0;
-}
-
-.mobile-selectors .theme-buttons {
-  width: 4rem;
-  margin: 0 1rem;
-}
-
-.mobile-selectors .rays {
-  left: 20px;
-  top: -4px;
-}
-
-.mobile-selectors .light-theme-button svg,
-.mobile-selectors .dark-theme-button svg {
-  scale: 1.5;
-}
-
-.mobile-selectors .light-theme-button:hover svg {
-  fill: var(--font-color);
-}
-
-.mobile-selectors .dark-theme-button:hover svg {
-  fill: var(--font-color);
 }
