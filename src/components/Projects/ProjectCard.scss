@@ -25,13 +25,13 @@
   height: fit-content;
   width: fit-content;
   background-color: rgba(0, 128, 0, 0.114);
-}
 
-.project-image img {
-  width: auto;
-  max-height: 300px;
-  padding: 0.4rem;
-  padding-bottom: 0.1rem;
+  img {
+    width: auto;
+    max-height: 300px;
+    padding: 0.4rem;
+    padding-bottom: 0.1rem;
+  }
 }
 
 .project-image-mobile {
@@ -41,13 +41,13 @@
   height: fit-content;
   width: fit-content;
   background-color: rgba(0, 128, 0, 0.114);
-}
 
-.project-image-mobile img {
-  width: auto;
-  max-height: 300px;
-  padding: 0.4rem;
-  padding-bottom: 0.2rem;
+  img {
+    width: auto;
+    max-height: 300px;
+    padding: 0.4rem;
+    padding-bottom: 0.2rem;
+  }
 }
 
 @media (max-width: 1239px) {
@@ -90,13 +90,13 @@
   .project-image-mobile {
     height: fit-content;
     width: fit-content;
-  }
 
-  .project-image-mobile img {
-    /* width: auto;
+    img {
+      /* width: auto;
       max-height: 300px; */
-    height: auto;
-    width: 100%;
+      height: auto;
+      width: 100%;
+    }
   }
 }
 
@@ -111,32 +111,41 @@
   margin-top: 1rem;
 }
 
-.project-link svg {
-  fill: var(--font-color);
-  transition: fill 0.2s ease;
-}
+.project-link {
+  svg {
+    fill: var(--font-color);
+    transition: fill 0.2s ease;
 
-.project-link:hover svg {
-  fill: green;
-}
+    g {
+      fill: var(--font-color);
+      transition: fill 0.2s ease;
+    }
+  }
 
-.project-link svg g {
-  fill: var(--font-color);
-  transition: fill 0.2s ease;
-}
+  &:hover {
+    /* VOLVER A VER el navbar tapa al tooltip */
+    .tooltip {
+      opacity: 1;
+    }
 
-.project-link:hover svg g {
-  fill: green;
+    svg {
+      fill: green;
+
+      g {
+        fill: green;
+      }
+    }
+  }
 }
 
 .project-technologies-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.project-technologies-container svg {
-  height: 30px;
+  svg {
+    height: 30px;
+  }
 }
 
 .project-technology-container {
@@ -147,7 +156,11 @@
   position: relative;
   margin: 1rem;
   /* max-height: fit-content;
-   max-width: fit-content; */
+  max-width: fit-content; */
+
+  &:hover > .tooltip {
+    opacity: 1;
+  }
 }
 
 .project-technology-container-css-modules {
@@ -168,14 +181,6 @@
   border-radius: 2px;
   /* font-weight: 600; */
   min-width: max-content;
-}
-
-.project-technology-container:hover > .tooltip {
-  opacity: 1;
-}
-
-.project-link:hover .tooltip {
-  opacity: 1;
 }
 
 /* VOLVER A VER esta clase se repite? */

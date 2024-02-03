@@ -44,6 +44,10 @@
   transition: transform 0.2s ease;
 }
 
+.selectors {
+  margin-right: 2rem;
+}
+
 @media (max-width: 719px) {
   .bottom-selector {
     display: none;
@@ -60,8 +64,4 @@
   .selectors {
     display: none;
   }
-}
-
-.selectors {
-  margin-right: 2rem;
 }

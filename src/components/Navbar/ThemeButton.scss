@@ -1,34 +1,11 @@
-.mobile-selectors .theme-button {
-  width: 4rem;
-  margin: 0 1rem;
-}
-
-.mobile-selectors .rays {
-  left: 20px;
-  top: -4px;
-}
-
-.mobile-selectors .light-theme-button svg,
-.mobile-selectors .dark-theme-button svg {
-  scale: 1.5;
-}
-
-.mobile-selectors .light-theme-button:hover svg {
-  fill: var(--font-color);
-}
-
-.mobile-selectors .dark-theme-button:hover svg {
-  fill: var(--font-color);
-}
-
 .theme-button {
   margin-right: 0.5rem;
   position: relative;
-}
 
-.light-theme-button,
-.dark-theme-button {
-  cursor: pointer;
+  svg {
+    fill: var(--font-color);
+    transition: fill 0.3s ease;
+  }
 }
 
 .rays {
@@ -37,30 +14,76 @@
   top: -2px;
 }
 
-.theme-button svg {
-  fill: var(--font-color);
-  transition: fill 0.3s ease;
+.light-theme-button {
+  cursor: pointer;
+
+  .rays {
+    scale: 0;
+    transition: scale 0.2s ease;
+  }
+
+  &:hover {
+    .rays {
+      scale: 1;
+    }
+
+    svg {
+      fill: #00ab00;
+    }
+  }
 }
 
-.light-theme-button .rays {
-  scale: 0;
-  transition: scale 0.2s ease;
+.dark-theme-button {
+  cursor: pointer;
+
+  .rays {
+    scale: 1;
+    transition: scale 0.2s ease;
+  }
+
+  &:hover {
+    .rays {
+      scale: 0;
+    }
+
+    svg {
+      fill: #00ab00;
+    }
+  }
 }
 
-.light-theme-button:hover .rays {
-  scale: 1;
-}
+.mobile-selectors {
+  .theme-button {
+    width: 4rem;
+    margin: 0 1rem;
+  }
 
-.dark-theme-button .rays {
-  scale: 1;
-  transition: scale 0.2s ease;
-}
+  .rays {
+    left: 20px;
+    top: -4px;
+  }
 
-.dark-theme-button:hover .rays {
-  scale: 0;
-}
+  .dark-theme-button {
+    svg {
+      scale: 1.5;
+    }
 
-.light-theme-button:hover svg,
-.dark-theme-button:hover svg {
-  fill: #00ab00;
+    &:hover {
+      svg {
+        fill: var(--font-color);
+      }
+    }
+  }
+
+  .light-theme-button {
+    svg {
+      scale: 1.5;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--font-color);
+      }
+    }
+  }
 }

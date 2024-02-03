@@ -8,10 +8,10 @@
   align-items: center;
   justify-content: center;
   transition: color 0.2s ease;
-}
 
-.mobile-home-button:hover {
-  color: green;
+  &:hover {
+    color: green;
+  }
 }
 
 @media (min-width: 720px) {
@@ -23,6 +23,7 @@
     display: none;
   }
 
+  /* VOLVER A VER mover .selector a un solo archivo */
   .selectors {
     display: flex;
   }
@@ -50,26 +51,18 @@
   align-items: center;
   color: var(--background-color);
   padding-top: 1rem;
-}
 
-.mobile-buttons-container a:hover {
-  width: 9rem;
-  transition: color 0.2s ease;
-}
-
-.mobile-buttons-container a:hover {
-  color: var(--font-color);
+  a {
+    &:hover {
+      width: 9rem;
+      transition: color 0.2s ease;
+      color: var(--font-color);
+    }
+  }
 }
 
 .mobile-button {
   width: 7rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin: 1.5rem 1rem;
-}
-
-.mobile-button:hover {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.4rem;

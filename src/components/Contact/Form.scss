@@ -26,12 +26,12 @@
   display: flex;
   align-items: center;
   color: green;
-}
 
-.success svg {
-  min-width: 2rem;
-  min-height: 2rem;
-  margin-right: 1rem;
+  svg {
+    min-width: 2rem;
+    min-height: 2rem;
+    margin-right: 1rem;
+  }
 }
 
 .form {
@@ -48,46 +48,48 @@
 .spinner {
   color: var(--font-color);
   scale: 0.8;
-  margin-top: 0.1rem;
-  /*! VOLVER A VER ver aca */
+  position: relative;
+  top: 3px;
 }
 
 .error-placeholder {
   visibility: hidden;
 }
 
-.input-container button[type="submit"] {
-  width: 10rem;
-  height: 2.5rem;
-  cursor: pointer;
-  transition: background-color 2s ease 0.4s, color 2s ease 0.4s;
+.input-container {
+  &:last-child {
+    align-self: center;
+  }
 
-  background-color: transparent;
-  color: var(--font-color);
-  font-weight: 600;
-}
+  button[type="submit"] {
+    width: 10rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: background-color 2s ease 0.4s, color 2s ease 0.4s;
 
-.input-container button[type="submit"]:hover {
-  background-color: rgb(0, 176, 0);
-  background-color: green;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  color: #d5d1cc;
-}
+    background-color: transparent;
+    color: var(--font-color);
+    font-weight: 600;
 
-.input-container:last-child {
-  align-self: center;
+    &:hover {
+      background-color: rgb(0, 176, 0);
+      background-color: green;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      color: #d5d1cc;
+
+      .waiting {
+        cursor: wait;
+      }
+
+      .button-error {
+        background-color: red;
+      }
+    }
+  }
 }
 
 @media (max-width: 599px) {
   .form-text {
     font-size: 1.2rem;
   }
-}
-
-.input-container button[type="submit"]:hover.waiting {
-  cursor: wait;
-}
-
-.input-container button[type="submit"]:hover.button-error {
-  background-color: red;
 }

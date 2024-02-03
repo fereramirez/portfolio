@@ -24,22 +24,22 @@
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
-}
 
-.resume-link:hover {
-  color: green;
-}
+  svg {
+    fill: var(--font-color);
+    transition: fill 0.2s ease;
+    min-width: 32px;
+    min-height: 32px;
+    margin-left: 1rem;
+  }
 
-.resume-link svg {
-  fill: var(--font-color);
-  transition: fill 0.2s ease;
-  min-width: 32px;
-  min-height: 32px;
-  margin-left: 1rem;
-}
+  &:hover {
+    color: green;
 
-.resume-link:hover svg {
-  fill: green;
+    svg {
+      fill: green;
+    }
+  }
 }
 
 @media (max-width: 599px) {

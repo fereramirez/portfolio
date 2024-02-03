@@ -15,23 +15,23 @@
   display: flex;
   align-items: center;
   transition: color 0.2s ease;
-}
 
-.footer-link:hover {
-  color: green;
+  &:hover {
+    color: green;
+
+    .footer-svg-container svg g {
+      fill: green;
+    }
+  }
 }
 
 .footer-svg-container {
   width: 30px;
   height: 30px;
   margin-left: 1rem;
-}
 
-.footer-svg-container svg g {
-  fill: var(--font-color);
-  transition: fill 0.2s ease;
-}
-
-.footer-link:hover .footer-svg-container svg g {
-  fill: green;
+  svg g {
+    fill: var(--font-color);
+    transition: fill 0.2s ease;
+  }
 }

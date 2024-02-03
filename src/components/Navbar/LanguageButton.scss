@@ -9,14 +9,16 @@
   position: relative;
   overflow: hidden;
   display: none;
-}
 
-.language-button-container:hover .language-hover {
-  top: 5px;
-}
+  &:hover {
+    .language-hover {
+      top: 5px;
+    }
 
-.language-button-container:hover .language-current {
-  top: 28px;
+    .language-current {
+      top: 28px;
+    }
+  }
 }
 
 .language-current {
@@ -52,6 +54,16 @@
   width: 4rem;
   position: relative;
   overflow: hidden;
+
+  &:hover {
+    .language-mobile-button-current {
+      top: 22px;
+    }
+
+    .language-mobile-button-hover {
+      top: 0;
+    }
+  }
 }
 
 .language-mobile-button-current {
@@ -69,14 +81,6 @@
   transition: top 0.1s ease;
   top: -22px;
   color: var(--font-color);
-}
-
-.language-mobile-button:hover .language-mobile-button-current {
-  top: 22px;
-}
-
-.language-mobile-button:hover .language-mobile-button-hover {
-  top: 0;
 }
 
 @media (min-width: 720px) {

@@ -22,32 +22,52 @@
 
 .contact-links-container {
   display: flex;
+
+  a {
+    margin: 1rem;
+  }
 }
 
-.contact-links-container a {
-  margin: 1rem;
+.svg-linkedin {
+  svg {
+    fill: var(--font-color);
+    height: 50px;
+  }
+
+  &:hover {
+    svg {
+      fill: green;
+      transition: fill 0.2s ease;
+    }
+  }
 }
 
-.svg-linkedin svg,
-.svg-github svg g {
-  fill: var(--font-color);
-}
+.svg-github {
+  svg {
+    height: 50px;
 
-.svg-linkedin:hover svg,
-.svg-github:hover svg g {
-  fill: green;
-  transition: fill 0.2s ease;
-}
+    g {
+      fill: var(--font-color);
+    }
+  }
 
-.svg-linkedin svg,
-.svg-github svg {
-  height: 50px;
+  &:hover {
+    svg g {
+      fill: green;
+      transition: fill 0.2s ease;
+    }
+  }
 }
 
 .email-button {
   color: green;
   cursor: pointer;
   position: relative;
+
+  /* VOLVER A VER normalizar tooltip */
+  &:hover > .tooltip {
+    opacity: 1;
+  }
 }
 
 .tooltip {
@@ -64,11 +84,6 @@
   border-radius: 2px;
   min-width: max-content;
   font-size: 1rem;
-}
-
-/* VOLVER A VER normalizar tooltip */
-.email-button:hover > .tooltip {
-  opacity: 1;
 }
 
 @media (max-width: 599px) {

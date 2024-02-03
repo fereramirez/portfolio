@@ -4,3 +4,17 @@
   height: 90px;
   width: 90px;
 }
+
+.grid-inactive {
+  .grid-item {
+    transform: scale(1);
+    opacity: 0;
+    transition: opacity 2s ease 0.4s, transform 0.8s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      transform: scale(1.04);
+    }
+  }
+}
