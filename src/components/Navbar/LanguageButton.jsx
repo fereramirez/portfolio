@@ -1,10 +1,9 @@
-import { useContext } from "react";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
 import "./LanguageButton.scss";
-import LanguageContext from "../../context/LanguageContext";
 
 const LanguageButton = () => {
-  const { language, handleLanguage } = useContext(LanguageContext);
+  const { language, handleLanguage } = useLanguageContext();
 
   return (
     <>

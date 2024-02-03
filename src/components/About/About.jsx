@@ -1,7 +1,4 @@
-import { useContext } from "react";
-//! VOLVER A VER agregar useContext hook?
-
-import LanguageContext from "../../context/LanguageContext";
+import useLanguageContext from "../../hooks/useLanguageContext";
 import AboutTechnologies from "./AboutTechnologies";
 import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
@@ -9,7 +6,7 @@ import "../../App.css";
 import "./About.scss";
 
 const About = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   return (
     <main className="about-container content">

@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import LanguageContext from "../../context/LanguageContext";
+import useLanguageContext from "../../hooks/useLanguageContext";
 import Form from "./Form";
 import { useClipboard } from "../../hooks/useClipboard";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
@@ -11,7 +9,7 @@ import "../../App.css";
 import "./Contact.scss";
 
 const Contact = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   const { copyToClipboard, textCopied } = useClipboard();
 

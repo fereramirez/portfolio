@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import LanguageContext from "../../context/LanguageContext";
+import useLanguageContext from "../../hooks/useLanguageContext";
 // import Grid from "../common/Grid";
 
 import "./TitleUnused.css";
 
 const Title = ({ text, setLinkSelected, linkSelected }) => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
   const navigate = useNavigate();
 
   const handleSelectedLink = () => {

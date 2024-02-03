@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import LanguageContext from "../../context/LanguageContext";
+import useLanguageContext from "../../hooks/useLanguageContext";
 import ProjectCard from "./ProjectCard";
 import Footer from "./Footer";
 
@@ -8,7 +6,7 @@ import "../../App.css";
 import "./Projects.scss";
 
 const Projects = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   return (
     <>

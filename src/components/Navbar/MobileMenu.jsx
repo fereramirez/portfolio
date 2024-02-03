@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-import LanguageContext from "../../context/LanguageContext";
+import useLanguageContext from "../../hooks/useLanguageContext";
 import ThemeButton from "./ThemeButton";
 import LanguageButton from "./LanguageButton";
 
@@ -9,7 +9,7 @@ import "./MobileMenu.scss";
 
 const MobileMenu = ({ sections, showMenu }) => {
   const location = useLocation();
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   return (
     <div className={`mobile-menu${showMenu ? " show-mobile-menu" : ""}`}>

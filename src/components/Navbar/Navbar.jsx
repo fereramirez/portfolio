@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
+import useLanguageContext from "../../hooks/useLanguageContext";
 import useNavbarLinks from "../../hooks/useNavbarLinks";
 import useMobileMenu from "../../hooks/useMobileMenu";
-import LanguageContext from "../../context/LanguageContext";
 import NavbarLink from "./NavbarLink";
 import ThemeButton from "./ThemeButton";
 import LanguageButton from "./LanguageButton";
@@ -15,7 +15,7 @@ import "../../App.css";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   const { buttonHover, handleHover, handleHoverLeave } =
     useNavbarLinks(SECTIONS);

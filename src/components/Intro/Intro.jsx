@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 
 import useIntro from "../../hooks/useIntro";
-import AnimationContext from "../../context/AnimationContext";
+import AnimationContext from "../../contexts/AnimationContext";
 import Grid from "../common/Grid";
 
 import "./Intro.scss";

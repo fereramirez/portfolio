@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
-import { LanguageProvider } from "./context/LanguageContext.jsx";
-import { AnimationProvider } from "./context/AnimationContext.jsx";
+import { LanguageProvider } from "./contexts/LanguageContext.jsx";
+import { AnimationProvider } from "./contexts/AnimationContext.jsx";
 import useTheme from "./hooks/useTheme";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./components/Home/Home";

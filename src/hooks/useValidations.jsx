@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import { isEmail } from "validator";
 
-import LanguageContext from "../context/LanguageContext";
+import useLanguageContext from "./useLanguageContext";
 import { nameRegex } from "../utils/regex";
 
 const useValidations = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
 
   const nameValidation = {
     required: {

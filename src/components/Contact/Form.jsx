@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import { useForm } from "react-hook-form";
 
+import useLanguageContext from "../../hooks/useLanguageContext";
 import useSubmit from "../../hooks/useSubmit";
 import useValidations from "../../hooks/useValidations";
-import LanguageContext from "../../context/LanguageContext";
 import InputContainer from "./InputContainer";
 import TextAreaContainer from "./TextAreaContainer";
 import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
@@ -13,7 +12,7 @@ import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 import "./Form.scss";
 
 const Form = () => {
-  const { texts } = useContext(LanguageContext);
+  const { texts } = useLanguageContext();
   const {
     register,
     handleSubmit,

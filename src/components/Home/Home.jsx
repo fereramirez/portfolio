@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
-import AnimationContext from "../../context/AnimationContext";
+import AnimationContext from "../../contexts/AnimationContext";
 import Grid from "../common/Grid";
 import Title from "./Title";
 
