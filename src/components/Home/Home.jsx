@@ -1,16 +1,23 @@
 import { Outlet, useLocation } from "react-router-dom";
 
+import useLanguageContext from "../../hooks/useLanguageContext";
 import useAnimationContext from "../../hooks/useAnimationContext";
 import GridBackground from "../common/GridBackground";
 import Title from "./Title";
-import { GRID_ITEMS_QUANTITY } from "../../utils/constants";
+import {
+  GRID_ITEMS_QUANTITY,
+  SECTION_ABOUT,
+  SECTION_CONTACT,
+  SECTION_PROJECTS,
+} from "../../utils/constants";
 
 import "./Home.scss";
 
 const Home = () => {
   const location = useLocation();
 
-  const { runCoverFadeOut } = useAnimationContext();
+  const { texts } = useLanguageContext();
+  const { runCoverFadeOut, handleLinkSelected } = useAnimationContext();
 
   return (
     <>
@@ -23,9 +30,24 @@ const Home = () => {
           <>
             <GridBackground position="left" quantity={GRID_ITEMS_QUANTITY} />
 
-            <Title text="projects" />
-            <Title text="about" />
-            <Title text="contact" />
+            <Title
+              text={SECTION_PROJECTS}
+              label={texts.home[SECTION_PROJECTS]}
+              onClick={() => handleLinkSelected(SECTION_PROJECTS)}
+              onKeyDown={() => handleLinkSelected(SECTION_PROJECTS)}
+            />
+            <Title
+              text={SECTION_ABOUT}
+              label={texts.home[SECTION_ABOUT]}
+              onClick={() => handleLinkSelected(SECTION_ABOUT)}
+              onKeyDown={() => handleLinkSelected(SECTION_ABOUT)}
+            />
+            <Title
+              text={SECTION_CONTACT}
+              label={texts.home[SECTION_CONTACT]}
+              onClick={() => handleLinkSelected(SECTION_CONTACT)}
+              onKeyDown={() => handleLinkSelected(SECTION_CONTACT)}
+            />
           </>
         )}
 

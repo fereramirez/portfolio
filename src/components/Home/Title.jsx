@@ -1,17 +1,14 @@
-import useLanguageContext from "../../hooks/useLanguageContext";
 import useAnimationContext from "../../hooks/useAnimationContext";
 // import GridBackground from "../common/GridBackground";
 
 import "./Title.scss";
 
-const Title = ({ text }) => {
-  const { texts } = useLanguageContext();
-  const { linkSelected, handleLinkSelected } = useAnimationContext();
+const Title = ({ text, label, ...props }) => {
+  const { linkSelected } = useAnimationContext();
 
   return (
     <div
-      onClick={() => handleLinkSelected(text)}
-      onKeyDown={() => handleLinkSelected(text)}
+      {...props}
       role="button"
       tabIndex={0}
       className={`title-link ${
@@ -23,7 +20,7 @@ const Title = ({ text }) => {
       }`}
     >
       <div className="title-container">
-        <h1>{texts.home[text]}</h1>
+        <h1>{label}</h1>
       </div>
 
       <div className="background-hover">

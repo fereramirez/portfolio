@@ -1,9 +1,15 @@
+import {
+  SECTION_ABOUT,
+  SECTION_PROJECTS,
+  SECTION_CONTACT,
+} from "../utils/constants";
+
 const translations = {
   en: {
     home: {
-      projects: "Projects",
-      about: "About",
-      contact: "Contact",
+      [SECTION_ABOUT]: "About",
+      [SECTION_PROJECTS]: "Projects",
+      [SECTION_CONTACT]: "Contact",
     },
 
     /*  navbarButtons: ["Home", "About", "Projects", "Contact"], */
@@ -77,9 +83,9 @@ const translations = {
   },
   es: {
     home: {
-      projects: "Proyectos",
-      about: "Sobre mi",
-      contact: "Contacto",
+      [SECTION_ABOUT]: "Sobre mi",
+      [SECTION_PROJECTS]: "Proyectos",
+      [SECTION_CONTACT]: "Contacto",
     },
 
     navbarButtons: ["Sobre mi", "Proyectos", "Contacto"],

@@ -1,5 +1,6 @@
-/* const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
-const SECTIONS = ["About", "Projects", "Contact"];
-const GRID_ITEMS_QUANTITY = 757;
-
-export { SECTIONS, GRID_ITEMS_QUANTITY };
+/* export const SECTIONS = ["Home", "About", "Projects", "Contact"]; */
+export const SECTIONS = ["About", "Projects", "Contact"];
+export const SECTION_ABOUT = "about";
+export const SECTION_PROJECTS = "projects";
+export const SECTION_CONTACT = "contact";
+export const GRID_ITEMS_QUANTITY = 757;
