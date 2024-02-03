@@ -1,8 +1,9 @@
 import { Outlet, useLocation } from "react-router-dom";
 
 import useAnimationContext from "../../hooks/useAnimationContext";
-import Grid from "../common/Grid";
+import GridBackground from "../common/GridBackground";
 import Title from "./Title";
+import { GRID_ITEMS_QUANTITY } from "../../utils/constants";
 
 import "./Home.scss";
 
@@ -20,7 +21,7 @@ const Home = () => {
       >
         {location.pathname === "/" && (
           <>
-            <Grid position="left" />
+            <GridBackground position="left" quantity={GRID_ITEMS_QUANTITY} />
 
             <Title text="projects" />
             <Title text="about" />
@@ -33,7 +34,11 @@ const Home = () => {
             runCoverFadeOut ? " total-cover-active" : ""
           }`}
         >
-          <Grid color="purple" position="right" />
+          <GridBackground
+            color="purple"
+            position="right"
+            quantity={GRID_ITEMS_QUANTITY}
+          />
         </div>
       </div>
 

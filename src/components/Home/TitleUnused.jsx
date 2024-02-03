@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import useLanguageContext from "../../hooks/useLanguageContext";
-// import Grid from "../common/Grid";
+// import GridBackground from "../common/GridBackground";
 
 import "./TitleUnused.css";
 
@@ -40,7 +40,7 @@ const Title = ({ text, setLinkSelected, linkSelected }) => {
             : "title-background-hover-active"
         }`}
       >
-        {/*  <Grid active={true} /> */}
+        {/*  <GridBackground active={true} quantity={GRID_ITEMS_QUANTITY}/> */}
       </div>
 
       {/* <div className="title-hover-container">

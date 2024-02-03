@@ -1,6 +1,6 @@
 import useLanguageContext from "../../hooks/useLanguageContext";
 import useAnimationContext from "../../hooks/useAnimationContext";
-// import Grid from "../common/Grid";
+// import GridBackground from "../common/GridBackground";
 
 import "./Title.scss";
 
@@ -26,7 +26,9 @@ const Title = ({ text }) => {
         <h1>{texts.home[text]}</h1>
       </div>
 
-      <div className="background-hover">{/* <Grid active={true} /> */}</div>
+      <div className="background-hover">
+        {/* <GridBackground active={true} /> quantity={GRID_ITEMS_QUANTITY} */}
+      </div>
     </div>
   );
 };

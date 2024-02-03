@@ -2,7 +2,8 @@ import { Outlet } from "react-router-dom";
 
 import useAnimationContext from "../../hooks/useAnimationContext";
 import useIntro from "../../hooks/useIntro";
-import Grid from "../common/Grid";
+import GridBackground from "../common/GridBackground";
+import { GRID_ITEMS_QUANTITY } from "../../utils/constants";
 
 import "./Intro.scss";
 
@@ -38,7 +39,7 @@ const Intro = () => {
           }`,
         }}
       >
-        <Grid />
+        <GridBackground quantity={GRID_ITEMS_QUANTITY} />
 
         <div className="text-container-outer">
           <div className="text-container">

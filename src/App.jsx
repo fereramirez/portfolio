@@ -29,6 +29,7 @@ function App() {
   - agregar cosas copadas al log
   - agregar aria-labels
   - agregar alguna imagen al fondo
+  - al tipear grid dejar jugar con el GridBackground
   */
 
   return (
