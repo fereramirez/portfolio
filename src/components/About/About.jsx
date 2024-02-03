@@ -1,5 +1,6 @@
 import useLanguageContext from "../../hooks/useLanguageContext";
 import AboutTechnologies from "./AboutTechnologies";
+import Paragraph from "./Paragraph";
 import { ReactComponent as Cv } from "../../assets/svg/cv.svg";
 
 import "../../App.css";
@@ -12,20 +13,18 @@ const About = () => {
     <main className="about-container content">
       <h1 className="title">{texts.about.title}</h1>
 
-      <div className="paragraph">
-        <span>
-          {texts.about.im} <strong className="name">Fernando Ramirez</strong>
-          {texts.about.firstParagraph}
-        </span>
-      </div>
+      <Paragraph>
+        {texts.about.im} <strong className="name">Fernando Ramirez</strong>
+        {texts.about.firstParagraph}
+      </Paragraph>
 
-      <div className="paragraph">{texts.about.secondParagraph}</div>
-      <div className="paragraph">{texts.about.thirdParagraph}</div>
-      <div className="paragraph">{texts.about.technologies}</div>
+      <Paragraph>{texts.about.secondParagraph}</Paragraph>
+      <Paragraph>{texts.about.thirdParagraph}</Paragraph>
+      <Paragraph>{texts.about.technologies}</Paragraph>
 
       <AboutTechnologies />
 
-      <div className="paragraph">
+      <Paragraph>
         <a
           href="https://drive.google.com/file/d/1Jc8UyhxUJGqPA4FFnPPN86OUCnVJ3ifc/view?usp=share_link"
           target="_blank"
@@ -38,7 +37,7 @@ const About = () => {
             <Cv />
           </span>
         </a>
-      </div>
+      </Paragraph>
     </main>
   );
 };
