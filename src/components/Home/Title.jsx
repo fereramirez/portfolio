@@ -1,14 +1,12 @@
-import { useContext } from "react";
-
 import useLanguageContext from "../../hooks/useLanguageContext";
-import AnimationContext from "../../contexts/AnimationContext";
+import useAnimationContext from "../../hooks/useAnimationContext";
 // import Grid from "../common/Grid";
 
 import "./Title.scss";
 
 const Title = ({ text }) => {
   const { texts } = useLanguageContext();
-  const { linkSelected, handleLinkSelected } = useContext(AnimationContext);
+  const { linkSelected, handleLinkSelected } = useAnimationContext();
 
   return (
     <div

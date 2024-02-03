@@ -6,8 +6,9 @@ import useLanguageContext from "../../hooks/useLanguageContext";
 import "./TitleUnused.css";
 
 const Title = ({ text, setLinkSelected, linkSelected }) => {
-  const { texts } = useLanguageContext();
   const navigate = useNavigate();
+
+  const { texts } = useLanguageContext();
 
   const handleSelectedLink = () => {
     setLinkSelected(text);

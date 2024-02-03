@@ -1,15 +1,13 @@
-import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 
+import useAnimationContext from "../../hooks/useAnimationContext";
 import useIntro from "../../hooks/useIntro";
-import AnimationContext from "../../contexts/AnimationContext";
 import Grid from "../common/Grid";
 
 import "./Intro.scss";
 
 const Intro = () => {
-  const { runFadeOut, runPop } = useContext(AnimationContext);
-
+  const { runFadeOut, runPop } = useAnimationContext();
   const { topText, bottomText, bottomCursor, location } = useIntro();
 
   return (

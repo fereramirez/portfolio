@@ -12,7 +12,6 @@ import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 import "./Form.scss";
 
 const Form = () => {
-  const { texts } = useLanguageContext();
   const {
     register,
     handleSubmit,
@@ -21,6 +20,7 @@ const Form = () => {
     watch,
   } = useForm();
 
+  const { texts } = useLanguageContext();
   const { sendEmail, waitingResponse, response, showSuccess } =
     useSubmit(reset);
   const { nameValidation, emailValidation, messageValidation } =

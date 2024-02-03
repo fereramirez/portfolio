@@ -9,6 +9,7 @@ import "./MobileMenu.scss";
 
 const MobileMenu = ({ sections, showMenu }) => {
   const location = useLocation();
+
   const { texts } = useLanguageContext();
 
   return (

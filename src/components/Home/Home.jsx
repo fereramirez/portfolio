@@ -1,7 +1,6 @@
-import { useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
-import AnimationContext from "../../contexts/AnimationContext";
+import useAnimationContext from "../../hooks/useAnimationContext";
 import Grid from "../common/Grid";
 import Title from "./Title";
 
@@ -9,7 +8,8 @@ import "./Home.scss";
 
 const Home = () => {
   const location = useLocation();
-  const { runCoverFadeOut } = useContext(AnimationContext);
+
+  const { runCoverFadeOut } = useAnimationContext();
 
   return (
     <>

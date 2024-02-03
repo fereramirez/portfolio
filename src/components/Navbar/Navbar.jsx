@@ -16,7 +16,6 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const { texts } = useLanguageContext();
-
   const { buttonHover, handleHover, handleHoverLeave } =
     useNavbarLinks(SECTIONS);
   const { showMenu, handleShowMenu } = useMobileMenu();
