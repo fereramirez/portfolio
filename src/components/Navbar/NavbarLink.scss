@@ -1,0 +1,16 @@
+.navbar-link {
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 719px) {
+  .navbar-link {
+    display: none;
+  }
+}

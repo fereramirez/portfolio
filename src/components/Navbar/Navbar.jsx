@@ -27,8 +27,8 @@ const Navbar = () => {
           <NavLink to="/">Fernando</NavLink>
         </span>
 
-        <div className="buttons-container">
-          <div className="buttons-box">
+        <div className="navbar-links-container">
+          <div className="navbar-links-box">
             {React.Children.toArray(
               SECTIONS.map((section, i) => (
                 /*  <NavLink to={i === 0 ? "/" : section.toLowerCase()}> */

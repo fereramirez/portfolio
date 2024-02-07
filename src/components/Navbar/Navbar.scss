@@ -14,26 +14,15 @@
   z-index: 40;
 }
 
-.buttons-container {
+.navbar-links-container {
   display: flex;
   flex-direction: column;
   margin-top: 6px;
   margin-left: 1rem;
 }
 
-.buttons-box {
+.navbar-links-box {
   display: flex;
-}
-
-.button {
-  width: 6rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
 }
 
 .bottom-selector {
@@ -50,10 +39,6 @@
 
 @media (max-width: 719px) {
   .bottom-selector {
-    display: none;
-  }
-
-  .button {
     display: none;
   }
 

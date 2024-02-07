@@ -1,4 +1,4 @@
-import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
+import ErrorMessage from "./ErrorMessage";
 
 import "./InputHeader.scss";
 
@@ -8,11 +8,7 @@ const InputHeader = ({ label, error }) => {
       {!error ? (
         <p className="field-name">{label}</p>
       ) : (
-        <div className="error-message">
-          <Warning />
-
-          {error?.message && <span>{error.message}</span>}
-        </div>
+        <ErrorMessage error={error} />
       )}
     </div>
   );

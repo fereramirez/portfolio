@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 
+import "./NavbarLink.scss";
+
 const NavbarLink = ({ section, label, ...props }) => {
-  //! VOLVER A VER agregar scss
   return (
     <NavLink to={section}>
-      <div className="button" {...props}>
+      <div className="navbar-link" {...props}>
         {label}
       </div>
     </NavLink>

@@ -5,8 +5,8 @@ import useSubmit from "../../hooks/useSubmit";
 import useValidations from "../../hooks/useValidations";
 import InputContainer from "./InputContainer";
 import TextAreaContainer from "./TextAreaContainer";
-import { ReactComponent as Spinner } from "../../assets/svg/spinner.svg";
-import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
+import ErrorMessage from "./ErrorMessage";
+import Button from "./Button";
 import { ReactComponent as Brick } from "../../assets/svg/brick.svg";
 
 import "./Form.scss";
@@ -40,7 +40,7 @@ const Form = () => {
             <InputContainer
               label={texts.form.name.label}
               register={register("name", nameValidation)}
-              error={errors.name}
+              error={errors.name?.message}
               isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
             />
@@ -48,7 +48,7 @@ const Form = () => {
             <InputContainer
               label={texts.form.email.label}
               register={register("email", emailValidation)}
-              error={errors.email}
+              error={errors.email?.message}
               isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
             />
@@ -56,7 +56,7 @@ const Form = () => {
             <TextAreaContainer
               label="Message"
               register={register("message", messageValidation)}
-              error={errors.message}
+              error={errors.message?.message}
               isLoading={waitingResponse}
               disabled={waitingResponse || response === "success"}
               name="message"
@@ -68,37 +68,22 @@ const Form = () => {
             <span className="input-container submit-container">
               <div className="field-name-container">
                 {response === "error" ? (
-                  /* VOLVER A VER crear ErrorMessage y mover clase error-message */
-                  <div className="error-message">
-                    <Warning />
-                    <p>{texts.form.responseError}</p>
-                  </div>
-                ) : (
-                  <p className="error-placeholder">hidden text</p>
-                )}
+                  <ErrorMessage error={texts.form.responseError} />
+                ) : null}
               </div>
 
-              <button
-                type="submit"
-                disabled={waitingResponse || Object.keys(errors).length}
-                className={`${waitingResponse ? "waiting" : ""} ${
-                  Object.keys(errors).length ? "button-error" : ""
-                }`}
-              >
-                {waitingResponse ? (
-                  <Spinner className="spinner" />
-                ) : Object.keys(errors).length ? (
-                  texts.form.submitError
-                ) : (
-                  texts.form.submit
-                )}
-              </button>
+              <Button
+                isLoading={waitingResponse}
+                errors={errors}
+                texts={texts}
+              />
             </span>
           </form>
         </>
       ) : (
         <div className="success">
           <Brick />
+
           <span className="form-text">{texts.form.responseSuccess}</span>
         </div>
       )}

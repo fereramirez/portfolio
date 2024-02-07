@@ -30,12 +30,14 @@ const TextArea = ({
         /* onPaste={(e) => e.preventDefault()} */
       />
 
-      <RadialProgress
-        disabled={disabled}
-        watcher={watch(name)}
-        minLength={minLength}
-        maxLength={maxLength}
-      />
+      {!disabled ? (
+        <RadialProgress
+          disabled={disabled}
+          watcher={watch(name)}
+          minLength={minLength}
+          maxLength={maxLength}
+        />
+      ) : null}
     </span>
   );
 };

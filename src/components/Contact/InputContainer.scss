@@ -2,23 +2,6 @@
   margin: 0.5rem 0;
   height: fit-content;
   position: relative;
-
-  /* VOLVER A VER crear y mover a Button */
-  button {
-    border: 1px solid transparent;
-  }
-
-  button[type="submit"] {
-    &:disabled {
-      cursor: not-allowed;
-      background-color: rgba(239, 239, 239, 0.3) !important;
-      /* background-color: red !important; */
-      /* background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgb(59, 59, 59)) !important; */
-      /* color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170)) !important; */
-      color: rgba(151, 151, 151, 0.501) !important;
-      border-color: rgba(118, 118, 118, 0.3) !important;
-    }
-  }
 }
 
 /* input:-webkit-autofill,
