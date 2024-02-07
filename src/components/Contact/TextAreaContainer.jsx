@@ -1,4 +1,4 @@
-import { ReactComponent as Warning } from "../../assets/svg/warning.svg";
+import InputHeader from "./InputHeader";
 import TextArea from "./TextArea";
 
 import "./InputContainer.scss";
@@ -17,17 +17,7 @@ const TextAreaContainer = ({
 }) => {
   return (
     <span className="input-container">
-      <div className="field-name-container">
-        {!error ? (
-          <p className="field-name">{label}</p>
-        ) : (
-          <div className="error-message">
-            <Warning />
-
-            {error?.message && <span>{error.message}</span>}
-          </div>
-        )}
-      </div>
+      <InputHeader label={label} error={error} />
 
       <TextArea
         register={register}

@@ -5,6 +5,7 @@ import GridItem from "./GridItem";
 import "./GridBackground.scss";
 
 const GridBackground = ({ active, color, position, quantity }) => {
+  //! VOLVER A VER modificar quantity dependiendo viewport
   return (
     <div
       className={`grid-container ${active ? "grid-active" : "grid-inactive"}`}
