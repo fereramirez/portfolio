@@ -38,14 +38,14 @@ function App() {
         <LanguageProvider>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Intro />}>
-              <Route path="/" element={<Home />}>
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/*" element={<NotFound />} />
-              </Route>
+            {/* <Route path="/" element={<Intro />}> */}
+            <Route path="/" element={<Home />}>
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/*" element={<NotFound />} />
             </Route>
+            {/* </Route> */}
           </Routes>
         </LanguageProvider>
       </AnimationProvider>
