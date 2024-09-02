@@ -4,7 +4,7 @@ import { translations } from "../helpers/translations";
 
 const LanguageContext = createContext();
 
-const initialLanguage = "en";
+const initialLanguage = "es";
 
 function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(initialLanguage);
