@@ -10,7 +10,7 @@ const useIntro = () => {
   useEffect(() => {
     document.documentElement.style.overflow = "hidden";
     const name = "Fernando Ramirez,";
-    const title = "Fullstack Developer.";
+    const title = "Frontend Developer.";
 
     let i = 0;
     let j = 0;

@@ -25,7 +25,7 @@ const About = () => {
 
       <Paragraph>
         <a
-          href="https://drive.google.com/file/d/1Jc8UyhxUJGqPA4FFnPPN86OUCnVJ3ifc/view?usp=share_link"
+          href="https://drive.google.com/file/d/1C_ONoKRQw0HpOBAV0oY0zSd_Xu73dVm5/view"
           target="_blank"
           rel="noreferrer"
           className="resume-link"
