@@ -22,8 +22,6 @@ const translations = {
         ", self-taught Web Developer, who found his passion for programming just for curiosity.",
       secondParagraph:
         "I'm a versatile person specialized in JavaScript technologies, passionate to learning new ones, self-demanding that goes beyond his capabilities to constantly surpass himself. I excel in frontend development but also I have backend development skills.",
-      thirdParagraph:
-        "I'm looking for my first job experience in IT as Fullstack Developer, in a company where I can keep learning and grow both professionally and personally.",
       technologies: "Technologies I currently work with",
       resume: "Here is my Resume.",
     },
@@ -72,6 +70,7 @@ const translations = {
         minLength: "This field must be 20 characters length at least",
         maxLength: "This field must have less than 500 characters",
       },
+      //! VOLVER A VER Message acepta 500 caracteres inclusive, cambiar texto
 
       submit: "Send",
       submitError: "There are errors",
@@ -98,8 +97,6 @@ const translations = {
         ", Desarrollador Web autodidacta, quien descubrió su pasión por la programación por curiosidad.",
       secondParagraph:
         "Soy una persona versátil, especializada en tecnologías JavaScript, apasionada por aprender a utilizar nuevas herramientas, autoexigente que va más allá de sus capacidades para superarse constantemente. Me destaco en el desarrollo frontend, aunque también poseo conocimientos sobre desarrollo backend.",
-      thirdParagraph:
-        "Me encuentro en busca de mi primer trabajo en el mundo IT como Desarrollador Fullstack en una empresa donde pueda seguir aprendiendo y creciendo tanto de forma profesional como personal.",
       technologies: "Tecnologías con las que trabajo actualmente",
       resume: "Aquí puedes ver mi CV.",
     },

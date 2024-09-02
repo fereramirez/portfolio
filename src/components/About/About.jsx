@@ -19,7 +19,6 @@ const About = () => {
       </Paragraph>
 
       <Paragraph>{texts.about.secondParagraph}</Paragraph>
-      <Paragraph>{texts.about.thirdParagraph}</Paragraph>
       <Paragraph>{texts.about.technologies}</Paragraph>
 
       <AboutTechnologies />
