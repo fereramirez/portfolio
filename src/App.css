@@ -43,7 +43,7 @@ a {
 
 #root {
   background-color: var(--background-color);
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   min-height: 100vh;
 }
 
@@ -57,7 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   color: var(--font-color);
   position: relative;
 }
@@ -75,16 +75,33 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(rgba(87, 87, 87, 0) 50%,
-      rgba(62, 62, 62, 0.25) 50%),
-    linear-gradient(90deg,
+  background: linear-gradient(
+      rgba(87, 87, 87, 0) 50%,
+      rgba(62, 62, 62, 0.25) 50%
+    ),
+    linear-gradient(
+      90deg,
       rgba(255, 0, 0, 0.06),
       rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06));
+      rgba(0, 0, 255, 0.06)
+    );
   z-index: 10000;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+
+/* .crt:before {
+    content: " ";
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,.2) 50%) 0 0/100% 2px,linear-gradient(90deg,rgba(255,0,0,.04),rgba(0,255,0,.016),rgba(0,0,255,.04)) 0 0/3px 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+} */
 
 .content {
   animation: 1s ease Content forwards;
